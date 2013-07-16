@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<definitions name="Echo" 
+    targetNamespace="http://www.extreme.indiana.edu/math/"
+    xmlns:tns="http://www.extreme.indiana.edu/math/"
+    xmlns:typens="http://www.extreme.indiana.edu/math/echoer/xsd/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <documentation xml:lang="en">A service for echoing two numbers</documentation>
+
+  <types>
+    <schema elementFormDefault="unqualified"
+        targetNamespace="http://www.extreme.indiana.edu/math/echoer/xsd/"
+        xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="typens:EchoInput" type="typens:EchoInputType" />
+      <complexType name="typens:EchoInputType">
+        <sequence>
+          <element name="input" type="xsd:any" />
+        </sequence>
+      </complexType>
+      <element name="typens:EchoOutput" type="typens:EchoOutputType" />
+      <complexType name="typens:EchoOutputType">
+        <sequence>
+          <element name="output" type="xsd:any" />
+        </sequence>
+      </complexType>
+    </schema>
+  </types>
+  
+  <message name="tns:EchoInputMessage">
+    <part name="tns:EchoInputMessagePart" element="typens:EchoInput" />
+  </message>
+  <message name="tns:EchoOutputMessage">
+    <part name="tns:EchoOutputMessagePart" element="typens:EchoOutput" />
+  </message>
+
+  <portType name="Echo">
+    <documentation xml:lang="en" />
+    <operation name="echo">
+      <documentation xml:lang="en">Run the echoer</documentation>
+      <input name="typens:EchoInput" message="tns:EchoInputMessage" />
+      <output name="typens:EchoOutput" message="tns:EchoOutputMessage" />
+    </operation>
+  </portType>
+  
+  <binding name="typens:EchoBinding" type="tns:Echo">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="echo">
+      <soap:operation soapAction="http://www.extreme.indiana.edu/math/echo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+ 
+  <service name="typens:EchoService">
+    <port name="typens:EchoSoapPort" binding="typens:EchoBinding">
+      <soap:address location="http://129.79.246.106:10000/EchoService" />
+    </port>
+  </service>
+
+</definitions>

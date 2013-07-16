@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+This is the seekda cache of the WSDL definition available at http://cs8230.comp.hkbu.edu.hk:8080/axis2/services/Multiplier?wsdl.
+seekdas cache is a snapshot that we took as we crawled the Web.
+The service may have changed since the last crawl.
+seekda is neither affiliated with the authors of this service nor responsible for its advertised functionality.
+
+-->
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns0="http://lab2service.comp3150" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://lab2service.comp3150">
+    <wsdl:documentation>Multiplier</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema xmlns:ns="http://lab2service.comp3150" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://lab2service.comp3150">
+            <xs:element name="multiply">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="i" type="xs:float"/>
+                        <xs:element minOccurs="0" name="j" type="xs:float"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="multiplyResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:float"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="multiplyRequest">
+        <wsdl:part name="parameters" element="ns0:multiply"/>
+    </wsdl:message>
+    <wsdl:message name="multiplyResponse">
+        <wsdl:part name="parameters" element="ns0:multiplyResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="MultiplierPortType">
+        <wsdl:operation name="multiply">
+            <wsdl:input message="ns0:multiplyRequest" wsaw:Action="urn:multiply"/>
+            <wsdl:output message="ns0:multiplyResponse" wsaw:Action="urn:multiplyResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="MultiplierSOAP11Binding" type="ns0:MultiplierPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="multiply">
+            <soap:operation soapAction="urn:multiply" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="MultiplierSOAP12Binding" type="ns0:MultiplierPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="multiply">
+            <soap12:operation soapAction="urn:multiply" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="MultiplierHttpBinding" type="ns0:MultiplierPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="multiply">
+            <http:operation location="Multiplier/multiply"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="multiply"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="multiply"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Multiplier">
+        <wsdl:port name="MultiplierSOAP11port_http" binding="ns0:MultiplierSOAP11Binding">
+            <soap:address location="http://cs8230.comp.hkbu.edu.hk:8080/axis2/services/Multiplier"/>
+        </wsdl:port>
+        <wsdl:port name="MultiplierSOAP12port_http" binding="ns0:MultiplierSOAP12Binding">
+            <soap12:address location="http://cs8230.comp.hkbu.edu.hk:8080/axis2/services/Multiplier"/>
+        </wsdl:port>
+        <wsdl:port name="MultiplierHttpport" binding="ns0:MultiplierHttpBinding">
+            <http:address location="http://cs8230.comp.hkbu.edu.hk:8080/axis2/services/Multiplier"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
+

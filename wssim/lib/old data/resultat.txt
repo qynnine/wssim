@@ -1,0 +1,30 @@
+web Services	Web services	Similarity score	Observation
+A	ws28	0.873	message parameters are simple in ws28 of Short Type
+			message parameters are complexe in A sub element are of Float Type
+A	C	0.616	difference in messags names  and parts names. Part types are the same 
+A	E	0.605	3 operation in E against 4 in A
+			different messages names
+			different part structure (complexe / simple)
+			different part name
+			different part types (Double/Float)
+A	ws12	0.743	in bouth services messages part are complexe but with different names
+C	D	[0.91 - 0.94]	different messages names  and sub elements are different (Double/Float)
+B	D	0.82	different message names; sub elements different (Double/Float)
+WS6	A	0.671	"Number of operation between compared services is different, but the same operations exist"
+	B	0.699; 0.599	
+	C	0.673	
+	D	0.67	
+WS11	A	0.591	"Number of operation between compared services is different, but the same operations exist"
+	B	0.62	
+	C	0.596	
+	D	0.543	
+			
+			
+			
+Groups 			
+Groupe Name	Element of groupe	Similarity between services 	Observation
+A	"{ws9, ws10, ws13, ws20, ws22, ws23, ws26, ws3, ws4}"	[0.98 - 1.00]	-
+B	"{ ws2, ws18 }"	1	
+C	"{ws25, ws27}"	1	same service (WSDL File)
+D	"{ws1, ws12}"	0.938	different types (Float/Double)
+E	"{ws14, ws7}"	0.963	different Message Names

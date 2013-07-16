@@ -1,0 +1,2 @@
+D://Developpement//eclipse//workspace1//WSSIM//wsdl////1personbicycle4wheeledcar_price_service.wsdl
+D://Developpement//eclipse//workspace1//WSSIM//wsdl////Amount-of-moneycarPrice.wsdl

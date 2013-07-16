@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!--
+This is the seekda cache of the WSDL definition available at http://misc-1.conexaossl.com.br/MyService/MyService.WSDL.
+seekdas cache is a snapshot that we took as we crawled the Web.
+The service may have changed since the last crawl.
+seekda is neither affiliated with the authors of this service nor responsible for its advertised functionality.
+
+-->
+
+<!-- Generated 10/02/08 by Microsoft SOAP Toolkit WSDL File Generator, Version 3.00.1325.0 --> 
+<definitions
+	name='MyService'
+	targetNamespace='http://misc-1.conexaossl.com.br/MyService/wsdl/'
+	xmlns:wsdlns='http://misc-1.conexaossl.com.br/MyService/wsdl/'
+	xmlns:typens='http://misc-1.conexaossl.com.br/MyService/type/'
+	xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+	xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+	xmlns:stk='http://schemas.microsoft.com/soap-toolkit/wsdl-extension'
+	xmlns:dime='http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/'
+	xmlns:ref='http://schemas.xmlsoap.org/ws/2002/04/reference/'
+	xmlns:content='http://schemas.xmlsoap.org/ws/2002/04/content-type/'
+	xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+	xmlns='http://schemas.xmlsoap.org/wsdl/'>
+
+	<types>
+		<schema
+			targetNamespace='http://misc-1.conexaossl.com.br/MyService/type/'
+			xmlns='http://www.w3.org/2001/XMLSchema'
+			xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/'
+			xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+			elementFormDefault='qualified'>
+
+			<import namespace='http://schemas.xmlsoap.org/soap/encoding/'/>
+			<import namespace='http://schemas.xmlsoap.org/wsdl/'/>
+			<import namespace='http://schemas.xmlsoap.org/ws/2002/04/reference/'/>
+			<import namespace='http://schemas.xmlsoap.org/ws/2002/04/content-type/'/>
+
+		</schema>
+	</types>
+
+	<message name='Math.add'>
+		<part name='a' type='xsd:short'/>
+		<part name='b' type='xsd:short'/>
+	</message>
+
+	<message name='Math.addResponse'>
+		<part name='Result' type='xsd:short'/>
+	</message>
+
+	<message name='Math.subtract'>
+		<part name='a' type='xsd:short'/>
+		<part name='b' type='xsd:short'/>
+	</message>
+
+	<message name='Math.subtractResponse'>
+		<part name='Result' type='xsd:short'/>
+	</message>
+
+	<message name='Math.multiply'>
+		<part name='a' type='xsd:short'/>
+		<part name='b' type='xsd:short'/>
+	</message>
+
+	<message name='Math.multiplyResponse'>
+		<part name='Result' type='xsd:short'/>
+	</message>
+
+	<message name='Math.divide'>
+		<part name='a' type='xsd:short'/>
+		<part name='b' type='xsd:short'/>
+	</message>
+
+	<message name='Math.divideResponse'>
+		<part name='Result' type='xsd:double'/>
+	</message>
+
+	<portType name='MathSoapPort'>
+
+		<operation name='add' parameterOrder='a b'>
+			<input message='wsdlns:Math.add'/>
+			<output message='wsdlns:Math.addResponse'/>
+		</operation>
+
+		<operation name='subtract' parameterOrder='a b'>
+			<input message='wsdlns:Math.subtract'/>
+			<output message='wsdlns:Math.subtractResponse'/>
+		</operation>
+
+		<operation name='multiply' parameterOrder='a b'>
+			<input message='wsdlns:Math.multiply'/>
+			<output message='wsdlns:Math.multiplyResponse'/>
+		</operation>
+
+		<operation name='divide' parameterOrder='a b'>
+			<input message='wsdlns:Math.divide'/>
+			<output message='wsdlns:Math.divideResponse'/>
+		</operation>
+
+	</portType>
+
+	<binding name='MathSoapBinding' type='wsdlns:MathSoapPort' >
+
+		<stk:binding preferredEncoding='UTF-8'/>
+		<soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/>
+
+		<operation name='add'>
+			<soap:operation soapAction='http://misc-1.conexaossl.com.br/MyService/action/Math.add'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='a b'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+		<operation name='subtract'>
+			<soap:operation soapAction='http://misc-1.conexaossl.com.br/MyService/action/Math.subtract'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='a b'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+		<operation name='multiply'>
+			<soap:operation soapAction='http://misc-1.conexaossl.com.br/MyService/action/Math.multiply'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='a b'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+		<operation name='divide'>
+			<soap:operation soapAction='http://misc-1.conexaossl.com.br/MyService/action/Math.divide'/>
+			<input>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='a b'/>
+			</input>
+			<output>
+				<soap:body
+					use='encoded'
+					namespace='http://misc-1.conexaossl.com.br/MyService/message/'
+					encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'
+					parts='Result'/>
+			</output>
+		</operation>
+
+	</binding>
+
+	<service name='MyService' >
+		<port name='MathSoapPort' binding='wsdlns:MathSoapBinding' >
+			<soap:address location='http://misc-1.conexaossl.com.br/MyService/MyService.WSDL'/>
+		</port>
+	</service>
+
+</definitions>
+

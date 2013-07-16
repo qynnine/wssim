@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://webservices.daehosting.com/dateservice" name="DatesService" targetNamespace="http://webservices.daehosting.com/dateservice">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://webservices.daehosting.com/dateservice">
+      <xs:complexType name="ArrayOfString">
+        <xs:sequence>
+          <xs:element name="string" type="xs:string" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MainLanguages">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MainLanguagesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MainLanguagesResult" type="tns:ArrayOfString"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SubLanguages">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SubLanguagesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SubLanguagesResult" type="tns:ArrayOfString"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SystemDefaultLanguage">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SystemDefaultLanguageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SystemDefaultLanguageResult" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LanguageId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="sMainLanguage" type="xs:string"/>
+            <xs:element name="sSubLanguage" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LanguageIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LanguageIdResult" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DayName">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="iLanguage" type="xs:int"/>
+            <xs:element name="iDay" type="xs:int"/>
+            <xs:element name="bAbbreviated" type="xs:boolean"/>
+  

@@ -1,0 +1,3 @@
+(barcode.xml , barcode.xml = 1.0 | 1.0 )	(barcode.xml , braille.xml = 0.37002608 | 0.43735996 )	(barcode.xml , genericbarcode.xml = 0.60787123 | 0.7106177 )	
+(braille.xml , barcode.xml = 0.0 | 0.0 )	(braille.xml , braille.xml = 1.0 | 1.0 )	(braille.xml , genericbarcode.xml = 0.47693813 | 0.4797778 )	
+(genericbarcode.xml , barcode.xml = 0.0 | 0.0 )	(genericbarcode.xml , braille.xml = 0.0 | 0.0 )	(genericbarcode.xml , genericbarcode.xml = 0.0 | 0.0 )	

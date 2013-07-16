@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/WebService1/Service1" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/WebService1/Service1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/WebService1/Service1">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="WebAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WebAddResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebMultiply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebMultiplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WebMultiplyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LatestWeb">
+        <s:complexType />
+      </s:element>
+      <s:element name="LatestWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LatestWebResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TheLse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TheLseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TheLseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAvail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="coid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="propid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startdate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="stopdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="tranType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAvailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAvailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HarvestA">
+        <s:complexType />
+      </s:element>
+      <s:element name="HarvestAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HarvestAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HarvestR">
+        <s:complexType />
+      </s:element>
+      <s:element name="HarvestRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HarvestRResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HarvestP">
+        <s:complexType />
+      </s:element>
+      <s:element name="HarvestPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HarvestPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitRates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PropID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitRatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitRatesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitAvailability">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PropID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitAvailabilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitAvailabilityResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PropID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalUnits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPortalUnitsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPortalUnitsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyDetailChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastUpdateDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyDetailChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyDetailChangesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitRateUpdates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastUpdateDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitRateUpdatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitRateUpdatesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookingsAndCancellations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastUpdateDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookingsAndCancellationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBookingsAndCancellationsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitImages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Propid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitImagesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitImageChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastUpdateDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitImageChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitImageChangesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnitAvailabilityCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccessKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UnitID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ArrivalDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DepartureDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumberOfNights" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnitAvailabilityCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UnitAvailabilityCheckResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WebAddSoapIn">
+    <wsdl:part name="parameters" element="tns:WebAdd" />
+  </wsdl:message>
+  <wsdl:message name="WebAddSoapOut">
+    <wsdl:part name="parameters" element="tns:WebAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebMultiplySoapIn">
+    <wsdl:part name="parameters" element="tns:WebMultiply" />
+  </wsdl:message>
+  <wsdl:message name="WebMultiplySoapOut">
+    <wsdl:part name="parameters" element="tns:WebMultiplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LatestWebSoapIn">
+    <wsdl:part name="parameters" element="tns:LatestWeb" />
+  </wsdl:message>
+  <wsdl:message name="LatestWebSoapOut">
+    <wsdl:part name="parameters" element="tns:LatestWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="TheLseSoapIn">
+    <wsdl:part name="parameters" element="tns:TheLse" />
+  </wsdl:message>
+  <wsdl:message name="TheLseSoapOut">
+    <wsdl:part name="parameters" element="tns:TheLseResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAvailSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAvail" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAvailSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAvailResponse" />
+  </wsdl:message>
+  <wsdl:message name="HarvestASoapIn">
+    <wsdl:part name="parameters" element="tns:HarvestA" />
+  </wsdl:message>
+  <wsdl:message name="HarvestASoapOut">
+    <wsdl:part name="parameters" element="tns:HarvestAResponse" />
+  </wsdl:message>
+  <wsdl:message name="HarvestRSoapIn">
+    <wsdl:part name="parameters" element="tns:HarvestR" />
+  </wsdl:message>
+  <wsdl:message name="HarvestRSoapOut">
+    <wsdl:part name="parameters" element="tns:HarvestRResponse" />
+  </wsdl:message>
+  <wsdl:message name="HarvestPSoapIn">
+    <wsdl:part name="parameters" element="tns:HarvestP" />
+  </wsdl:message>
+  <wsdl:message name="HarvestPSoapOut">
+    <wsdl:part name="parameters" element="tns:HarvestPResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitRatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitRates" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitRatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitAvailabilitySoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitAvailability" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitAvailabilitySoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropertyDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropertyDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalUnitsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPortalUnits" />
+  </wsdl:message>
+  <wsdl:message name="GetPortalUnitsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPortalUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyDetailChangesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropertyDetailChanges" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyDetailChangesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropertyDetailChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitRateUpdatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitRateUpdates" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitRateUpdatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitRateUpdatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBookingsAndCancellationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBookingsAndCancellations" />
+  </wsdl:message>
+  <wsdl:message name="GetBookingsAndCancellationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBookingsAndCancellationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitImages" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitImageChangesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitImageChanges" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitImageChangesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitImageChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnitAvailabilityCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:UnitAvailabilityCheck" />
+  </wsdl:message>
+  <wsdl:message name="UnitAvailabilityCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:UnitAvailabilityCheckResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="WebAdd">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This method adds x and y.</documentation>
+      <wsdl:input message="tns:WebAddSoapIn" />
+      <wsdl:output message="tns:WebAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WebMultiply">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This method multiplies x by y.</documentation>
+      <wsdl:input message="tns:WebMultiplySoapIn" />
+      <wsdl:output message="tns:WebMultiplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LatestWeb">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This returns the one thing.</documentation>
+      <wsdl:input message="tns:LatestWebSoapIn" />
+      <wsdl:output message="tns:LatestWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TheLse">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This returns the other stuff.</documentation>
+      <wsdl:input message="tns:TheLseSoapIn" />
+      <wsdl:output message="tns:TheLseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAvail">
+      <wsdl:input message="tns:UpdateAvailSoapIn" />
+      <wsdl:output message="tns:UpdateAvailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HarvestA">
+      <wsdl:input message="tns:HarvestASoapIn" />
+      <wsdl:output message="tns:HarvestASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HarvestR">
+      <wsdl:input message="tns:HarvestRSoapIn" />
+      <wsdl:output message="tns:HarvestRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HarvestP">
+      <wsdl:input message="tns:HarvestPSoapIn" />
+      <wsdl:output message="tns:HarvestPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitRates">
+      <wsdl:input message="tns:GetUnitRatesSoapIn" />
+      <wsdl:output message="tns:GetUnitRatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitAvailability">
+      <wsdl:input message="tns:GetUnitAvailabilitySoapIn" />
+      <wsdl:output message="tns:GetUnitAvailabilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyDetails">
+      <wsdl:input message="tns:GetPropertyDetailsSoapIn" />
+      <wsdl:output message="tns:GetPropertyDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalUnits">
+      <wsdl:input message="tns:GetPortalUnitsSoapIn" />
+      <wsdl:output message="tns:GetPortalUnitsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyDetailChanges">
+      <wsdl:input message="tns:GetPropertyDetailChangesSoapIn" />
+      <wsdl:output message="tns:GetPropertyDetailChangesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitRateUpdates">
+      <wsdl:input message="tns:GetUnitRateUpdatesSoapIn" />
+      <wsdl:output message="tns:GetUnitRateUpdatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookingsAndCancellations">
+      <wsdl:input message="tns:GetBookingsAndCancellationsSoapIn" />
+      <wsdl:output message="tns:GetBookingsAndCancellationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitImages">
+      <wsdl:input message="tns:GetUnitImagesSoapIn" />
+      <wsdl:output message="tns:GetUnitImagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitImageChanges">
+      <wsdl:input message="tns:GetUnitImageChangesSoapIn" />
+      <wsdl:output message="tns:GetUnitImageChangesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnitAvailabilityCheck">
+      <wsdl:input message="tns:UnitAvailabilityCheckSoapIn" />
+      <wsdl:output message="tns:UnitAvailabilityCheckSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="WebAdd">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/WebAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebMultiply">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/WebMultiply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LatestWeb">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/LatestWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TheLse">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/TheLse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAvail">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/UpdateAvail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HarvestA">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/HarvestA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HarvestR">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/HarvestR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HarvestP">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/HarvestP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitRates">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetUnitRates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitAvailability">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetUnitAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyDetails">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetPropertyDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalUnits">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetPortalUnits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyDetailChanges">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetPropertyDetailChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitRateUpdates">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetUnitRateUpdates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookingsAndCancellations">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetBookingsAndCancellations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitImages">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetUnitImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitImageChanges">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/GetUnitImageChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnitAvailabilityCheck">
+      <soap:operation soapAction="http://tempuri.org/WebService1/Service1/UnitAvailabilityCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://xml.carolinadesigns.com/webservice1/service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

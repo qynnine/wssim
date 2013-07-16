@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ct="http://datafed.net/xs/CubeTransformer" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://datafed.net/xs/CubeTransformer" xmlns="http://schemas.xmlsoap.org/wsdl/">
+    <documentation>Performs operations on grids.</documentation>
+    <types>
+        <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://datafed.net/xs/DataPrimitives" xmlns="http://datafed.net/xs/DataPrimitives">
+            <xs:simpleType name="DatasetAbbrType">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="DateTimeType">
+                <xs:union memberTypes="xs:dateTime xs:date" />
+            </xs:simpleType>
+            <xs:simpleType name="DateTimeListType">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="DateTimeNowType">
+                <xs:union memberTypes="xs:string xs:dateTime xs:date" />
+            </xs:simpleType>
+            <xs:complexType name="DateTimeRangeType">
+                <xs:sequence>
+                    <xs:element name="time_min" type="DateTimeType" default="1970-01-01T00:00:00" />
+                    <xs:element name="time_max" type="DateTimeNowType" default="now" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="TimeUnitType">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="year" />
+                    <xs:enumeration value="month" />
+                    <xs:enumeration value="week" />
+                    <xs:enumeration value="day" />
+                    <xs:enumeration value="hour" />
+                    <xs:enumeration value="minute" />
+                    <xs:enumeration value="second" />
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="LatLonType">
+                <xs:sequence>
+                    <xs:element name="lat" type="xs:float" default="40" />
+                    <xs:element name="lon" type="xs:float" default="-90" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="LatLonRangeType">
+                <xs:sequence>
+                    <xs:element name="lat_min" type="xs:float" default="-90" />
+                    <xs:element name="lat_max" type="xs:float" default="90" />
+                    <xs:element name="lon_min" type="xs:float" default="-180" />
+                    <xs:element name="lon_max" type="xs:float" default="180" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="RangeType">
+                <xs:sequence>
+                    <xs:element name="min" type="xs:float" default="0" />
+                    <xs:element name="max" type="xs:float" default="1" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="RangeIType">
+                <xs:sequence>
+                    <xs:element name="min" type="xs:int" default="0" />
+                    <xs:element name="max" type="xs:int" default="1" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="LocCodesType">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="LocCodeType">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="mlstring">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="script">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:complexType name="MonthsType">
+                <xs:sequence>
+                    <xs:element name="Jan" type="xs:boolean" default="true" />
+                    <xs:element name="Feb" type="xs:boolean" default="true" />
+                    <xs:element name="Mar" type="xs:boolean" default="true" />
+                    <xs:element name="Apr" type="xs:boolean" default="true" />
+                    <xs:element name="May" type="xs:boolean" default="true" />
+                    <xs:element name="Jun" type="xs:boolean" default="true" />
+                    <xs:element name="Jul" type="xs:boolean" default="true" />
+                    <xs:element name="Aug" type="xs:boolean" default="true" />
+                    <xs:element name="Sep" type="xs:boolean" default="true" />
+                    <xs:element name="Oct" type="xs:boolean" default="true" />
+                    <xs:element name="Nov" type="xs:boolean" default="true" />
+                    <xs:element name="Dec" type="xs:boolean" default="true" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="NumberListType">
+                <!-- should be <xs:list itemType="xs:string" /> but list are not implemented in views -->
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="ParamAbbrType">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="ParamAbbrsType">
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="PositiveFloatType">
+                <xs:restriction base="xs:float">
+                    <xs:minExclusive value="0" />
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="SizeFType">
+                <xs:sequence>
+                    <xs:element name="width" type="xs:float" />
+                    <xs:element name="height" type="xs:float" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SizeIType">
+                <xs:sequence>
+                    <xs:element name="width" type="xs:int" />
+                    <xs:element name="height" type="xs:int" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="ZeroToOneType">
+                <xs:restriction base="xs:float">
+                    <xs:minInclusive value="0" />
+                    <xs:maxInclusive value="1" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://datafed.net/xs/Lineage" xmlns="http://datafed.net/xs/Lineage">
+            <xs:element name="LineageList" type="LineageListType" />
+            <xs:complexType name="LineageListType">
+                <xs:sequence>
+                    <xs:any namespace="##any" processContents="skip" minOccurs="0" maxOccurs="unbounded" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="LineageComment" type="LineageComment" />
+            <xs:complexType name="LineageComment">
+                <xs:sequence>
+                    <xs:element name="subject" type="xs:string" />
+                    <xs:element name="body" type="xs:string" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Statistics" type="Statistics" />
+            <xs:complexType name="Statistics">
+                <xs:sequence>
+                    <xs:element name="sum" type="xs:float" default="0" />
+                    <xs:element name="avg" type="xs:float" default="NaN" />
+                    <xs:element name="min" type="xs:float" default="NaN" />
+                    <xs:element name="max" type="xs:float" default="NaN" />
+                    <xs:element name="null_count" type="xs:int" default="0" />
+                    <xs:element name="total_count" type="xs:int" default="0" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lin="http://datafed.net/xs/Lineage" targetNamespace="http://datafed.net/xs/Cube" xmlns="http://datafed.net/xs/Cube">
+            <xs:import namespace="http://datafed.net/xs/Lineage" schemaLocation="Lineage.xsd" />
+            <xs:element name="Cube" type="CubeType" />
+            <xs:complexType name="CubeType">
+                <xs:sequence>
+                    <xs:element name="CubeRef" type="CubeRefType" default="http://dataserver.net/uri_pointing_to_NetCDF_with_CF2_conventions" />
+                    <xs:element ref="lin:Statistics" minOccurs="0" />
+                    <xs:element ref="lin:LineageList" minOccurs="0" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="CubeFormatType">
+                <xs:annotation>
+                    <xs:appinfo>xs_handler:CAPITA.Wui,CAPITA.Wui.CubeFormats</xs:appinfo>
+                </xs:annotation>
+                <xs:restriction base="xs:string" />
+            </xs:simpleType>
+            <xs:simpleType name="CubeRefType">
+                <xs:restriction base="xs:anyURI" />
+            </xs:simpleType>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cube="http://datafed.net/xs/Cube" targetNamespace="http://datafed.net/xs/CubeTransformer" xmlns:dp="http://datafed.net/xs/DataPrimitives" xmlns="http://datafed.net/xs/CubeTransformer">
+            <xs:import namespace="http://datafed.net/xs/Cube" schemaLocation="Cube.xsd" />
+            <xs:import namespace="http://datafed.net/xs/DataPrimitives" schemaLocation="DataPrimitives.xsd" />
+            <xs:element name="Add">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="grid0" type="cube:CubeType" />
+                        <xs:element name="grid1" type="cube:CubeType" />
+                        <xs:element name="GridAdjustSettings" type="GridAdjustSettingsType" />
+                        <xs:element name="format" type="cube:CubeFormatType" default="internal" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Subtract">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="grid0" type="cube:CubeType" />
+                        <xs:element name="grid1" type="cube:CubeType" />
+                        <xs:element name="GridAdjustSettings" type="GridAdjustSettingsType" />
+                        <xs:element name="format" type="cube:CubeFormatType" default="internal" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Multiply">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="grid0" type="cube:CubeType" />
+                        <xs:element name="grid1" type="cube:CubeType" />
+                        <xs:element name="GridAdjustSettings" type="GridAdjustSettingsType" />
+                        <xs:element name="format" type="cube:CubeFormatType" default="internal" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Divide">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="grid0" type="cube:CubeType" />
+                        <xs:element name="grid1" type="cube:CubeType" />
+                        <xs:element name="GridAdjustSettings" type="GridAdjustSettingsType" />
+                        <xs:element name="format" type="cube:CubeFormatType" default="internal" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Evaluate">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="expression" type="xs:string" />
+                        <xs:element name="grid0" type="cube:CubeType" />
+                        <xs:element name="grid1" type="cube:CubeType" />
+                        <xs:element name="GridAdjustSettings" type="GridAdjustSettingsType" />
+                        <xs:element name="format" type="cube:CubeFormatType" default="internal" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ZeroGridToNaNGrid">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="grid" type="cube:CubeType" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="MakeVector2D">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="output_param_abbr" type="xs:string" />
+                        <xs:element name="units" type="xs:string" />
+                        <xs:element name="style" type="VectorStyles" />
+                        <xs:element name="grid0" type="cube:CubeType" />
+                        <xs:element name="grid1" type="cube:CubeType" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Scale">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="cube:Cube" />
+                        <xs:element name="factor" type="xs:float" default="1" />
+                        <xs:element name="offset" type="xs:float" default="0" />
+                        <xs:element name="format" type="cube:CubeFormatType" default="internal" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Process">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="cube:Cube" />
+                        <xs:element name="Settings" type="ScriptSettingsType" />
+                        <xs:element name="format" type="cube:CubeFormatType" default="internal" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CalculateCFPressure">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="cube:Cube" />
+                        <xs:element name="dataset_abbr" type="dp:DatasetAbbrType" />
+                        <xs:element name="datetime" type="dp:DateTimeType" />
+                        <xs:element name="elev" type="xs:float" />
+                        <xs:element name="lat" type="xs:float" />
+                        <xs:element name="lon" type="xs:float" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="ScriptSettingsType">
+                <xs:sequence>
+                    <xs:element name="constants" type="dp:mlstring" default="real_number = 3.14&#xA;natural_number=5&#xA;text='abc'&#xA;datetime = System.DateTime.Parse('2000-01-02T03:04:05')&#xA;" />
+                    <xs:element name="script" type="dp:script" default="class MyProcessor:&#xA;    def on_init(self, cube):&#xA;        pass&#xA;    def on_calc(self, cell, index):&#xA;        pass&#xA;    def on_done(self, cube):&#xA;        pass&#xA;" />
+                    <xs:element name="context" type="dp:mlstring" default="$(context)" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="VectorStyles">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="U_V" />
+                    <xs:enumeration value="mag_dir" />
+                    <xs:enumeration value="mag" />
+                    <xs:enumeration value="dir" />
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:complexType name="GridAdjustSettingsType">
+                <xs:sequence>
+                    <xs:element name="Dimensions" type="xs:string" default="lat lon" />
+                    <xs:element name="ZoomStyle" type="GridZoomAdjustStylesType" default="must_match" />
+                    <xs:element name="Zoom" type="dp:mlstring" default="" />
+                    <xs:element name="SizeStyle" type="GridSizeAdjustStylesType" default="use_default" />
+                    <xs:element name="Size" type="dp:mlstring" default="" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="GridZoomAdjustStylesType">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="must_match" />
+                    <xs:enumeration value="use_first" />
+                    <xs:enumeration value="use_second" />
+                    <xs:enumeration value="union" />
+                    <xs:enumeration value="intersection" />
+                    <xs:enumeration value="user_defined" />
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType name="GridSizeAdjustStylesType">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="use_default" />
+                    <xs:enumeration value="use_finer" />
+                    <xs:enumeration value="use_coarser" />
+                    <xs:enumeration value="use_first" />
+                    <xs:enumeration value="use_second" />
+                    <xs:enumeration value="user_defined" />
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="CubeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="cube:Cube" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </types>
+    <message name="AddSoapIn">
+        <part name="parameters" element="ct:Add" />
+    </message>
+    <message name="SubtractSoapIn">
+        <part name="parameters" element="ct:Subtract" />
+    </message>
+    <message name="MultiplySoapIn">
+        <part name="parameters" element="ct:Multiply" />
+    </message>
+    <message name="DivideSoapIn">
+        <part name="parameters" element="ct:Divide" />
+    </message>
+    <message name="EvaluateSoapIn">
+        <part name="parameters" element="ct:Evaluate" />
+    </message>
+    <message name="ZeroGridToNaNGridSoapIn">
+        <part name="parameters" element="ct:ZeroGridToNaNGrid" />
+    </message>
+    <message name="MakeVector2DSoapIn">
+        <part name="parameters" element="ct:MakeVector2D" />
+    </message>
+    <message name="Scale">
+        <part name="parameters" element="ct:Scale" />
+    </message>
+    <message name="Process">
+        <part name="parameters" element="ct:Process" />
+    </message>
+    <message name="CalculateCFPressure">
+        <part name="parameters" element="ct:CalculateCFPressure" />
+    </message>
+    <message name="CubeSoapOut">
+        <part name="parameters" element="ct:CubeResponse" />
+    </message>
+    <portType name="CubeTransformerSoap">
+        <operation name="Add">
+            <input message="ct:AddSoapIn" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="Subtract">
+            <input message="ct:SubtractSoapIn" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="Multiply">
+            <input message="ct:MultiplySoapIn" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="Divide">
+            <input message="ct:DivideSoapIn" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="Evaluate">
+            <input message="ct:EvaluateSoapIn" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="ZeroGridToNaNGrid">
+            <input message="ct:ZeroGridToNaNGridSoapIn" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="MakeVector2D">
+            <input message="ct:MakeVector2DSoapIn" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="Scale">
+            <input message="ct:Scale" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="Process">
+            <input message="ct:Process" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+        <operation name="CalculateCFPressure">
+            <input message="ct:CalculateCFPressure" />
+            <output message="ct:CubeSoapOut" />
+        </operation>
+    </portType>
+    <binding name="CubeTransformerSoap" type="ct:CubeTransformerSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+        <operation name="Add">
+            <documentation>Adds two grids.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/Add" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="Subtract">
+            <documentation>Subtracts two grids.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/Subtract" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="Multiply">
+            <documentation>Multiplies two grids.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/Multiply" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="Divide">
+            <documentation>Divides two grids.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/Divide" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="Evaluate">
+            <documentation>Evaluates an expression between corresponding cells in two grids.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/Evaluate" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="ZeroGridToNaNGrid">
+            <documentation>If there are no non-zero values in this grid, all the values will be set to zero.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/ZeroGridToNaNGrid" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="MakeVector2D">
+            <documentation>Makes one 2D vector grid out of two grids.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/MakeVector2D" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="Scale">
+            <documentation>Performs new = factor * old + offset for each cell.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/Scale" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="Process">
+            <documentation>Let's IronPython do the job.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/Process" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+        <operation name="CalculateCFPressure">
+            <documentation>Calculate CF Pressures.</documentation>
+            <soap:operation soapAction="http://datafed.net/CubeTransformer/CalculateCFPressure" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+    </binding>
+    <service name="CubeTransformer">
+        <port name="CubeTransformerSoap" binding="ct:CubeTransformerSoap">
+            <soap:address location="http://webapps.datafed.net/CubeTransformer.asmx" />
+        </port>
+    </service>
+</definitions>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+This is the seekda cache of the WSDL definition available at http://zvs.deep.ch/ws/ZVSTest.wsdl.
+seekdas cache is a snapshot that we took as we crawled the Web.
+The service may have changed since the last crawl.
+seekda is neither affiliated with the authors of this service nor responsible for its advertised functionality.
+
+-->
+
+<definitions
+	name="ZVSTest"
+	targetNamespace="http://zvs.deep.ch/ws/ZVSTest"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://zvs.deep.ch/ws/ZVSTest"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+	<message name="addRequest">
+		<part name="sum1" type="xsd:double"/>
+		<part name="sum2" type="xsd:double"/>
+	</message>
+	<message name="addResponse">
+		<part name="addResult" type="xsd:double"/>
+	</message>
+	<message name="multiplyRequest">
+		<part name="mul1" type="xsd:float"/>
+		<part name="mul2" type="xsd:float"/>
+	</message>
+	<message name="multiplyResponse">
+		<part name="multiplyResult" type="xsd:float"/>
+	</message>
+	<message name="sayRequest">
+		<part name="something" type="xsd:string"/>
+	</message>
+	<message name="sayResponse">
+		<part name="someString" type="xsd:string"/>
+	</message>
+	<portType name="ZVSTestPortType">
+		<operation name="add" parameterOrder="sum1">
+			<input message="tns:addRequest"/>
+			<output message="tns:addResponse"/>
+		</operation>
+		<operation name="multiply" parameterOrder="mul1">
+			<input message="tns:multiplyRequest"/>
+			<output message="tns:multiplyResponse"/>
+		</operation>
+		<operation name="say" parameterOrder="something">
+			<input message="tns:sayRequest"/>
+			<output message="tns:sayResponse"/>
+		</operation>
+	</portType>
+	<binding name="ZVSTestBinding" type="tns:ZVSTestPortType">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="add">
+		<soap:operation soapAction="http://zvs.deep.ch/ws/ZVSTest#add"/>
+			<input>
+				<soap:body 	use="encoded"
+							namespace="urn:http://zvs.deep.ch/ws/"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body 	use="encoded"
+							namespace="urn:http://zvs.deep.ch/ws/"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="multiply">
+			<soap:operation soapAction="http://zvs.deep.ch/ws/ZVSTest#multiply"/>
+			<input>
+				<soap:body	use="encoded"
+							namespace="urn:http://zvs.deep.ch/ws/"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body	use="encoded"
+							namespace="urn:http://zvs.deep.ch/ws/"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="say">
+			<soap:operation soapAction="http://zvs.deep.ch/ws/ZVSTest#say"/>
+			<input>
+			<soap:body	use="encoded"
+						namespace="urn:http://zvs.deep.ch/ws/"
+						encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body 	use="encoded"
+							namespace="urn:http://zvs.deep.ch/ws/"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ZVSTestService">
+		<documentation>
+			ZVS test SOAP webservice
+		</documentation>
+		<port name="ZVSTestPort" binding="tns:ZVSTestBinding">
+			<soap:address location="http://zvs.deep.ch/ws/testserver.php"/>
+		</port>
+	</service>
+</definitions>

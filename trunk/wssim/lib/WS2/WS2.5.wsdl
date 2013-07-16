@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://unicell.co.il/smssvc/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://unicell.co.il/smssvc/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service to enable sending of SMS messages</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://unicell.co.il/smssvc/">
+      <s:element name="SendWapPush">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageDesc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recepients" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaSendTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaObseleteTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendWapPushResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendWapPushResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendWorldSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recepients" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaSendTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaObseleteTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendWorldSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendWorldSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSimpleSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recepients" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaSendTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaObseleteTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSimpleSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSimpleSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSimpleNPSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Text70" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Text126" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Text160" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recepients" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaSendTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeltaObseleteTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSimpleNPSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSimpleNPSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchBlockPhones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlockType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchBlockPhonesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchBlockPhonesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBlockPhones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlockType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBlockPhonesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateBlockPhonesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendWapPushSoapIn">
+    <wsdl:part name="parameters" element="tns:SendWapPush" />
+  </wsdl:message>
+  <wsdl:message name="SendWapPushSoapOut">
+    <wsdl:part name="parameters" element="tns:SendWapPushResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendWorldSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendWorldSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendWorldSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendWorldSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSimpleSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSimpleSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleNPSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSimpleNPSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleNPSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSimpleNPSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchBlockPhonesSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchBlockPhones" />
+  </wsdl:message>
+  <wsdl:message name="SearchBlockPhonesSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchBlockPhonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlockPhonesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBlockPhones" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlockPhonesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBlockPhonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendWapPushHttpGetIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageDesc" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+    <wsdl:part name="Url" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendWapPushHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendWorldSMSHttpGetIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageText" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendWorldSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleSMSHttpGetIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageText" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleNPSMSHttpGetIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageText" type="s:string" />
+    <wsdl:part name="Text70" type="s:string" />
+    <wsdl:part name="Text126" type="s:string" />
+    <wsdl:part name="Text160" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleNPSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBlockPhonesHttpGetIn">
+    <wsdl:part name="Phone" type="s:string" />
+    <wsdl:part name="BlockType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBlockPhonesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlockPhonesHttpGetIn">
+    <wsdl:part name="Phone" type="s:string" />
+    <wsdl:part name="BlockType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlockPhonesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SendWapPushHttpPostIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageDesc" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+    <wsdl:part name="Url" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendWapPushHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendWorldSMSHttpPostIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageText" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendWorldSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleSMSHttpPostIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageText" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleNPSMSHttpPostIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="EventName" type="s:string" />
+    <wsdl:part name="MessageText" type="s:string" />
+    <wsdl:part name="Text70" type="s:string" />
+    <wsdl:part name="Text126" type="s:string" />
+    <wsdl:part name="Text160" type="s:string" />
+    <wsdl:part name="Recepients" type="s:string" />
+    <wsdl:part name="DeltaSendTime" type="s:string" />
+    <wsdl:part name="DeltaObseleteTime" type="s:string" />
+    <wsdl:part name="Signature" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSimpleNPSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBlockPhonesHttpPostIn">
+    <wsdl:part name="Phone" type="s:string" />
+    <wsdl:part name="BlockType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchBlockPhonesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlockPhonesHttpPostIn">
+    <wsdl:part name="Phone" type="s:string" />
+    <wsdl:part name="BlockType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlockPhonesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="SMSSvcSoap">
+    <wsdl:operation name="SendWapPush">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send a WapPush Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendWapPushSoapIn" />
+      <wsdl:output message="tns:SendWapPushSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorldSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send a simple World SMS Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendWorldSMSSoapIn" />
+      <wsdl:output message="tns:SendWorldSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a simple SMS Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendSimpleSMSSoapIn" />
+      <wsdl:output message="tns:SendSimpleSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleNPSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a simple SMS Message with Number Portability to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendSimpleNPSMSSoapIn" />
+      <wsdl:output message="tns:SendSimpleNPSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBlockPhones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search Block Phone Numbers</wsdl:documentation>
+      <wsdl:input message="tns:SearchBlockPhonesSoapIn" />
+      <wsdl:output message="tns:SearchBlockPhonesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlockPhones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Block Phone Numbers</wsdl:documentation>
+      <wsdl:input message="tns:UpdateBlockPhonesSoapIn" />
+      <wsdl:output message="tns:UpdateBlockPhonesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSSvcHttpGet">
+    <wsdl:operation name="SendWapPush">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send a WapPush Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendWapPushHttpGetIn" />
+      <wsdl:output message="tns:SendWapPushHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorldSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send a simple World SMS Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendWorldSMSHttpGetIn" />
+      <wsdl:output message="tns:SendWorldSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a simple SMS Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendSimpleSMSHttpGetIn" />
+      <wsdl:output message="tns:SendSimpleSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleNPSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a simple SMS Message with Number Portability to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendSimpleNPSMSHttpGetIn" />
+      <wsdl:output message="tns:SendSimpleNPSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBlockPhones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search Block Phone Numbers</wsdl:documentation>
+      <wsdl:input message="tns:SearchBlockPhonesHttpGetIn" />
+      <wsdl:output message="tns:SearchBlockPhonesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlockPhones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Block Phone Numbers</wsdl:documentation>
+      <wsdl:input message="tns:UpdateBlockPhonesHttpGetIn" />
+      <wsdl:output message="tns:UpdateBlockPhonesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSSvcHttpPost">
+    <wsdl:operation name="SendWapPush">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send a WapPush Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendWapPushHttpPostIn" />
+      <wsdl:output message="tns:SendWapPushHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorldSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send a simple World SMS Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendWorldSMSHttpPostIn" />
+      <wsdl:output message="tns:SendWorldSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a simple SMS Message to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendSimpleSMSHttpPostIn" />
+      <wsdl:output message="tns:SendSimpleSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleNPSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sends a simple SMS Message with Number Portability to one or multiply recipients.</wsdl:documentation>
+      <wsdl:input message="tns:SendSimpleNPSMSHttpPostIn" />
+      <wsdl:output message="tns:SendSimpleNPSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBlockPhones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search Block Phone Numbers</wsdl:documentation>
+      <wsdl:input message="tns:SearchBlockPhonesHttpPostIn" />
+      <wsdl:output message="tns:SearchBlockPhonesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlockPhones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update Block Phone Numbers</wsdl:documentation>
+      <wsdl:input message="tns:UpdateBlockPhonesHttpPostIn" />
+      <wsdl:output message="tns:UpdateBlockPhonesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMSSvcSoap" type="tns:SMSSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendWapPush">
+      <soap:operation soapAction="http://unicell.co.il/smssvc/SendWapPush" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWorldSMS">
+      <soap:operation soapAction="http://unicell.co.il/smssvc/SendWorldSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleSMS">
+      <soap:operation soapAction="http://unicell.co.il/smssvc/SendSimpleSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleNPSMS">
+      <soap:operation soapAction="http://unicell.co.il/smssvc/SendSimpleNPSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBlockPhones">
+      <soap:operation soapAction="http://unicell.co.il/smssvc/SearchBlockPhones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlockPhones">
+      <soap:operation soapAction="http://unicell.co.il/smssvc/UpdateBlockPhones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSSvcSoap12" type="tns:SMSSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendWapPush">
+      <soap12:operation soapAction="http://unicell.co.il/smssvc/SendWapPush" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWorldSMS">
+      <soap12:operation soapAction="http://unicell.co.il/smssvc/SendWorldSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleSMS">
+      <soap12:operation soapAction="http://unicell.co.il/smssvc/SendSimpleSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleNPSMS">
+      <soap12:operation soapAction="http://unicell.co.il/smssvc/SendSimpleNPSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBlockPhones">
+      <soap12:operation soapAction="http://unicell.co.il/smssvc/SearchBlockPhones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlockPhones">
+      <soap12:operation soapAction="http://unicell.co.il/smssvc/UpdateBlockPhones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSSvcHttpGet" type="tns:SMSSvcHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendWapPush">
+      <http:operation location="/SendWapPush" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWorldSMS">
+      <http:operation location="/SendWorldSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleSMS">
+      <http:operation location="/SendSimpleSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleNPSMS">
+      <http:operation location="/SendSimpleNPSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBlockPhones">
+      <http:operation location="/SearchBlockPhones" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlockPhones">
+      <http:operation location="/UpdateBlockPhones" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSSvcHttpPost" type="tns:SMSSvcHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendWapPush">
+      <http:operation location="/SendWapPush" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWorldSMS">
+      <http:operation location="/SendWorldSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleSMS">
+      <http:operation location="/SendSimpleSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSimpleNPSMS">
+      <http:operation location="/SendSimpleNPSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBlockPhones">
+      <http:operation location="/SearchBlockPhones" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlockPhones">
+      <http:operation location="/UpdateBlockPhones" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMSSvc">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service to enable sending of SMS messages</wsdl:documentation>
+    <wsdl:port name="SMSSvcSoap" binding="tns:SMSSvcSoap">
+      <soap:address location="http://usm.unicell.co.il/sms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSSvcSoap12" binding="tns:SMSSvcSoap12">
+      <soap12:address location="http://usm.unicell.co.il/sms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSSvcHttpGet" binding="tns:SMSSvcHttpGet">
+      <http:address location="http://usm.unicell.co.il/sms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSSvcHttpPost" binding="tns:SMSSvcHttpPost">
+      <http:address location="http://usm.unicell.co.il/sms.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

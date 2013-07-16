@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="IBRSClaimPricerservice" targetNamespace="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns1="http://www.borland.com/namespaces/Types" xmlns:ns2="urn:uBRSClaimPricerIntf">
+<xs:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <types>
+    <xs:schema targetNamespace="http://www.borland.com/namespaces/Types" xmlns="http://www.borland.com/namespaces/Types">
+      <xs:complexType name="TStringDynArray">
+        <xs:complexContent>
+          <xs:restriction base="soapenc:Array">
+            <xs:sequence/>
+            <xs:attribute ref="soapenc:arrayType" n1:arrayType="xs:string[]" xmlns:n1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema targetNamespace="urn:uBRSClaimPricerIntf" xmlns="urn:uBRSClaimPricerIntf">
+      <xs:complexType name="AuthHeader">
+        <xs:sequence>
+          <xs:element name="UserID" type="xs:int"/>
+          <xs:element name="SessionID" type="xs:string"/>
+          <xs:element name="Key" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="CreateSession0Request">
+    <part name="Mode" type="xs:int"/>
+    <part name="Authorization" type="xs:string"/>
+    <part name="Key" type="xs:string"/>
+  </message>
+  <message name="CreateSession0Response">
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="CreateSession0headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="CreateSession0headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PhysicianServicesClaim1Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="Year" type="xs:int"/>
+    <part name="PhyType" type="xs:int"/>
+    <part name="Specialty" type="xs:int"/>
+    <part name="PayType" type="xs:int"/>
+    <part name="zip" type="xs:string"/>
+    <part name="DiagCodes" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="PhysicianServicesClaim1Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="PhysicianServicesClaim1headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PhysicianServicesClaim1headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="AmbulatorySurgeryClaim2Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="Year" type="xs:int"/>
+    <part name="PayType" type="xs:int"/>
+    <part name="zip" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="AmbulatorySurgeryClaim2Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="AmbulatorySurgeryClaim2headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="AmbulatorySurgeryClaim2headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HospitalOutpatientClaim3Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="PayType" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="HospitalNo" type="xs:string"/>
+    <part name="Zip" type="xs:string"/>
+    <part name="TypeOfBill" type="xs:string"/>
+    <part name="Sex" type="xs:string"/>
+    <part name="Dob" type="xs:string"/>
+    <part name="FromDate" type="xs:string"/>
+    <part name="ThroughDate" type="xs:string"/>
+    <part name="ConditionCodes" type="xs:string"/>
+    <part name="DiagCodes" type="xs:string"/>
+    <part name="AdmitDiagCode" type="xs:string"/>
+    <part name="PatientStatus" type="xs:string"/>
+    <part name="ValueCodes" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="HospitalOutpatientClaim3Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="HospitalOutpatientClaim3headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HospitalOutpatientClaim3headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="AmbulanceClaim4Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="Year" type="xs:int"/>
+    <part name="PayType" type="xs:int"/>
+    <part name="zip" type="xs:string"/>
+    <part name="DiagCodes" type="xs:string"/>
+    <part name="UseCMSPrevailingRates" type="xs:boolean"/>
+    <part name="AmbulanceHangerState" type="xs:string"/>
+    <part name="BillingMethod" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="AmbulanceClaim4Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="AmbulanceClaim4headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="AmbulanceClaim4headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="EsrdClaim5Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="Zip" type="xs:string"/>
+    <part name="Dob" type="xs:string"/>
+    <part name="FromDate" type="xs:string"/>
+    <part name="ThroughDate" type="xs:string"/>
+    <part name="ConditionCodes" type="xs:string"/>
+    <part name="DiagCodes" type="xs:string"/>
+    <part name="ValueCodes" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="EsrdClaim5Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="EsrdClaim5headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="EsrdClaim5headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="SnfClaim6Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="TypeOfBill" type="xs:string"/>
+    <part name="Zip" type="xs:string"/>
+    <part name="PrincDiagCode" type="xs:string"/>
+    <part name="OtherDiagCodes" type="xs:string"/>
+    <part name="FromDate" type="xs:string"/>
+    <part name="ThroughDate" type="xs:string"/>
+    <part name="ValueCodes" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="SnfClaim6Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="SnfClaim6headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="SnfClaim6headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HhaClaim7Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="TypeOfBill" type="xs:string"/>
+    <part name="AdmitDate" type="xs:string"/>
+    <part name="FromDate" type="xs:string"/>
+    <part name="ThroughDate" type="xs:string"/>
+    <part name="AdmitSrc" type="xs:string"/>
+    <part name="PatientZip" type="xs:string"/>
+    <part name="PatientStatus" type="xs:string"/>
+    <part name="ValueCodes" type="xs:string"/>
+    <part name="RAP_WasSubmitted" type="xs:boolean"/>
+    <part name="EpisodeSequence" type="xs:int"/>
+    <part name="TreatmentAuthorizationCode" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="HhaClaim7Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="HhaClaim7headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HhaClaim7headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="InpatientPsychClaim8Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="TypeOfBill" type="xs:string"/>
+    <part name="Sex" type="xs:string"/>
+    <part name="Dob" type="xs:string"/>
+    <part name="AdmitDate" type="xs:string"/>
+    <part name="DischargeDate" type="xs:string"/>
+    <part name="AdmitSrc" type="xs:string"/>
+    <part name="DischargeStatus" type="xs:string"/>
+    <part name="ConditionCodes" type="xs:string"/>
+    <part name="PrincDiagCode" type="xs:string"/>
+    <part name="OtherDiagCodes" type="xs:string"/>
+    <part name="PrincProcedure" type="xs:string"/>
+    <part name="OtherProcedures" type="xs:string"/>
+    <part name="Drg" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="InpatientPsychClaim8Response">
+    <part name="Drg" type="xs:int"/>
+    <part name="GroupedDrg" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="InpatientPsychClaim8headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="InpatientPsychClaim8headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="LtcClaim9Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="TypeOfBill" type="xs:string"/>
+    <part name="Sex" type="xs:string"/>
+    <part name="Dob" type="xs:string"/>
+    <part name="AdmitDate" type="xs:string"/>
+    <part name="DischargeDate" type="xs:string"/>
+    <part name="DischargeStatus" type="xs:string"/>
+    <part name="ConditionCodes" type="xs:string"/>
+    <part name="PrincDiagCode" type="xs:string"/>
+    <part name="OtherDiagCodes" type="xs:string"/>
+    <part name="PrincProcedure" type="xs:string"/>
+    <part name="OtherProcedures" type="xs:string"/>
+    <part name="Drg" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="LtcClaim9Response">
+    <part name="Drg" type="xs:int"/>
+    <part name="GroupedDrg" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="LtcClaim9headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="LtcClaim9headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="InpatientRehabClaim10Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="TypeOfBill" type="xs:string"/>
+    <part name="AdmitDate" type="xs:string"/>
+    <part name="DischargeDate" type="xs:string"/>
+    <part name="CoveredDays" type="xs:int"/>
+    <part name="PatientStatus" type="xs:string"/>
+    <part name="ConditionCodes" type="xs:string"/>
+    <part name="LifetimeReserveDays" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="InpatientRehabClaim10Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="InpatientRehabClaim10headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="InpatientRehabClaim10headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="DRGClaim11Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="TypeOfBill" type="xs:string"/>
+    <part name="Sex" type="xs:string"/>
+    <part name="Dob" type="xs:string"/>
+    <part name="AdmitDate" type="xs:string"/>
+    <part name="DischargeDate" type="xs:string"/>
+    <part name="DischargeStatus" type="xs:string"/>
+    <part name="PrincDiagCode" type="xs:string"/>
+    <part name="OtherDiagCodes" type="xs:string"/>
+    <part name="PrincProcedure" type="xs:string"/>
+    <part name="OtherProcedures" type="xs:string"/>
+    <part name="ConditionCodes" type="xs:string"/>
+    <part name="ValueCodes" type="xs:string"/>
+    <part name="POA" type="xs:string"/>
+    <part name="Drg" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="DRGClaim11Response">
+    <part name="Drg" type="xs:int"/>
+    <part name="GroupedDrg" type="xs:int"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="DRGClaim11headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="DRGClaim11headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HospiceClaim12Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="NPI" type="xs:string"/>
+    <part name="ProviderNo" type="xs:string"/>
+    <part name="ValueCodes" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+  </message>
+  <message name="HospiceClaim12Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="HospiceClaim12headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HospiceClaim12headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="ClaimLinesSchema13Request">
+    <part name="ProviderType" type="xs:int"/>
+  </message>
+  <message name="ClaimLinesSchema13Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="ClaimLinesSchema13headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="ClaimLinesSchema13headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HcpcsDescription14Request">
+    <part name="Year" type="xs:int"/>
+    <part name="Hcpcs" type="xs:string"/>
+    <part name="Mod1" type="xs:string"/>
+    <part name="Mod2" type="xs:string"/>
+  </message>
+  <message name="HcpcsDescription14Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="HcpcsDescription14headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="HcpcsDescription14headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="RevCodeDescription15Request">
+    <part name="RevCode" type="xs:string"/>
+  </message>
+  <message name="RevCodeDescription15Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RevCodeDescription15headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="RevCodeDescription15headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="Version16Request"/>
+  <message name="Version16Response">
+    <part name="Details" type="xs:string"/>
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="Version16headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="Version16headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceH145017Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="ID" type="xs:string"/>
+    <part name="Incomplete" type="xs:boolean"/>
+    <part name="ProviderType" type="xs:int"/>
+    <part name="ClaimFields" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+    <part name="OverrideInstructions" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+  </message>
+  <message name="PriceH145017Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Allowance" type="xs:double"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="Errors" type="xs:string"/>
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="PriceH145017headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceH145017headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceCMS150018Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="ID" type="xs:string"/>
+    <part name="Incomplete" type="xs:boolean"/>
+    <part name="ProviderType" type="xs:int"/>
+    <part name="ClaimFields" type="xs:string"/>
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="ShowDescription" type="xs:boolean"/>
+    <part name="ShowNarrative" type="xs:boolean"/>
+    <part name="ShowDetails" type="xs:boolean"/>
+    <part name="OverrideInstructions" type="xs:string"/>
+    <part name="Info" type="xs:string"/>
+  </message>
+  <message name="PriceCMS150018Response">
+    <part name="ClaimLines" type="xs:string"/>
+    <part name="Allowance" type="xs:double"/>
+    <part name="Info" type="xs:string"/>
+    <part name="Warnings" type="xs:string"/>
+    <part name="Errors" type="xs:string"/>
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="PriceCMS150018headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceCMS150018headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="SqlSelect19Request">
+    <part name="DbId" type="xs:int"/>
+    <part name="Statement" type="xs:string"/>
+  </message>
+  <message name="SqlSelect19Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="SqlSelect19headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="SqlSelect19headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="GetModelingSchedule20Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="Global" type="xs:boolean"/>
+  </message>
+  <message name="GetModelingSchedule20Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="GetModelingSchedule20headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="GetModelingSchedule20headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="ListModelingSchedules21Request"/>
+  <message name="ListModelingSchedules21Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="ListModelingSchedules21headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="ListModelingSchedules21headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceClaim22Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="HeaderFields" type="xs:string"/>
+    <part name="LineFields" type="xs:string"/>
+    <part name="Header" type="xs:string"/>
+    <part name="Lines" type="ns1:TStringDynArray"/>
+  </message>
+  <message name="PriceClaim22Response">
+    <part name="Header" type="xs:string"/>
+    <part name="Lines" type="ns1:TStringDynArray"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="PriceClaim22headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceClaim22headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PhysicianSpecialty23Request">
+    <part name="Id" type="xs:int"/>
+  </message>
+  <message name="PhysicianSpecialty23Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="PhysicianSpecialty23headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PhysicianSpecialty23headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceClaimXML24Request">
+    <part name="FeeId" type="xs:int"/>
+    <part name="WeirdCode" type="xs:int"/>
+    <part name="IOmerge" type="xs:boolean"/>
+    <part name="MsgDelim" type="xs:string"/>
+    <part name="ClaimXMLData" type="xs:string"/>
+  </message>
+  <message name="PriceClaimXML24Response">
+    <part name="ClaimXMLData" type="xs:string"/>
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="PriceClaimXML24headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="PriceClaimXML24headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="MessageDescription25Request">
+    <part name="Code" type="xs:string"/>
+  </message>
+  <message name="MessageDescription25Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="MessageDescription25headerRequest">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <message name="MessageDescription25headerResponse">
+    <part name="AuthHeader" type="ns2:AuthHeader"/>
+  </message>
+  <portType name="IBRSClaimPricer">
+    <operation name="CreateSession">
+      <input message="tns:CreateSession0Request"/>
+      <output message="tns:CreateSession0Response"/>
+    </operation>
+    <operation name="PhysicianServicesClaim">
+      <input message="tns:PhysicianServicesClaim1Request"/>
+      <output message="tns:PhysicianServicesClaim1Response"/>
+    </operation>
+    <operation name="AmbulatorySurgeryClaim">
+      <input message="tns:AmbulatorySurgeryClaim2Request"/>
+      <output message="tns:AmbulatorySurgeryClaim2Response"/>
+    </operation>
+    <operation name="HospitalOutpatientClaim">
+      <input message="tns:HospitalOutpatientClaim3Request"/>
+      <output message="tns:HospitalOutpatientClaim3Response"/>
+    </operation>
+    <operation name="AmbulanceClaim">
+      <input message="tns:AmbulanceClaim4Request"/>
+      <output message="tns:AmbulanceClaim4Response"/>
+    </operation>
+    <operation name="EsrdClaim">
+      <input message="tns:EsrdClaim5Request"/>
+      <output message="tns:EsrdClaim5Response"/>
+    </operation>
+    <operation name="SnfClaim">
+      <input message="tns:SnfClaim6Request"/>
+      <output message="tns:SnfClaim6Response"/>
+    </operation>
+    <operation name="HhaClaim">
+      <input message="tns:HhaClaim7Request"/>
+      <output message="tns:HhaClaim7Response"/>
+    </operation>
+    <operation name="InpatientPsychClaim">
+      <input message="tns:InpatientPsychClaim8Request"/>
+      <output message="tns:InpatientPsychClaim8Response"/>
+    </operation>
+    <operation name="LtcClaim">
+      <input message="tns:LtcClaim9Request"/>
+      <output message="tns:LtcClaim9Response"/>
+    </operation>
+    <operation name="InpatientRehabClaim">
+      <input message="tns:InpatientRehabClaim10Request"/>
+      <output message="tns:InpatientRehabClaim10Response"/>
+    </operation>
+    <operation name="DRGClaim">
+      <input message="tns:DRGClaim11Request"/>
+      <output message="tns:DRGClaim11Response"/>
+    </operation>
+    <operation name="HospiceClaim">
+      <input message="tns:HospiceClaim12Request"/>
+      <output message="tns:HospiceClaim12Response"/>
+    </operation>
+    <operation name="ClaimLinesSchema">
+      <input message="tns:ClaimLinesSchema13Request"/>
+      <output message="tns:ClaimLinesSchema13Response"/>
+    </operation>
+    <operation name="HcpcsDescription">
+      <input message="tns:HcpcsDescription14Request"/>
+      <output message="tns:HcpcsDescription14Response"/>
+    </operation>
+    <operation name="RevCodeDescription">
+      <input message="tns:RevCodeDescription15Request"/>
+      <output message="tns:RevCodeDescription15Response"/>
+    </operation>
+    <operation name="Version">
+      <input message="tns:Version16Request"/>
+      <output message="tns:Version16Response"/>
+    </operation>
+    <operation name="PriceH1450">
+      <input message="tns:PriceH145017Request"/>
+      <output message="tns:PriceH145017Response"/>
+    </operation>
+    <operation name="PriceCMS1500">
+      <input message="tns:PriceCMS150018Request"/>
+      <output message="tns:PriceCMS150018Response"/>
+    </operation>
+    <operation name="SqlSelect">
+      <input message="tns:SqlSelect19Request"/>
+      <output message="tns:SqlSelect19Response"/>
+    </operation>
+    <operation name="GetModelingSchedule">
+      <input message="tns:GetModelingSchedule20Request"/>
+      <output message="tns:GetModelingSchedule20Response"/>
+    </operation>
+    <operation name="ListModelingSchedules">
+      <input message="tns:ListModelingSchedules21Request"/>
+      <output message="tns:ListModelingSchedules21Response"/>
+    </operation>
+    <operation name="PriceClaim">
+      <input message="tns:PriceClaim22Request"/>
+      <output message="tns:PriceClaim22Response"/>
+    </operation>
+    <operation name="PhysicianSpecialty">
+      <input message="tns:PhysicianSpecialty23Request"/>
+      <output message="tns:PhysicianSpecialty23Response"/>
+    </operation>
+    <operation name="PriceClaimXML">
+      <input message="tns:PriceClaimXML24Request"/>
+      <output message="tns:PriceClaimXML24Response"/>
+    </operation>
+    <operation name="MessageDescription">
+      <input message="tns:MessageDescription25Request"/>
+      <output message="tns:MessageDescription25Response"/>
+    </operation>
+  </portType>
+  <binding name="IBRSClaimPricerbinding" type="tns:IBRSClaimPricer">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CreateSession">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#CreateSession" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:CreateSession0headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:CreateSession0headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="PhysicianServicesClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#PhysicianServicesClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PhysicianServicesClaim1headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PhysicianServicesClaim1headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="AmbulatorySurgeryClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#AmbulatorySurgeryClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:AmbulatorySurgeryClaim2headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:AmbulatorySurgeryClaim2headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="HospitalOutpatientClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#HospitalOutpatientClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HospitalOutpatientClaim3headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HospitalOutpatientClaim3headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="AmbulanceClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#AmbulanceClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:AmbulanceClaim4headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:AmbulanceClaim4headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="EsrdClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#EsrdClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:EsrdClaim5headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:EsrdClaim5headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="SnfClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#SnfClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:SnfClaim6headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:SnfClaim6headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="HhaClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#HhaClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HhaClaim7headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HhaClaim7headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="InpatientPsychClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#InpatientPsychClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:InpatientPsychClaim8headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:InpatientPsychClaim8headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="LtcClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#LtcClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:LtcClaim9headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:LtcClaim9headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="InpatientRehabClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#InpatientRehabClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:InpatientRehabClaim10headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:InpatientRehabClaim10headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="DRGClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#DRGClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:DRGClaim11headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:DRGClaim11headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="HospiceClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#HospiceClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HospiceClaim12headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HospiceClaim12headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="ClaimLinesSchema">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#ClaimLinesSchema" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:ClaimLinesSchema13headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:ClaimLinesSchema13headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="HcpcsDescription">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#HcpcsDescription" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HcpcsDescription14headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:HcpcsDescription14headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="RevCodeDescription">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#RevCodeDescription" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:RevCodeDescription15headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:RevCodeDescription15headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="Version">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#Version" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:Version16headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:Version16headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="PriceH1450">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#PriceH1450" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceH145017headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceH145017headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="PriceCMS1500">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#PriceCMS1500" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceCMS150018headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceCMS150018headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="SqlSelect">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#SqlSelect" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:SqlSelect19headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:SqlSelect19headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="GetModelingSchedule">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#GetModelingSchedule" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:GetModelingSchedule20headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:GetModelingSchedule20headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="ListModelingSchedules">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#ListModelingSchedules" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:ListModelingSchedules21headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:ListModelingSchedules21headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="PriceClaim">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#PriceClaim" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceClaim22headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceClaim22headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="PhysicianSpecialty">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#PhysicianSpecialty" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PhysicianSpecialty23headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PhysicianSpecialty23headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="PriceClaimXML">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#PriceClaimXML" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceClaimXML24headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:PriceClaimXML24headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+    <operation name="MessageDescription">
+      <soap:operation soapAction="urn:uBRSClaimPricerIntf-IBRSClaimPricer#MessageDescription" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:MessageDescription25headerRequest" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf-IBRSClaimPricer"/>
+        <soap:header use="encoded" message="tns:MessageDescription25headerResponse" part="AuthHeader" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:uBRSClaimPricerIntf"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="IBRSClaimPricerservice">
+    <port name="IBRSClaimPricerPort" binding="tns:IBRSClaimPricerbinding">
+      <soap:address location="http://207.59.236.123/pricer-cgi/pricer_out.dll/soap/IBRSClaimPricer"/>
+    </port>
+  </service>
+</definitions>
+

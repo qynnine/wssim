@@ -1,0 +1,3076 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Firefox 2.0 breaks client-side XSL for RSS and Atom feeds
+This seems like a small thing, but it bothers me: For RSS and Atom feeds, Firefox ignores client-side XSL transformations in favor of its own new enhanced rendering. The only way to work around this issue is to stuff 512 bytes or more of XML comment text before the initial feed tag -->
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/Information/News/rss/ebinews.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>  
+    <title>EBI News</title>
+    <link>http://www.ebi.ac.uk/Information/News/news.html</link>
+    <description>EBI News feed</description>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 20 Oct 2010 14:57:17 GMT</lastBuildDate> 
+	
+    <image>
+      <title>EBI News</title>
+      <url>http://www.ebi.ac.uk/Information/images/newsfeed.jpg</url>
+      <link>http://www.ebi.ac.uk/Information/News/news.html</link>      
+    </image>
+	
+	
+	<item>
+      <title>The 1000 Genomes Project Pilot Phase Complete</title>
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_646</link>
+      <description>The 1000 Genomes Project, a major international
+                collaboration to build a detailed map of human genetic variation, has
+                completed its pilot phase. The results are now published in the journal
+                Nature and freely available through the EBI. The study provides valuable
+                insights into the nature of human genetic variation and will underpin the
+                next phase of human genetic research.
+	  </description>
+      <pubDate>Thu, 28 Oct 2010 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_646</guid>
+    </item>
+
+	<item>
+      <title>InterPro release 29.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#dat_0003</link>
+      <description>We are pleased to announce the release of InterPro 29.0, which
+			contains 21123 entries and includes an update to PROSITE patterns and
+			profiles (20.66), Gene3D (3.3.0), PIRSF (2.73), SUPERFAMILY (1.73) and
+			SMART (6.1) and the integration of 731 new methods from the HAMAP,
+			Gene3D, PIRSF, SUPERFAMILY and SMART databases; the release covers 79.4%
+			of UniProt Knowledgebase release 2010_11.
+			UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches
+			to InterPro methods have been updated and are available from the ftp site.
+			Please note that the new release of InterProScan (v4.7) has been delayed
+			for about 1 week. When the new version of InterProScan is ready,
+			subscribers to InterProScan-announce will be informed and the
+			InterProScan FTP site will be updated. If you have any questions about
+			this, please contact us using our online support form.
+			For full details of the release please see the Release Notes.</description>
+      <pubDate>Wed, 20 Oct 2010 14:57:17 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#dat_0003</guid>
+    </item>
+
+	<item>
+      <title>UniProtKB-GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#dat_0002</link>
+      <description>The new release of UniProtKB-GOA contains UniProt GO v88.0, UniProtKB-GOA 
+              Human v90.0, UniProtKB-GOA Mouse v76.0, UniProtKB-GOA Rat v76.0, 
+              UniProtKB-GOA Arabidopsis v63.0, UniProtKB-GOA Zebrafish v63.0, 
+              UniProtKB-GOA Chicken v60.0, UniProtKB-GOA Cow v53.0, 
+              UniProtKB-GOA PDB v77.0 and UniProtKB-GOA Proteome Sets 65.0... more</description>
+      <pubDate>Tue, 19 Oct 2010 12:59:05 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#dat_0002</guid>
+    </item>
+	
+	<item>
+      <title>IntEnz release 63, Rhea release 16</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#dat_0001</link>
+      <description>IntEnz release 63 and Rhea release 16 are already available. UniProt 2010.10 and Reactome 34 have been used for cross-references. Next release (64/17) is flexibly scheduled for November 8th.</description>
+      <pubDate>Wed, 13 Oct 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#dat_0001</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 131</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_635</link>
+      <description>IntAct contains 229,082 binary interactions from 4,515 manually curated publications. All data is also available on the public FTP site</description>
+      <pubDate>Mon, 11 Oct 2010 15:55:54 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/database_releases.html#a_635</guid>
+    </item>
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_647</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Fri, 08 Oct 2010 14:41:56 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_647</guid>
+    </item>
+	
+	<item>
+      <title>UniProt Knowledgebase release 2010_11</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_646</link>
+      <description>UniProt Knowledgebase release 2010_11 UniProt Knowledgebase release 2010_11 includes Swiss-Prot release 2010_11 and TrEMBL release 2010_11... more UniProtKB/Swiss-Prot Release 2010_11 of 07-October-2010 contains 522019 sequence entries... more UniProtKB/TrEMBL Release 2010_11 of 07-October-2010 contains 12347303 sequence entries. This represents an increase of 2%... more</description>
+      <pubDate>Thu, 07 Oct 2010 14:28:48 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_646</guid>
+    </item>
+
+	<item>
+      <title>'Eureka 100' recognises Janet Thornton and the EBI</title> <!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_645</link>
+      <description>The Times' 'Eureka 100', published 7 October, lists EBI Director
+    Janet Thornton among today's most important contributors to science.
+    'This award reflects the importance of the EBI, which is at the
+    heart of biology and medicine today,' Janet commented. The EBI helps
+    researchers to make the most of the daily data downpour... more</description>
+      <pubDate>Thu, 07 Oct 2010 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_645</guid>
+    </item>
+	
+	<item>
+      <title>Reactome Version 34</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_644</link>
+      <description>Interactions of the immunoglobulin superfamily (IgSF) proteins is new. Revised topics include Transmembrane transport of small molecules, Metabolism of proteins, Hemostasis, Immune system signaling, Insulin receptor signaling, GPCR signaling, Integration of energy metabolism, and Synaptic transmission. A recent paper describes the annotation of GPCR families in Reactome... more</description>
+      <pubDate>Mon, 04 Oct 2010 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_644</guid>
+    </item>	
+		
+	<item>
+      <title>18th release of BioModels Database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_643b</link>
+      <description>In this release, 157 new models have been published. The public
+version of BioModels Database now contains 269 models in the curated and
+361 in the non-curated branch. Together, these 630 models comprise 79224
+species and 109091 reactions. Moreover, the database now features 20426
+cross-references. Along with the data release, several new converters
+were also introduced, such as BioPAX Level 3 and Octave... more</description>
+      <pubDate>Thur, 30 Sep 2010 19:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_643b</guid>
+    </item>
+	
+	<item>
+      <title>Third mosquito genome sequenced</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_643</link>
+      <description>EBI scientists have contributed to annotation and analysis of the genetic blueprint of the Southern house mosquito, Culex quinquefasciatus, published today in the journal Science. An important vector of human diseases ranging from West Nile virus to filarial worms, Culex is the third mosquito to have its genome sequenced. Expansions of several gene families may contribute to Culex’s ability to thrive in diverse environments... more</description>
+      <pubDate>Thur, 30 Sep 2010 19:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_643</guid>
+    </item>	
+	
+	<item>
+      <title>New genomic variation database will support research into genetic diseases</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_642</link>
+      <description>Today sees the launch of the Database of Genomic Variants archive (DGVa) – a public catalogue of the large-scale insertions, deletions, duplications and rearrangements that are found in the genomes of individuals within a species. The new database is announced today in the journal Nature Genetics... more</description>
+      <pubDate>Tue, 28 Sep 2010 18:00:05 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_642</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB-GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_641</link>
+      <description>The new release of UniProtKB-GOA contains UniProt GO v87.0, UniProtKB-GOA Human v89.0, UniProtKB-GOA Mouse v75.0, UniProtKB-GOA Rat v75.0, UniProtKB-GOA Arabidopsis v62.0, UniProtKB-GOA Zebrafish v62.0, UniProtKB-GOA Chicken v59.0, UniProtKB-GOA Cow v52.0, UniProtKB-GOA PDB v76.0 and UniProtKB-GOA Proteome Sets 64.0... more</description>
+      <pubDate>Tue, 21 Sep 2010 12:59:05 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_641</guid>
+    </item>
+	
+	<item>
+      <title>EMBL Release 105</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_640</link>
+      <description>EMBL-Bank was frozen to make Release 105 on 27-AUG-2010. The release contains 195,241,608 sequence entries comprising 292,078,866,691 nucleotides ...more</description>
+      <pubDate>Fri, 17 Sep 2010 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_640</guid>
+    </item>
+	<item>
+      <title>IntEnz release 62, Rhea release 15</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_639</link>
+      <description>IntEnz release 62 and Rhea release 15 are already available. UniProt 2010_09 and Reactome 33 have been used for cross-references.</description>
+      <pubDate>Thu, 16 Sep 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_639</guid>
+    </item>
+
+	<item>
+      <title>IntAct Release 130</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_638</link>
+      <description>IntAct contains 228,262 binary interactions from 4,469 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Wed, 08 Sep 2010 14:11:57 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_638</guid>
+    </item>
+
+	<item>
+      <title>Ensembl Genomes Release 6</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_637</link>
+      <description>The Ensembl Genomes Project is pleased to announce release 6 of Ensembl Genomes. The main highlights of this release are: Software migration to Ensembl 59 2 new rodent malarial genomes, Plasmodium berghei and Plasmodium chabaudi,and an update to the Plasmodium falciparum gene-set in Ensembl Protists. Variation BioMarts added for Plasmodium falciparum, Saccharomyces cerevisiae, Arabidopsis thaliana, Oryza sativa indica, Oryza sativa japonica, Vitis vinifera , Anopheles gambiae and Drosophila melanogaster. See the individual homepages for Bacteria, Protists, Fungi, Plants and Metazoa for more information.</description>
+      <pubDate>Tue, 31 Aug 2010 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_637</guid>
+    </item>
+
+
+	<item>
+      <title>UniProtKB-GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_636</link>
+      <description>The new release of UniProtKB-GOA contains UniProt GO v86.0, UniProtKB-GOA Human v88.0, UniProtKB-GOA Mouse v74.0, UniProtKB-GOA Rat v74.0, UniProtKB-GOA Arabidopsis v61.0, UniProtKB-GOA Zebrafish v61.0, UniProtKB-GOA Chicken v58.0, UniProtKB-GOA Cow v51.0, UniProtKB-GOA PDB v75.0 and UniProtKB-GOA Proteome Sets 63.0... more</description>
+      <pubDate>Tue, 24 Aug 2010 12:59:05 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_636</guid>
+    </item>
+
+	<item>
+      <title>IntAct Release 129</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_635</link>
+      <description>IntAct contains 228,023 binary interactions from 4,458 manually curated publications. All data is also available on the public FTP site</description>
+      <pubDate>Mon, 23 Aug 2010 16:45:36 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_635</guid>
+    </item>
+
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_634</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Thu, 19 Aug 2010 13:19:58 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_634</guid>
+    </item>
+
+	<item>
+      <title>InterPro release 28.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_633</link>
+      <description>We are pleased to announce the release of InterPro 28.0, which contains 20837 entries and includes an update to HAMAP (180510) and the integration of 114 new methods from the HAMAP, Gene3D and PRINTS databases; the release covers 78.7% of UniProt Knowledgebase release 2010_08.
+UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site.
+For full details of the release please see the Release Notes.</description>
+      <pubDate>Wed,11 Aug 2010 10:33:53 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_633</guid>
+    </item>
+
+
+
+
+	<item>
+      <title>IntAct Release 128</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_632</link>
+      <description>IntAct contains 227,866 binary interactions from 4,445 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Wed,11 Aug 2010 10:05:28 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_632</guid>
+    </item>
+	
+	<item>
+      <title>UniProt Knowledgebase release 2010_09</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_631</link>
+      <description>UniProt Knowledgebase release 2010_09 includes Swiss-Prot release 2010_09 and TrEMBL release 2010_09... more UniProtKB/Swiss-Prot Release 2010_09 of 10-August-2010 contains 519348 sequence entries... more UniProtKB/TrEMBL Release 2010_09 of 10-August-2010 contains 9476 sequence entries. This represents an increase of 3%... more</description>
+      <pubDate>Tue,10 Aug 2010 16:34:13 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_631</guid>
+    </item>
+
+
+
+
+	<item>
+      <title>Ensembl Release 59</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_630</link>
+      <description>The Ensembl project is pleased to announce release 59 of Ensembl. Highlights of this release are:
+- 5 new cell lines from the ENCODE project
+- Regulation cell-line tracks on 'Region in Detail'
+- COSMIC somatic mutations
+- New masthead design with more links to popular content
+For more information visit:
+http://www.ensembl.org/info/website/news/
+For the latest news on the Ensembl project, visit our blog at
+http://ensembl.blogspot.com</description>
+      <pubDate>Thu, 05 Aug 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_630</guid>
+    </item>
+
+	
+	<item>
+      <title>IntAct Release 127</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_629</link>
+      <description>The new release of UniProtKB-GOA contains UniProt GO v85.0, UniProtKB-GOA Human v87.0, UniProtKB-GOA Mouse v73.0, UniProtKB-GOA Rat v73.0, UniProtKB-GOA Arabidopsis v60.0, UniProtKB-GOA Zebrafish v60.0, UniProtKB-GOA Chicken v57.0, UniProtKB-GOA Cow v50.0, UniProtKB-GOA PDB v74.0 and UniProtKB-GOA Proteome Sets 62.0... more</description>
+      <pubDate>Wed,04 Aug 2010 15:52:17 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_629</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB-GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_628</link>
+      <description>The new release of UniProtKB-GOA contains UniProt GO v85.0, UniProtKB-GOA Human v87.0, UniProtKB-GOA Mouse v73.0, UniProtKB-GOA Rat v73.0, UniProtKB-GOA Arabidopsis v60.0, UniProtKB-GOA Zebrafish v60.0, UniProtKB-GOA Chicken v57.0, UniProtKB-GOA Cow v50.0, UniProtKB-GOA PDB v74.0 and UniProtKB-GOA Proteome Sets 62.0... more</description>
+      <pubDate>Fri, 25 July 2010 17:30:10 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_628</guid>
+    </item>	
+	<item>
+      <title>IntAct Release 126</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_627</link>
+      <description>IntAct contains 226,993 binary interactions from 4,428 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2010-07-23/</description>
+      <pubDate>Fri, 25 July 2010 17:30:10 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_627</guid>
+    </item>	
+	
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_626</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Fri, 16 July 2010 10:00:10 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_626</guid>
+    </item>	
+	
+	<item>
+      <title>UniProt Knowledgebase release 2010_08</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_625</link>
+      <description>UniProt Knowledgebase release 2010_08 includes Swiss-Prot release 2010_08 and TrEMBL release 2010_08... more  UniProtKB/Swiss-Prot Release 2010_08 of 13-July-2010 contains                  518415  sequence entries... more  UniProtKB/TrEMBL Release 2010_08 of 13-July-2010 contains                  11397958  sequence entries. 
+                This represents an increase of 3%... more</description>
+      <pubDate>Tue, 13 July 2010 15:14:06 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_625</guid>
+    </item>
+	
+	
+	
+	<item>
+		  <title>High resolution insights to the regulation of transcript processing in eukaryotic cells</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_624</link>
+      <description>A paper in Nature Structural and Molecular Biology released online today finally ends speculation on whether a protein involved in splicing regulation functions as a repressor or facilitator of splicing. It does both! The study, authored by researchers from EMBL-EBI, Cambridge and Slovenia, used a new high-resolution technique to pinpoint the precise transcript binding positions of the protein... more</description>
+      <pubDate>Mon, 05 July 2010 10:00:10 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_624</guid>
+    </item>	
+	
+	<item>
+      <title>UniProtKB-GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_623</link>
+      <description>The new release of UniProtKB-GOA contains UniProt GO v84.0, UniProtKB-GOA Human v86.0, UniProtKB-GOA Mouse v72.0, UniProtKB-GOA Rat v72.0, UniProtKB-GOA Arabidopsis v59.0, UniProtKB-GOA Zebrafish v59.0, UniProtKB-GOA Chicken v56.0, UniProtKB-GOA Cow v49.0, UniProtKB-GOA PDB v73.0 and UniProtKB-GOA Proteome Sets 61.0... more</description>
+      <pubDate>Tue, 29 June 2010 15:00:10 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_623</guid>
+    </item>
+	
+	 <item>
+      <title>IntAct Release 125</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_622</link>
+      <description>IntAct contains 218,028 binary interactions from 4,402 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Thu, 24 June 2010 16:27:42 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_622</guid>
+    </item>	
+	
+	 <item>
+      <title>1000 Genomes Project Releases Data from Pilot Projects</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_621</link>
+      <description>The 1000 Genomes Project, an international public–private consortium to build the most detailed map of human genetic variation to date, announces the completion of three pilot projects and the deposition of the final resulting data in freely available public databases for use by the research community... more</description>
+      <pubDate>Mon, 21 June 2010 13:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_621</guid>
+    </item>
+	
+	<item>
+      <title>Reactome Version 33</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_620b</link>
+      <description>Chromosome Maintenance is new and Synaptic Transmission, Axon Guidance, Transport, Metabolism, Signaling, and Diabetes pathways are revised. Ensembl Compara is now used for electronic inferences. Proteins now cross-reference PDB, CTD, DockBlaster, BioGPS, and dbSNP. Recent papers describe Reactome Functional Interaction Network and R spider network-based analysis of Reactome pathways... more</description>
+      <pubDate>Fri, 18 June 2010 16:44:54 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_620b</guid>
+    </item>
+	
+		
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_620</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Thu, 17 June 2010 16:44:54 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_620</guid>
+    </item>
+	
+	
+	<item>
+      <title>UniProt Knowledgebase release 2010_07</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_619</link>
+      <description>UniProt Knowledgebase release 2010_07 includes Swiss-Prot release 2010_07 and TrEMBL release 2010_07... more  UniProtKB/Swiss-Prot Release 2010_07 of 15-June-2010 contains 517802  sequence entries... more  UniProtKB/TrEMBL Release 2010_07 of 15-June-2010 contains 11109684 sequence entries. This represents an increase of 2% ...more</description>
+      <pubDate>Tue, 15 June 2010 15:14:06 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_619</guid>
+    </item>
+	
+	<item>
+      <title>EMBL Release 104</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_618</link>
+      <description>EMBL-Bank was frozen to make Release 104 on 27-MAY-2010. The release contains 190,119,871 sequence entries comprising 287,946,554,761 nucleotides ...more</description>
+      <pubDate>Tue, 15 June 2010 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_618</guid>
+    </item>
+
+	
+	<item>
+      <title>IntEnz release 61, Rhea release 14</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_617</link>
+      <description>IntEnz release 61 and Rhea release 14 are already
+available. UniProt 2010_06 and Reactome 32 have been used for cross-references.</description>
+      <pubDate>Thu, 10 June 2010 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_617</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 124</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_616</link>
+      <description>IntAct contains 216,395 binary interactions from 4,387 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Fri, 04 June 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_616</guid>
+    </item>
+	
+	
+	<item>
+      <title>UniProtKB-GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_615</link>
+      <description>The new release of UniProtKB-GOA contains UniProt GO v83.0, UniProtKB-GOA Human v85.0, UniProtKB-GOA Mouse v71.0, UniProtKB-GOA Rat v71.0, UniProtKB-GOA Arabidopsis v58.0, UniProtKB-GOA Zebrafish v58.0, UniProtKB-GOA Chicken v55.0, UniProtKB-GOA Cow v48.0, UniProtKB-GOA PDB v72.0 and UniProtKB-GOA Proteome Sets 60.0 ...more</description>
+      <pubDate>Thu, 03 June 2010 13:17:10 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_615</guid>
+    </item>
+	
+	
+	<item>
+      <title>The Ensembl Genomes Project is pleased to announce release 5 of Ensembl Genomes</title><!--PPRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_614</link>
+      <description>The main highlights of this release are: Software migration to Ensembl 58. Total of 6 new bacterial genomes for Escherichia/Shigella and Staphylococcus collections for Ensembl Bacteria; pairwise alignments added for all collections. 2 new genomes, Phaeodactylum tricornutum and Thalassiosira pseudonana, for Ensembl Protists; pairwise alignments added. A. fumigatus A1163 genome added to Ensembl Fungi. Pristionchus pacificus genome from Wormbase and updates to the Drosophilia variation database added to Ensembl Metazoa. Updates to the variation databases for A.thaliana, O. sativa japonica and V.vinifera in Ensembl Plants ...more</description>
+      <pubDate>Tue, 01 June 2010 17:27:45 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_614</guid>
+    </item>
+	
+	<item>
+      <title>Making enough red blood cells</title><!--PPRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_613</link>
+      <description>In a study published today in the Journal of Experimental Medicine, scientists at the European Molecular Biology Laboratory (EMBL) in Monterotondo, Italy, and EMBL’s European Bioinformatics Institute (EMBL-EBI) in Hinxton, UK, have identified two small RNA molecules which ensure that enough red blood cells are produced efficiently, by fine-tuning a number of different genes involved in this process ...more</description>
+      <pubDate>Mon, 31 May 2010 23:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_613</guid>
+    </item>
+	
+	
+	<item>
+      <title>Ensembl Release 58</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_612</link>
+      <description>The Ensembl project is pleased to announce release 58 of Ensembl. Highlights of this release are:
+- New assemblies and genebuilds for marmoset and C.elegans
+- New regulation views, including wiggle plots for each cell line
+- Many tables on web displays are now sortable and searchable, and
+individual columns can be hidden
+For more information visit:
+http://www.ensembl.org/info/website/news/
+For the latest news on the Ensembl project, visit our blog at
+http://ensembl.blogspot.com</description>
+      <pubDate>Wed, 27 May 2010 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_612</guid>
+    </item>
+	
+	<item>
+      <title>EMBL-EBI's ChEMBL database receives chemical structure data from GSK, St Judes and Novartis</title><!--PPRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_611</link>
+      <description>GSK and St Jude Children's Research Hospital, USA, have deposited
+compound data into the EBI's drug discovery database ChEMBL to coincide
+with the publication of two papers in this week's issue of Nature.
+This addition provides information on over 14,000 compounds known to act
+against the parasite responsible for transmitting malaria. Novartis have
+also added data to the resource. Providing free access to this
+information and integrating it with other publicly-held data will
+support researchers worldwide in developing new malaria treatments... more</description>
+      <pubDate>Wed, 19 May 2010 18:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_611</guid>
+    </item>
+	
+	<item>
+      <title>InterPro release 27.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_610</link>
+      <description>We are pleased to announce the release of InterPro 27.0, which
+contains 20671 entries and includes an update to PIRSF (2.72) and the
+integration of 220 new methods from ProDom, Pfam, PIRSF and TIGRFAMs;
+the release covers 78.5% of UniProt Knowledgebase release 2010_06.                  
+UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches
+to InterPro methods have been updated and are available from the ftp site. For full details of the release please see the Release Notes.</description>
+      <pubDate>Wed, 19 May 2010 09:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_610</guid>
+    </item>
+	
+	<item>
+      <title>UniProt Knowledgebase release 2010_06</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_609</link>
+      <description>UniProt Knowledgebase release 2010_06 includes Swiss-Prot release 2010_06 and TrEMBL release 2010_06... more  UniProtKB/Swiss-Prot Release 2010_06 of 18-May-2010 contains 517100 sequence entries... more  UniProtKB/TrEMBL Release 2010_06 of 18-May-2010 contains 2914715 sequence entries. This represents an increase of 1%... more</description>
+      <pubDate>Tue, 18 May 2010 15:15:13 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_609</guid>
+    </item>
+	
+	
+	<item>
+      <title>IntAct Release 123</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_608</link>
+      <description>IntAct contains 213,763 binary interactions from 4,377 manually curated publications. All data is also available on the public FTP site ...more</description>
+      <pubDate>Wed, 12 May 2010 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_608</guid>
+    </item>
+	
+	
+	<item>
+      <title>IntEnz release 60, Rhea release 13</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_607</link>
+      <description>IntEnz release 60 and Rhea release 13 are already available. UniProt 2010_05 and Reactome 32 have been used for cross-references.</description>
+      <pubDate>Tue, 11 May 2010 13:53:56 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_607</guid>
+    </item>
+	
+	
+	
+	
+	<item>
+      <title>ENAbling easy access to DNA sequence information</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_606</link>
+      <description>The European Nucleotide Archive (ENA) is launched today, consolidating three major sequence resources to become Europe's primary access point to globally comprehensive DNA and RNA sequence information. The ENA is freely available from the European Bioinformatics Institute (EMBL-EBI), a part of European Molecular Biology Laboratory... more</description>
+      <pubDate>Mon, 10 May 2010 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_606</guid>
+    </item>
+	
+	
+	
+	<item>
+      <title>GOA Released</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_605</link>
+      <description>The new release of GOA contains UniProt GO v82.0, GOA Human v84.0, GOA Mouse v70.0, GOA Rat v70.0, GOA Arabidopsis v57.0, GOA Zebrafish v57.0, GOA Chicken v54.0, GOA Cow v47.0, GOA PDB v71.0 and GOA Proteome Sets 59.0... more </description>
+      <pubDate>Fri, 07 May 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_605</guid>
+    </item>
+	
+	
+	 <item>
+      <title>Draft Neandertal genome published today</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_604</link>
+      <description>An international research team including researchers at EMBL-EBI have published the draft genome sequence of the Neandertal, an extinct human relative estimated to have died out approximately 30,000 years ago. The genome, published today in Science, allows direct comparison with the human genome to identify the differences that might account for advantageous human characteristics, and even provides evidence that Neandertals and early humans interbred... more</description>
+      <pubDate>Thu, 06 May 2010 19:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_604</guid>
+    </item>
+	
+	
+	
+	
+	 <item>
+      <title>IntAct Release 122</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_603</link>
+      <description>IntAct contains 213,336 binary interactions from 4,358 manually curated publications. All data is also available on the public FTP site ...more</description>
+      <pubDate>Thu, 29 Apr 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_603</guid>
+    </item>
+	
+	 <item>
+      <title>ELIXIR seeks input to help shape its construction</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_602</link>
+      <description>ELIXIR, Europe’s emerging infrastructure for biological information, today announced that it is formally seeking input from organisations that are interested in hosting one of its ‘nodes’. Organisations wishing to respond are requested to consider how they might contribute: data resources; bio-compute capacity; infrastructure for data integration; and services for the research community... more</description>
+      <pubDate>Wed, 28 Apr 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_602</guid>
+    </item>
+	
+	
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_601</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Mon, 26 Apr 2010 11:08:54 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_601</guid>
+    </item>
+	
+	
+	 <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_600</link>
+      <description>The new release of GOA contains UniProt GO v81.0, GOA Human v83.0, GOA Mouse v69.0, GOA Rat v69.0, GOA Arabidopsis v56.0, GOA Zebrafish v56.0, GOA Chicken v53.0, GOA Cow v46.0, GOA PDB v70.0 and GOA Proteome Sets 58.0... more </description>
+      <pubDate>Thu, 22 Apr 2010 13:46:09 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_600</guid>
+    </item>
+	
+	
+	 <item>
+      <title>UniProt Knowledgebase release 2010_05 </title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_599</link>
+      <description>UniProt Knowledgebase release 2010_05 includes Swiss-Prot release 2010_05 and TrEMBL release 2010_05... more UniProtKB/Swiss-Prot Release 2010_05 of 20-Apr-2010 contains 516603 sequence entries... more UniProtKB/TrEMBL Release 2010_04 of 20-Apr-2010 contains 1504904 sequence entries. This represents an increase of 2%... more</description>
+      <pubDate>Tue, 20 Apr 2010 15:30:41 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_599</guid>
+    </item>
+	
+	
+	
+	 <item>
+      <title>Using gene expression profiles to predict prognosis for autoimmune disease</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_598</link>
+      <description>A paper in Nature Medicine released online today reports that personalised treatment and the development of improved therapies to treat autoimmune disease might be one step closer. The study, authored by researchers from EMBL-EBI, Cambridge, Oxford and Singapore-based research centres identified three genes that could be used as prognostic biomarkers to guide treatment of autoimmune disease... more</description>
+      <pubDate>Mon, 19 Apr 2010 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_598</guid>
+    </item>
+	
+	
+	
+	 <item>
+      <title>IntAct Release 121</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_597</link>
+      <description>IntAct contains 212,321 binary interactions from 4,330 manually curated publications. All data is also available on the public FTP site ...more</description>
+      <pubDate>Mon, 12 Apr 2010 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_597</guid>
+    </item>
+	
+	 <item>
+      <title>Rewiring of gene regulation across 300 million years of evolution</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_596</link>
+      <description>As published today in Science, researchers from Cambridge, Glasgow and Greece have discovered a remarkable amount of plasticity in how transcription factors, the proteins that bind to DNA to control the activation of genes, maintain their function over large evolutionary distances... more</description>
+      <pubDate>Fri, 09 Apr 2010 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_596</guid>
+    </item>
+	
+	 <item>
+      <title>Variations on the genetic theme</title>
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_595</link><!--PRESS-->
+      <description>By integrating gene expression data from an unprecedented variety of human tissue samples, EMBL-EBI researchers and their collaborators have for the first time produced a global map of gene expression. The full analysis behind this unique view of the genetic activities determining our appearance, function and behaviour is published today in Nature Biotechnology ...more</description>
+      <pubDate>Thu, 08 Apr 2010 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_595</guid>
+    </item>
+	
+	
+	 <item>
+      <title>RESID Database Release 61.00</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_594</link>
+      <description>Release 61.00 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ...more</description>
+      <pubDate>Wed, 31 Mar 2010 18:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_594</guid>
+    </item>
+	
+	 <item>
+      <title>Songbird genome to aid understanding of learning, memory and more</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_593</link>
+      <description>In research published today in Nature, scientists including
+researchers from EMBL-EBI break the news that they have sequenced the zebra finch genome. This is only the second ever bird genome to be sequenced -- the first being that of the chicken. The zebra finch offers
+a unique opportunity for us to understand the genetics behind the wiring
+and re-wiring of our brains when we learn and memorise... more</description>
+      <pubDate>Wed, 31 Mar 2010 18:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_593</guid>
+    </item>
+	
+	 <item>
+      <title>From alpaca to zebra finch - a decade of cataloguing life's diversity</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_592</link>
+      <description>Today's publication in Nature of the genetic blueprint for the
+zebra finch marks 10 years of success for the Ensembl project in helping
+researchers to navigate the genomes of a Noah's Ark of species. Ensembl,
+a genome annotation system co-developed and jointly run by EMBL-EBI and
+the Wellcome Trust Sanger Institute, played a major part in finding the
+genes and other functionally important features in the zebra finch
+genome... more</description>
+      <pubDate>Wed, 31 Mar 2010 18:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_592</guid>
+    </item>	
+
+	 <item>
+      <title>IntAct Release 120</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_591</link>
+      <description>IntAct contains 209,203 binary interactions from 4,316 manually curated publications. All data is also available on the public FTP site. </description>
+      <pubDate>Fri, 26 Mar 2010 17:09:47 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_591</guid>
+    </item>
+	
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_590</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Wed, 24 Mar 2010 17:04:59 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_590</guid>
+    </item>
+	
+	
+	 <item>
+      <title>UniProt Knowledgebase release 2010_04</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_589</link>
+      <description>UniProt Knowledgebase release 2010_04 includes Swiss-Prot release 2010_04 and TrEMBL release 2010_04... more UniProtKB/Swiss-Prot Release 2010_04 of 23-Mar-2010 contains 516081 sequence entries... more UniProtKB/TrEMBL Release 2010_04 of 23-Mar-2010 contains 10618387 sequence entries. This represents an increase of 1%... more</description>
+      <pubDate>Tue, 23 Mar 2010 15:19:15 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_589</guid>
+    </item>
+	
+	
+	 <item>
+      <title>InterPro release 26.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_588</link>
+      <description>We are pleased to announce the release of InterPro 26.0, which contains 20329 entries and includes an update to PRINTS (40.0) and the integration of 131 new methods from PRINTS, HAMAP, Pfam, PIRSF and TIGRFAMs; the release covers 78.1% of UniProt Knowledgebase release 2010_04. UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site. For full details of the release please see the Release Notes.</description>
+      <pubDate>Tue, 23 Mar 2010 10:51:22 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_588</guid>
+    </item>
+	
+	
+	 <item>
+      <title>How heritable genetic events influence gene expression in humans</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_587</link>
+      <description>A Science paper released today uncovers the role of variation in chromatin structure on gene regulation and the heritability of these differences. The study, authored by researchers from EMBL-EBI and several USA research institutes, used data from the 1000 Genomes Project to compare chromatin structure at regulatory sites in the genome not only between individuals but also within an individual. Humans typically contain two copies of every gene but these copies can be expressed differently... more</description>
+      <pubDate>Fri, 19 Mar 2010 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_587</guid>
+    </item>
+	
+	 <item>
+      <title>New InterPro DAS Service Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_586</link>
+      <description>We are pleased to announce the new InterPro DAS service, which provides three data sources, the &quot;InterPro&quot; data source is identical to the original data source, the &quot;InterPro&quot; data source, InterPro-UniParc-matches and the InterPro-UniParc-matches data source. The data available from the &quot;InterPro&quot; and &quot;InterPro-Matches-overview&quot; data sources are available by default from the Dasty and SPICE DAS clients ...more</description>
+      <pubDate>Thu, 18 Mar 2010 14:26:38 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_586</guid>
+    </item>
+	
+	 <item>
+      <title>Reactome Version 32</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_585</link>
+      <description>The new topic is the role of CDO in Myogenesis. Topics updated include: Synaptic Transmission (Activation of Kainate receptors), Signaling by insulin receptor (Energy dependent regulation of mTOR by LKB1-AMPK), DNA repair (Fanconi Anemia Pathway), Toll Receptor Cascades (TLR3 cascade), Olfactory Signaling, Cell Cycle, Metabolic pathways (Amino Acids, Carbohydrates, and Nucleotides), and the TCA cycle ...more</description>
+      <pubDate>Tue, 16 Mar 2010 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_585</guid>
+    </item>
+	
+	 <item>
+      <title>EMBL Release 103</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_584</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 103 on 26-FEB-2010. The release contains 185,231,366 sequence entries comprising 281,478,752,483 nucleotides ...more</description>
+      <pubDate>Mon, 15 Mar 2010 17:15:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_584</guid>
+    </item>
+	
+	 <item>
+      <title>IntEnz release 58, Rhea release 11</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_583</link>
+      <description>IntEnz release 58 and Rhea release 11 are already available. UniProt 15.15 and Reactome 31 have been used for cross-references. The IntEnz and Rhea BioPAX exports have been enhanced with new relationships among Rhea entries.</description>
+      <pubDate>Wed, 10 Mar 2010 16:33:37 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_583</guid>
+    </item>
+	
+	
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_582</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Thu, 04 Mar 2010 15:15:29 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_582</guid>
+    </item>
+	
+	 <item>
+      <title>GOA Released</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_581</link>
+      <description>The new release of GOA contains UniProt GO v80.0, GOA Human v82.0, GOA Mouse v68.0, GOA Rat v68.0, GOA Arabidopsis v55.0, GOA Zebrafish v55.0, GOA Chicken v52.0, GOA Cow v45.0, GOA PDB v69.0 and GOA Proteome Sets 57.0... more</description>
+      <pubDate>Thu, 04 Mar 2010 14:31:42 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_581</guid>
+    </item>
+	
+	 
+	
+	 <item>
+      <title>UniProt Knowledgebase release 15.15</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_580</link>
+      <description>UniProt Knowledgebase release 15.15 includes Swiss-Prot release 57.15 and TrEMBL release 40.15... more UniProtKB/Swiss-Prot Release 57.15 of 02-Mar-2010 contains 515203 sequence entries... more UniProtKB/TrEMBL Release 40.15 of 02-Mar-2010 contains 10494564 sequence entries. This represents an increase of 1%... more</description>
+      <pubDate>Mon, 02 Mar 2010 15:00:39 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_580</guid>
+    </item>
+	
+	
+	
+	 <item>
+      <title>RESID Database Release 60.02</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_579</link>
+      <description>Release 60.02 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ...more</description>
+      <pubDate>Mon, 01 Mar 2010 16:02:25 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_579</guid>
+    </item>
+	
+	 <item>
+      <title>IntAct Release 119</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_578</link>
+      <description>IntAct contains 208,593 binary interactions from 4,283 manually curated publications. All data is also available on the public FTP... more</description>
+      <pubDate>Thu, 25 Feb 2010 16:39:30 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_578</guid>
+    </item>
+	
+	
+	 <item>
+      <title>Ensembl Genomes v4 Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_577</link>
+      <description>Features of the new release include the addition of new databases for the bread mould Neurospora crassa to the Ensembl Fungi division, the slime mould Dictyostelium discoides (built with the assistance of dictyBase) to Ensembl Protists, and the body louse Pediculus humanus (containing data provided by VectorBase) to Ensembl Metazoa. 
+The release also includes new variation databases for Drosophila melanogaster (using data from the Drosophila Population Genomics Project) and Plasmodium falciparum; the update of existing variation databases for Arabidopsis thaliana and Vitis vinifera in Ensembl Plants; and the addition of three new clades to Ensembl Bacteria. 
+Ensembl Genomes is available at http://www.ensemblgenomes.org.</description>
+      <pubDate>Thu, 25 Feb 2010 09:24:08 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_577</guid>
+    </item>
+	
+	
+	 <item>
+      <title>IntAct Release 118</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_576</link>
+      <description>IntAct contains 208,239 binary interactions from 4,283 manually curated publications. All data is also available on the public FTP site... more</description>
+      <pubDate>Thu, 18 Feb 2010 15:43:55 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_576</guid>
+    </item>
+	
+	
+	
+	 <item>
+      <title>Nucleoporins are a new class of chromatin-binding proteins</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_575</link>
+      <description>For the first time in a higher eukaryote, researchers at EMBL-EBI and 
+their collaborators have demonstrated that the binding of nuclear pore 
+components to large parts of the Drosophila genome is an additional 
+mechanism involved in regulating gene expression. As published today in 
+PLoS Genetics, the researchers identified two nucleoporins, Mtor and 
+Nup153, that bind a quarter of the Drosophila genome at active 
+chromosomal regions and define a major class of new proteins regulating 
+gene expression... more</description>
+      <pubDate>Fri, 12 Feb 2010 09:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_575</guid>
+    </item>	
+	 
+	 <item>
+      <title>InterPro release 25.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_574</link>
+      <description>New features include: This release contains 1312 new methods, which include new methods from HAMAP (280509), Pfam (24.0), PIRSF (2.71) and TIGRFAMs (9.0). Please Note: Pfam release 24.0 matches were calculated using HMMER3. The majority of the updated signatures were stable; however some had significant increases or decreases in the numbers of proteins they matched (+/- 30% change), which changed the taxonomy and/or biology based on protein matches. We are reviewing these entries, checking that the InterPro entry annotation is still valid and reflects the taxonomy and biology of the proteins matched by the Pfam signatures. Those Pfam signatures which have not yet been through this review process were therefore temporarily removed from InterPro and will be re-integrated into the InterPro database during 2010. If you have any questions about this, please contact us via support. For full details of the release please see the Release Notes.</description>
+      <pubDate>Wed, 10 Feb 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_574</guid>
+    </item>	
+		
+		
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_573</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Wed, 10 Feb 2010 13:19:44 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_573</guid>
+    </item>	
+		
+	 <item>
+      <title>UniProt Knowledgebase release 15.14</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_572</link>
+      <description>UniProt Knowledgebase release 15.14 includes Swiss-Prot release 57.14 and TrEMBL release 40.14... more UniProtKB/Swiss-Prot Release 57.14 of 09-Feb-2010 contains 514789 sequence entries... more UniProtKB/TrEMBL Release 40.14 of 09-Feb-2010 contains 10376872 sequence entries. This represents an increase of 43%... more</description>
+      <pubDate>Tue, 09 Feb 2010 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_572</guid>
+    </item>	
+		
+	 <item>
+      <title>IntEnz release 57, Rhea release 10</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_571</link>
+      <description>IntEnz release 57 and Rhea release 10 are already available. UniProt 15.13 and Reactome 31 have been used for cross-references.</description>
+      <pubDate>Mon, 08 Feb 2010 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_571</guid>
+    </item>
+
+	 <item>
+      <title>Finland invests €1.85 million in pan-European infrastructure for biomedical research</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_570</link>
+      <description>Finland has made its first specific commitment to the development of European biomedical research infrastructures by supporting a joint pilot infrastructure project in bioinformatics (ELIXIR), biobanking (BBMRI) and translational research (EATRIS).... more</description>
+      <pubDate>Wed, 03 Feb 2010 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_570</guid>
+    </item>
+	
+	
+	 <item>
+      <title>GOA Released</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_569</link>
+      <description>The new release of GOA contains UniProt GO v79.0, GOA Human v81.0, GOA Mouse v67.0, GOA Rat v67.0, GOA Arabidopsis v54.0, GOA Zebrafish v54.0, GOA Chicken v51.0, GOA Cow v44.0, GOA PDB v68.0 and GOA Proteome Sets 56.0... more</description>
+      <pubDate>Thu, 21 Jan 2010 14:55:53 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_569</guid>
+    </item>
+	
+	
+	 <item>
+      <title>UniProt Knowledgebase release 15.13</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_568</link>
+      <description>UniProt Knowledgebase release 15.13 includes Swiss-Prot release 57.13 and TrEMBL release 40.13... more UniProtKB/Swiss-Prot Release 57.13 of 19-Jan-2010 contains 514212 sequence entries... more  UniProtKB/TrEMBL Release 40.13 of 19-Jan-2010 contains 10158056 sequence entries. This represents an increase of 39%... more</description>
+      <pubDate>Tue, 19 Jan 2010 12:39:56 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_568</guid>
+    </item>
+	
+	 <item>
+      <title>Open access drug discovery database launches with half a million compounds</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_567</link>
+      <description>ChEMBLdb, a vast online database of information on the properties and activities of drugs and drug-like small molecules and their targets, launches today with information on over half a million compounds. The data lie at the heart of translating information from the human genome into successful new drugs in the clinic... more</description>
+      <pubDate>Mon, 18 Jan 2010 09:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_567</guid>
+    </item>
+	
+	 <item>
+      <title>Innovative new web interface improves access to UK’s largest free online life sciences resource</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_566</link>
+      <description>Today sees the launch of the open beta version of UK PubmedCentral, helping researchers access and exploit over 1.7 million full-text, peer reviewed biomedical research articles and over 19 million other life science research papers... more</description>
+      <pubDate>Tue, 12 Jan 2010 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_566</guid>
+    </item>
+	
+	 <item>
+		  <title>Denmark invests €5 million in pan-European infrastructure for biology</title><!--PRESS-->
+      <link>http://www.ebi.ac.uk/Information/News/press_releases.html#a_565</link>
+      <description>Denmark has made its first substantial commitment to the emerging European Life-Science Infrastructure form Biological Information (ELIXIR), a major emerging pan-European science project, with a €3.5 M investment by the Danish Agency for Science, Technology and Innovation, and substantial co-financing from several universities... more</description>
+      <pubDate>Tue, 12 Jan 2010 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/press_releases.html#a_565</guid>
+    </item>
+
+	
+	 <item>
+      <title>IntEnz release 56, Rhea release 9</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_564</link>
+      <description>IntEnz release 56 and Rhea release 9 are already available. UniProt 15.12 and Reactome 31 have been used for cross-references.</description>
+      <pubDate>Mon, 11 Jan 2010 10:54:42 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_564</guid>
+    </item>
+	
+	
+	 <item>
+      <title>IntAct Release 115</title>
+      <link>http://www.ebi.ac.uk/Information/News/database_releases.html#a_563</link>
+      <description>IntAct contains 203,642 binary interactions from 4,199 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Wed, 06 Jan 2010 10:45:46 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/database_releases.html#a_563</guid>
+    </item>
+	
+	
+	 <item>
+      <title>RESID Database Release 60.00</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_569a</link>
+      <description>Release 60.00 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF... more</description>
+      <pubDate>Thu, 31 Dec 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_569a</guid>
+    </item>
+	
+
+	 <item>
+      <title>Reactome Version 31</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_562</link>
+      <description>New pathways include Metabolism of mRNA and Cell junction organization. Updated pathways include SLC-mediated transmembrane transport, Smooth muscle contraction, Nuclear receptor transcription, Olfactory signaling, and Hemostasis. We now annotate modified residues of proteins using MOD terms, and provide listings of protein-protein interactions in PSI-MOD format. Follow us on Facebook, Twitter, and LinkedIn.</description>
+      <pubDate>Wed, 23 Dec 2009 17:27:34 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_562</guid>
+    </item>
+	
+	
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_561</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Fri, 18 Dec 2009 15:11:21 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_561</guid>
+    </item>
+	
+	 <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_560</link>
+      <description>The new release of GOA contains UniProt GO v78.0, GOA Human v80.0, GOA Mouse v66.0, GOA Rat v66.0, GOA Arabidopsis v53.0, GOA Zebrafish v53.0, GOA Chicken v50.0, GOA Cow v43.0, GOA PDB v67.0 and GOA Proteome Sets 55.0... more</description>
+      <pubDate>Fri, 18 Dec 2009 13:45:51 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_560</guid>
+    </item>
+	
+	
+	 <item>
+      <title>InterPro release 24.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_559</link>
+      <description>We are pleased to announce the release of InterPro 24.0, which contains 18349 entries and 53 new methods, which include new methods from HAMAP and Pfam an d covers 76.2% of UniProt Knowledgebase release 15.12. UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site. For full details of the release please see the Release Notes.</description>
+      <pubDate>Wed, 16 Dec 2009 16:29:49 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_559</guid>
+    </item>
+	
+	 <item>
+      <title>EMBL Release 102</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_558</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 102 on 26-NOV-2009. The release contains 167,493,839 sequence entries comprising 266,361,987,641 nucleotides ...more</description>
+      <pubDate>Tue, 15 Dec 2009 14:33:54 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_558</guid>
+    </item>
+	
+	
+	 <item>
+      <title>UniProt Knowledgebase release 15.12</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_557</link>
+      <description>UniProt Knowledgebase release 15.12 includes Swiss-Prot release 57.12 and TrEMBL release 40.12... more UniProtKB/Swiss-Prot Release 57.12 of 15-Dec-2009 contains 513877 sequence entries... more UniProtKB/TrEMBL Release 40.12 of 15-Dec-2009 contains 5965463 sequence entries. This represents an increase of 37%... more</description>
+      <pubDate>Tue, 15 Dec 2009 15:07:41 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_557</guid>
+    </item>		
+	
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_556</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Thu, 10 Dec 2009 15:51:03 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_556</guid>
+    </item>
+	
+	
+	 <item>
+      <title>IntEnz release 55, Rhea release 8</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_555</link>
+      <description>IntEnz release 55 and Rhea release 8 are already available. 
+UniProt 15.11 and Reactome 30 have been used for cross-references. 
+IntEnzXML includes now cross references to Rhea reactions.</description>
+      <pubDate>Fri, 04 Dec 2009 22:21:57 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_555</guid>
+    </item>
+	
+	
+	 <item>
+      <title>IntAct Release 114</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_554</link>
+      <description>IntAct contains 202,826 binary interactions from 4,174 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Wed, 02 Dec 2009 15:29:40 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_554</guid>
+    </item>
+	
+
+	 <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_553</link>
+      <description>The new release of GOA contains UniProt GO v77.0, GOA Human v79.0, GOA Mouse v65.0, GOA Rat v65.0, GOA Arabidopsis v52.0, GOA Zebrafish v52.0, GOA Chicken v49.0, GOA Cow v42.0, GOA PDB v66.0 and GOA Proteome Sets 54.0... more</description>
+      <pubDate>Mon, 30 Nov 2009 09:13:08 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_553</guid>
+    </item>
+
+	 <item>
+      <title>EMBL-EBI articles are top of the list</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_552</link>
+      <description>Articles on three resources hosted by EMBL-EBI (PDBe, Ensembl Genomes and Gene Expression Atlas) are highlighted as featured articles in the latest Database issue of Nucleic Acids Research. Featured articles are selected by the journal's Executive Editors based upon their originality, significance and scientific excellence</description>
+      <pubDate>Fri, 20 Nov 2009 09:13:08 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_552</guid>
+    </item>
+	
+	
+	
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_551</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Fri, 06 Nov 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_551</guid>
+    </item>
+	
+	 <item>
+      <title>IntEnz release 54, Rhea release 7</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_550</link>
+      <description>IntEnz release 54 and Rhea release 7 are already available. UniProt 15.10 and Reactome 30 have been used for cross-references.</description>
+      <pubDate>Thu, 05 Nov 2009 11:55:31 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_550</guid>
+    </item>
+	
+	
+	 <item>
+      <title>InterPro release 23.1</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_549</link>
+      <description>We are pleased to announce the release of InterPro 23.1, which contains 19269 entries and 68 new methods, which include new methods from PANTHER, HAMAP and PROSITE and covers 76.5% of UniProt Knowledgebase release 15.10.  UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site. For full details of the release please see the Release Notes.</description>
+      <pubDate>Wed, 04 Nov 2009 17:00:17 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_549</guid>
+    </item>
+	
+	
+	 <item>
+      <title>IntAct Release 113</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_548</link>
+      <description>IntAct contains 202,419 binary interactions from 4,148 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Wed, 04 Nov 2009 12:23:08 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_548</guid>
+    </item>
+	
+	
+	 <item>
+      <title>UniProt Knowledgebase release 15.9</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_547</link>
+      <description>UniProt Knowledgebase release 15.10 includes Swiss-Prot release 57.10 and TrEMBL release 40.10... more UniProtKB/Swiss-Prot Release 57.10 of 04-Nov-09 contains 512205 sequence entries... more UniProtKB/TrEMBL Release 40.10 of 04-Nov-09 contains 9696103 sequence entries. This represents an increase of 32%... more</description>
+      <pubDate>Tue, 03 Nov 2009 16:25:41 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_547</guid>
+    </item>
+				
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_546</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Fri, 16 Oct 2009 09:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_546</guid>
+    </item>
+	 
+	 <item>
+      <title>IntAct Release 112</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_545</link>
+      <description>IntAct contains 201,652 binary interactions from 4,119 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Wed, 14 Oct 2009 09:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_545</guid>
+    </item>
+	
+	 <item>
+      <title>UniProt Knowledgebase release 15.9</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_544</link>
+      <description>UniProt Knowledgebase release 15.9 includes Swiss-Prot release 57.9 and TrEMBL release 40.9... more UniProtKB/Swiss-Prot Release 57.9 of 13-Oct-09 contains 510076 sequence entries... more UniProtKB/TrEMBL Release 40.9 of 13-Oct-09 contains 5346359 sequence entries. This represents an increase of 29%... more</description>
+      <pubDate>Tue, 13 Oct 2009 16:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_544</guid>
+    </item>
+	
+	 <item>
+      <title>IntEnz release 53 / Rhea release 6</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_543</link>
+      <description>IntEnz release 53 and Rhea release 6 are already available. Rhea identifiers can be used now to search IntEnz. UniProt 15.8 and Reactome 30 have been used for cross-references.</description>
+      <pubDate>Fri, 09 Oct 2009 00:27:16 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_543</guid>
+    </item>
+	
+	
+	 <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_542</link>
+      <description>The new release of GOA contains UniProt GO v76.0, GOA Human v78.0, GOA Mouse v64.0, GOA Rat v64.0, GOA Arabidopsis v51.0, GOA Zebrafish v51.0, GOA Chicken v48.0, GOA Cow v41.0, GOA PDB v67.0 and GOA Proteome Sets 53.0... more</description>
+      <pubDate>Thu, 08 Oct 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_542</guid>
+    </item>
+	
+	
+	 <item>
+      <title>New portal for plant genomics will support research into improved crops</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_541</link>
+      <description>Today sees the launch of Ensembl Plants – a freely available web resource for plant genomics research – by EMBL-EBI, in partnership with the Cold Spring Harbor Laboratory, USA. Ensembl Plants allows researchers worldwide to access and visualise the results of genome-scale experiments in different plant species and will make it easier for scientists to improve the productivity and health of crops... more</description>
+      <pubDate>Thu, 08 Oct 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_541</guid>
+    </item>
+	 
+	 <item>
+      <title>Research takes us a step closer to longer, healthier lives</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_540</link>
+      <description>Scientists have shown that genetically manipulating a key
+molecular pathway in mice can mimic the longevity effects of a calorie
+restricted diet. The research, a collaborative effort that includes
+researchers at the EMBL-European Bioinformatics Institute, is published
+today in the journal Science and holds promise for drug
+treatments for age-related diseases... more</description>
+      <pubDate>Fri, 02 Oct 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_540</guid>
+    </item>
+	 
+	 <item>
+      <title>RESID Database Release 59.00</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_539</link>
+      <description>Release 59.00 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ...more</description>
+      <pubDate>Wed, 30 Sep 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_539</guid>
+    </item>
+
+	 <item>
+      <title>Ensembl Release 56</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_538</link>
+      <description>The Ensembl project is pleased to announce release 56 of Ensembl ...more</description>
+      <pubDate>Mon, 28 Sep 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_538</guid>
+    </item> 
+	
+    <item>
+      <title>IntAct Release 110</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_536</link>
+      <description>IntAct contains 201,094 binary interactions from 4,085 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Sat, 26 Sep 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_536</guid>
+    </item> 
+	
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_537</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Thu, 24 Sep 2009 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_537</guid>
+    </item> 
+	
+	 <item>
+      <title>InterPro release 23.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_535</link>
+      <description>We are pleased to announce the release of InterPro 23.0, which contains 19150 entries and 434 new methods, which include new methods from PANTHER, HAMAP and the new releases from PROSITE and SMART, covering 76.4% of UniProt Knowledgebase release 15.8 ... more</description>
+      <pubDate>Tue, 22 Sep 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_535</guid>
+    </item> 
+	
+	 <item>
+      <title>UniProt Knowledgebase release 15.8</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_534</link>
+      <description>UniProt Knowledgebase release 15.8 includes Swiss-Prot release 57.8 and TrEMBL release 40.8... more UniProtKB/Swiss-Prot Release 57.8 of 22-Sep-09 contains 509019 sequence entries... more UniProtKB/TrEMBL Release 40.8 of 22-Sep-09 contains 9325547 sequence entries. This represents an increase of 26%... more</description>
+      <pubDate>Tue, 22 Sep 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_534</guid>
+    </item> 	
+  
+	 <item>
+      <title>EMBL Release 101</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_533</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 101 on 26-Aug-2009. The release contains 163,656,234 sequence entries comprising 283,748,816,763 nucleotides ...more</description>
+      <pubDate>Thu, 10 Sep 2009 13:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_533</guid>
+    </item> 
+
+	 <item>
+      <title>IntAct Release 109</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_532</link>
+      <description>IntAct contains 200,395 binary interactions from 4,064 manually curated publications. All data is also available on the public FTP site</description>
+      <pubDate>Tue, 08 Sep 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_532</guid>
+    </item> 
+
+	 <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_531</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Thu, 03 Sep 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_531</guid>
+    </item> 
+
+	 <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_530a</link>
+      <description>The new release of GOA contains UniProt GO v75.0, GOA Human v77.0, GOA Mouse v63.0, GOA Rat v63.0, GOA Arabidopsis v50.0, GOA Zebrafish v50.0, GOA Chicken v47.0, GOA Cow v41.0, GOA PDB v66.0 and GOA Proteome Sets 52.0... more</description>
+      <pubDate>Tue, 01 Sep 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_530a</guid>
+    </item>
+
+
+	 <item>
+      <title>UniProt Knowledgebase release 15.7</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_530</link>
+      <description>UniProt Knowledgebase release 15.7 includes Swiss-Prot release 57.7 and TrEMBL release 40.7... more UniProtKB/Swiss-Prot Release 57.7 of 01-Sep-09 contains 497293 sequence entries... more UniProtKB/TrEMBL Release 40.7 of 01-Sep-09 contains 9145906 sequence entries. This represents an increase of 24%... more</description>
+      <pubDate>Tue, 01 Sep 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_530</guid>
+    </item> 
+	
+	
+	 <item>
+      <title>RESID Database Release 58.02</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_529</link>
+      <description>Release 58.02 of the RESID of Protein Modifications is available by ftp at the EBI in the directory or at the NCIFCRF in the directory ...more</description>
+      <pubDate>Fri, 28 Aug 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_529</guid>
+    </item> 
+
+	 	<item>
+      <title>IntEnz release 52</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_528</link>
+      <description>IntEnz release 52 (http://www.ebi.ac.uk/intenz) is already available. This is the first release of IntEnz as an open source project. UniProt 15.6 has been used for cross-references.Next release (53) is flexibly scheduled for Oct 1st.</description>
+      <pubDate>Fri, 28 Aug 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_528</guid>
+    </item> 
+
+    <item>
+      <title>IntAct Release 108</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_527</link>
+      <description>IntAct contains 200,056 binary interactions from 4,035 manually curated publications. All data is also available on the public FTP site</description>
+      <pubDate>Thu, 27 Aug 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_527</guid>
+    </item> 
+	
+
+    <item>
+      <title>ChEBI release 60</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_526</link>
+      <description>ChEBI release 60 contains 18643 entities with 266 of those submitted via the ChEBI submission tool. ChEBI now includes publications referencing its entries. The next ChEBI release will be Sep 30th 2009. See our entity of the month, Cocaine. All data are also available on the public FTP site</description>
+      <pubDate>Wed, 26 Aug 2009 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_526</guid>
+    </item> 
+
+
+	 	<item>
+      <title>UK leads European research programme with £10M investment in bioscience data handling capacity</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_525</link>
+      <description>The UK has made its first substantial commitment to a major emerging pan-European science project with a £10M investment by 
+the Biotechnology and Biological Sciences Research Council (BBSRC). BBSRC has awarded funding to the European Molecular Biology Laboratory’s 
+European Bioinformatics Institute to permit a dramatic increase in the institute’s data storage and handling capacity... more</description>
+      <pubDate>Tue, 25 Aug 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_525</guid>
+    </item> 
+	
+ 	<item>
+      <title>Launch of the first standard graphical notation for biology</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_524</link>
+      <description>EBI researchers and their colleagues in 30 labs worldwide have released a new set of standards for graphically representing biological information. This visual language should make it easier to exchange complex information, so that models are accurate, efficient and readily understandable. The new standard, called the Systems Biology Graphical Notation (SBGN), is published today in Nature Biotechnology... more</description>
+      <pubDate>Fri, 07 Aug 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_524</guid>
+    </item> 
+	
+	<item>
+      <title>IntEnz release 51</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_523</link>
+      <description>IntEnz release 51 is already available. UniProt 15.6 has been used for cross-references. Next release (52) is flexibly scheduled for Aug 27th.</description>
+      <pubDate>Thu, 06 Aug 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_523</guid>
+    </item>
+
+	<item>
+      <title>IntAct Release 107</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_522</link>
+      <description>IntAct contains 195,719 binary interactions from 4,002 manually curated publications. All data is also available on the public FTP site ...more</description>
+      <pubDate>Wed, 05 Aug 2009 13:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_522</guid>
+    </item>
+
+
+	<item>
+      <title>RESID Database Release 58.01</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_521</link>
+      <description>Release 58.01 of the RESID of Protein Modifications is available by ftp at the EBI in the directory or at the NCIFCRF in the directory ...more</description>
+      <pubDate>Mon, 03 Aug 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_521</guid>
+    </item>
+
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_520</link>
+      <description>The new release of GOA contains UniProt GO v74.0, GOA Human v76.0, GOA Mouse v62.0, GOA Rat v62.0, GOA Arabidopsis v49.0, GOA Zebrafish v49.0, GOA Chicken v46.0, GOA Cow v39.0, GOA PDB v65.0 and GOA Proteome Sets 51.0... more</description>
+      <pubDate>Thu, 30 Jul 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_520</guid>
+    </item>
+
+
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_519</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Thu, 30 Jul 2009 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_519</guid>
+    </item>
+
+
+
+	<item>
+      <title>ChEBI Release 59</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_518</link>
+      <description>ChEBI release 59 contains 18414 entities with 202 of those submitted via the ChEBI submission tool. The next ChEBI release will be Aug 26th 2009. See our entity of the month, Copernicium. All data is also available on the public FTP site. </description>
+      <pubDate>Wed, 29 Jul 2009 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_518</guid>
+    </item>
+
+	<item>
+      <title>UniProt Knowledgebase release 15.6</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_517</link>
+      <description>UniProt Knowledgebase release 15.6 includes Swiss-Prot release 57.6 and TrEMBL release 40.6... more  UniProtKB/Swiss-Prot Release 57.6 of 28-Jun-09 contains 495880 sequence entries... more UniProtKB/TrEMBL Release 40.5 of 28-Jun-09 ontains 8926016 sequence entries comprising 2886024699 amino acids. 1569144 sequences have been added since release 40, the sequence data of 2860 existing entries has been updated and the annotations of 4516603 entries have been revised. This represents an increase of 21%... more</description>
+      <pubDate>Tue, 28 Jul 2009 20:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_517</guid>
+    </item>
+	
+	<item>
+      <title>InterPro release 22.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_516</link>
+      <description>We are pleased to announce the release of InterPro 22.0, which now includes HAMAP (High-quality Automated and Manual Annotation of microbial Proteomes) as a new member database. Release 22.0 contains 18843 entries, with 280 new methods from HAMAP and 135 from PRODOM, covering 76.3% of UniProt Knowledgebase release 15.6. UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site. For full details of the release please see the Release Notes.</description>
+      <pubDate>Tue, 28 Jul 2009 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_516</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 106</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_515</link>
+      <description>IntAct contains 195,553 binary interactions from 3,989 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Wed, 22 Jul 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_515</guid>
+    </item>
+	
+	
+	<item>
+      <title>New InterPro BioMart Service Now Available</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_514</link>
+      <description>InterPro BioMart We are pleased to announce the release of a new BioMart service providing data from InterPro, the database of protein families, domains, regions, repeats and sites ...more</description>
+      <pubDate>Tue, 14 Jul 2009 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_514</guid>
+    </item>
+	  
+	  
+	<item>
+      <title>Ensembl Release 55</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_513</link>
+      <description>The Ensembl project is pleased to announce release 55 of Ensembl ...more</description>
+      <pubDate>Tue, 14 Jul 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_513</guid>
+    </item>
+	
+
+	
+	<item>
+      <title>IntAct Release 105</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_512</link>
+      <description>IntAct contains 194,978 binary interactions from 3,974  manually curated publications. All data is also available on the public FTP site:  ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-07-10/</description>
+      <pubDate>Tue, 14 Jul 2009 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_512</guid>
+    </item>
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_511</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Thu, 09 Jul 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_511</guid>
+    </item>
+	<item>
+      <title>EMBL-EBI Director Janet Thornton awarded an ISCB Accomplishment by a Senior Scientist Award</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_510</link>
+      <description>Janet Thornton, Director of EMBL-EBI, has been awarded a Senior Scientist Award by the ISCB Fellows Programme in recognition of her outstanding contributions to the fields of computational biology and bioinformatics. The award was made at the ISMB/ECCB 2009 conference in Stockholm, Sweden ...more</description>
+      <pubDate>Wed, 08 Jul 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_510</guid>
+    </item>
+	<item>
+      <title>UniProt Knowledgebase release 15.5</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_509</link>
+      <description>UniProt Knowledgebase release 15.5 includes Swiss-Prot release 57.5 and TrEMBL release 40.5... more UniProtKB/Swiss-Prot Release 57.5 of 07-Jul-09 contains 471472 sequence entries... more UniProtKB/TrEMBL Release 40.5 of 07-Jul-09 of UniProtKB/TrEMBL contains 8760751 sequence entries comprising 2828570079 amino acids. 1304179 sequences have been added since release 40, the sequence data of 2480 existing entries has been updated and the annotations of 4382329 entries have been revised. This represents an increase of 16%. ... more</description>
+      <pubDate>Tue, 07 Jul 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_509</guid>
+    </item>
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_508</link>
+      <description>The new release of GOA contains UniProt GO v73.0, GOA Human v75.0, GOA Mouse v61.0, GOA Rat v61.0, GOA Arabidopsis v48.0, GOA Zebrafish v48.0, GOA Chicken v45.0, GOA Cow v38.0, GOA PDB v64.0 and GOA Proteome Sets 50.0... more</description>
+      <pubDate>Thu, 02 Jul 2009 15:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_508</guid>
+    </item>
+	
+	<item>
+      <title>EMBL-EBI and University of Manchester launch major new e- 
+science resource</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_507</link>
+      <description>Biocatalogue.org - a  
+curated registry of web services for the life sciences - is launched  
+today. Biocatalogue will make it easier for scientists to find  
+bioinformatics services that meet their research needs by providing a  
+single search point. Providers, expert curators and users monitor the  
+catalogue and provide high quality information on each service,  
+including ratings. This type of systematic access has the potential to  
+significantly accelerate the work of biomedical researchers The  
+project has been led by Prof Carole Goble at The University of  
+Manchester and Rodrigo Lopez at EMBL-EBI... more</description>
+      <pubDate>Wed, 01 Jul 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_507</guid>
+    </item>
+	<item>
+      <title>Gerard Kleywegt to head Protein Data Bank Europe</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_506</link>
+      <description>From  1 Jul 2009, Gerard Kleywegt will lead the Protein 
+Data Bank Europe (PDBe) project. Gerard has served on the PDBe 
+Scientific Advisory Board for the last few years and has been on the 
+wwPDB advisory committee. Gerard will replace Kim Henrick, who has 
+headed the PDBe since 2001... more</description>
+      <pubDate>Tue, 30 Jun 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_506</guid>
+    </item>
+	<item>
+      <title>RESID Release 58.00</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_505</link>
+      <description>Release 58.00 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF. See the release notes for more information on the this release of the RESID Database.</description>
+      <pubDate>Tue, 30 Jun 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_505</guid>
+    </item>
+	<item>
+      <title>IntEnz release 50</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_504</link>
+      <description>IntEnz release 50 is already available. UniProt 15.4 has been used for cross-references. Next release (51) is flexibly scheduled for Aug 4th.</description>
+      <pubDate>Thu, 25 Jun 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_504</guid>
+    </item>
+	<item>
+      <title>ChEBI Release 58</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_503</link>
+      <description>ChEBI release 58 contains 18186 entities with 175 of those submitted via the ChEBI submission tool. The next ChEBI release will be Jul 29th 2009. See our entity of the month, Capecitabine http://www.ebi.ac.uk/chebi/init.do#Entity All data are also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/</description>
+      <pubDate>Tue, 23 Jun 2009 11:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_503</guid>
+    </item>
+	<item>
+      <title>IntAct Release 104</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_502</link>
+      <description>IntAct contains 194,558 binary interactions from 3,965  manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-06-19/</description>
+      <pubDate>Tue, 23 Jun 2009 11:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_502</guid>
+    </item>
+	<item>
+      <title>Sweden is the first country to pledge long-term funding for ELIXIR</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_501</link>
+      <description>The Swedish funding agencies (the Swedish Energy Agency, Fas, Formas, the Swedish Research Council and VINNOVA) have suggested the government to allocate a total of 19 million SEK (1.7 million Euro) over three years to ELIXIR and the Swedish Bioinformatics Infrastructure for Life Sciences (BILS), which would make Sweden the first country to secure long-term funding for ELIXIR. The Swedish government has expressed its intention to substantially increase research funding in several strategic areas, including national infrastructures, and a final decision along these lines is expected during the autumn 2009. Bioinformatics is increasingly important in the interpretation of these data. We are therefore very enthusiastic about this new long-term funding for the BILS bioinformatics infrastructure in Sweden, which works within a European perspective and interacts closely with ELIXIR"... more</description>
+      <pubDate>Tue, 23 Jun 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_501</guid>
+    </item>
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_500</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Wed, 17 Jun 2009 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_500</guid>
+    </item>
+	<item>
+      <title>InterPro release 21.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_499</link>
+      <description>We are pleased to announce the release of InterPro 21.0, containing 18638 entries covering 76.8% of UniProtKB. This release includes 169 new entries with 126 new methods from PRINTS and PRODOM. UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site. For full details of the release please see the Release Notes.</description>
+      <pubDate>Tue, 16 Jun 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_499</guid>
+    </item>
+	<item>
+      <title>UniProt Knowledgebase release 15.4</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_498</link>
+      <description>UniProt Knowledgebase release 15.4 includes Swiss-Prot release 57.4 and TrEMBL release 40.4...more * UniProtKB/Swiss-Prot Release 57.4 of 16-Jun-09 contains 470369 sequence entries...more * UniProtKB/TrEMBL Release 40.4 of 16-Jun-09 contains 8594382   sequence entries comprising 2774832018   amino acids.  1128426   sequences have been added since release 40, the sequence data of 2330   existing entries has been updated and the annotations of 4332439   entries have been revised. This represents an increase of 14%... more</description>
+      <pubDate>Tue, 16 Jun 2009 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_498</guid>
+    </item>
+	<item>
+      <title>IntAct Release 103</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_497</link>
+      <description>IntAct contains 193,716 binary interactions from 3,963  manually  curated publications. All data is also available on the public FTP  site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-06-12/</description>
+      <pubDate>Tue, 16 Jun 2009 13:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_497</guid>
+    </item>
+	<item>
+      <title>EMBL Release 100</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_496</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 100 on 29-May-2009. The release contains 161,580,181 sequence entries comprising 275,798,912,115 nucleotides ...more</description>
+      <pubDate>Mon, 15 Jun 2009 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_496</guid>
+    </item>
+    <item>
+      <title>Mapping gene expression with Gene Expression Atlas</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_495</link>
+      <description>Today, researchers at EMBL-EBI launch a new database, the Gene Expression Atlas, which allows scientists to search and compare gene expression data at unprecedented detail and scope. Observing how gene expression varies in different cell types, tissues and under disease conditions can help researchers understand gene function and to develop new drugs and therapies...more</description>
+      <pubDate>Mon, 15 Jun 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_495</guid>
+    </item>
+	<item>
+      <title>RESID Release 57.01</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_494</link>
+      <description>Release 57.01 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF. See the release notes for more information on the this release of the RESID Database.</description>
+      <pubDate>Fri, 05 Jun 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_494</guid>
+    </item>
+	<item>
+      <title>IntAct Release 102</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_493</link>
+      <description>IntAct release 102 contains 192,887 binary interactions from 3,944 manually curated publications. All data is also available on the public FTP site.</description>
+      <pubDate>Fri, 05 Jun 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_493</guid>
+    </item>
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_492</link>
+      <description>The new release of GOA contains UniProt GO v72.0, GOA Human v74.0, GOA Mouse v60.0, GOA Rat v60.0, GOA Arabidopsis v47.0, GOA Zebrafish v47.0, GOA Chicken v44.0, GOA Cow v37.0, GOA PDB v63.0 and GOA Proteome Sets 49.0... more</description>
+      <pubDate>Wed, 27 May 2009 15:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_492</guid>
+    </item>
+	
+	<item>
+      <title>ChEBI Release 57</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_491</link>
+      <description>ChEBI Release 57 contains new links to NMRShiftDB. It also contains just under 17,963 manually annotated entries of which 108 entries have been submitted via the ChEBI Submission tool. The next ChEBI Release will be on the 24 Jun 2009. See our entity of the month, Oseltamivir. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/</description>
+      <pubDate>Wed, 27 May 2009 10:50:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_491</guid>
+    </item>
+	
+	<item>
+      <title>UniProt Knowledgebase release 15.3</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_489</link>
+      <description>UniProt Knowledgebase release 15.3 includes Swiss-Prot release 57.3 and TrEMBL release 40.3... more * UniProtKB/Swiss-Prot Release 57.3 of 26-May-09 contains 462764 sequence entries... more * UniProtKB/TrEMBL Release 40.3 of 26-May-09 contains 7916844  sequence entries comprising 2577542687  amino acids.  445798  sequences have been added since release 40, the sequence data of 1362  existing entries has been updated and the annotations of 3670156  entries have been revised. This represents an increase of 6%... more</description>
+      <pubDate>Tue, 26 May 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_489</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 101</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_488</link>
+      <description>IntAct contains 190,521 binary interactions from 3,934  manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-05-15/</description>
+      <pubDate>Wed, 20 May 2009 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_488</guid>
+    </item>
+	<item>
+      <title>InterPro release 20.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_487</link>
+      <description>We are pleased to announce the release of InterPro 20.0, containing 18469 entries covering 77.0% of UniProtKB. This release includes 10 57 new entries representing 1611 new methods from Pfam, PRODOM, PANTHER and TIGRFAMs. UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site. For full details of the release please see the Release Notes.</description>
+      <pubDate>Mon, 11 May 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_487</guid>
+    </item>
+	<item>
+      <title>IntAct Release 100</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_486</link>
+      <description>IntAct contains 189,994 binary interactions from 3,920  manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-05-05</description>
+      <pubDate>Mon, 11 May 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_486</guid>
+    </item>
+	<item>
+      <title>IntEnz release 49</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_485</link>
+      <description>IntEnz release 49 is already available. New in this release: One new subsubclass (EC 1.17.7) in the enzyme classification. Wherever possible, reactions have been mapped to Rhea and their participants to ChEBI. IntEnz available now in BioPAX level 2 format! UniProt 15.2 has been used for cross-references.</description>
+      <pubDate>Mon, 11 May 2009 15:17:01 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_485</guid>
+    </item>
+	<item>
+      <title>Release 54 of Ensembl</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_484</link>
+      <description>The Ensembl project is pleased to announce release 54 of Ensembl (http://www.ensembl.org/). Highlights of this release are: New Zv8 zebrafish assembly Comparative alignment text displays for variations and regions Ability to add personal notes to any Gene or Transcript For more information visit: http://www.ensembl.org/info/website/news/index.html Along side this release we are also releasing a new version of the pre site (http://pre.ensembl.org/). This now includes: The GRCh37 human assembly released in Feb 2009 The callJacc3 marmoset assembly</description>
+      <pubDate>Fri, 08 May 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_484</guid>
+    </item>
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_483</link>
+      <description>The latest release of IPI is now available...</description>
+      <pubDate>Thu, 07 May 2009 10:38:39 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_483</guid>
+    </item>
+	
+	
+	<item>
+      <title>UniProt Knowledgebase release 15.2</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_482</link>
+      <description>UniProt Knowledgebase release 15.2 includes Swiss-Prot release 57.2 and TrEMBL release 40.2... more * UniProtKB/Swiss-Prot Release 57.2 of 05-May-09 contains 462764 sequence entries, comprising 163773385 amino acids abstracted from 178290 references. 0 sequences have been added since release 57.0, the sequence data of 0 existing entries has been updated and the annotations of 0 entries have been revised... more * UniProtKB/TrEMBL Release 40.2 of 05-May-09 contains 7695149 sequence entries comprising 2506224652 amino acids. 215676 sequences have been added since release 40, the sequence data of 1252 existing entries has been updated and the annotations of 3596189 entries have been revised. This represents an increase of 3%... more</description>
+      <pubDate>Mon, 06 Apr 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_482</guid>
+    </item>	
+	
+	
+	<item>
+      <title>ChEBI Release 56 with SDF Files</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_481</link>
+      <description>SDF files are now available with ChEBI Release 56. They can be exported via the Downloads section or the search results page. We also have automatically generated links from IntEnz (www.ebi.ac.uk/intenz/) and Rhea (www.ebi.ac.uk/rhea/). This release contains 17842 annotated compounds with 74 of them new submissions entered via the ChEBI submission tool. The next ChEBI Release will be on the 27 May 2009. See our entity of the month, Ethyl formate: http://www.ebi.ac.uk/chebi/init.do#Entity All data are also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/</description>
+      <pubDate>Wed, 29 Apr 2009 18:33:33 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_481</guid>
+    </item>
+	<item>
+      <title>GOA Release</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_480</link>
+      <description>The new release of GOA contains UniProt GO v71.0, GOA Human v73.0, GOA Mouse v59.0, GOA Rat v59.0, GOA Arabidopsis v46.0, GOA Zebrafish v46.0, GOA Chicken v43.0, GOA Cow v36.0, GOA PDB v62.0 and GOA Proteome Sets 48.0 ...more</description>
+      <pubDate>Fri, 24 Apr 2009 15:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_480</guid>
+    </item>
+	<item>
+      <title>IntAct Release 99</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_479</link>
+      <description>IntAct contains 189,708 binary interactions from 3,907  manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-04-17/</description>
+      <pubDate>Wed, 22 Apr 2009 11:50:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_479</guid>
+    </item>
+
+	<item>
+      <title>Launch of new Ensembl Genomes and new-look Ensembl website means more genome power at your fingertips</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_478</link>
+      <description>Today sees the release of Ensembl Genomes, a web-based browser that allows anyone to examine the genomes of much of life on earth. Ensembl Genomes is the new younger sibling of the Ensembl genome browser, which opens up the power of Ensembl to non-vertebrate species - plants, fungi, bacteria, metazoa and protists - for the first time ... more</description>
+      <pubDate>Mon, 20 Apr 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_478</guid>
+    </item>
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_477</link>
+      <description>The latest release of IPI is now available...</description>
+      <pubDate>Thu, 16 Apr 2009 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_477</guid>
+    </item>
+	<item>
+      <title>UniProt Knowledgebase release 15.1</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_476</link>
+      <description>UniProt Knowledgebase release 15.1 
+UniProt Knowledgebase release 15.1 includes Swiss-Prot release 57.1 and TrEMBL release 40.1... more 
+UniProtKB/Swiss-Prot Release 57.1 of 14-Apr-09 contains 462764 sequence entries, comprising 163773385 amino acids abstracted from 178290 references. 34128 sequences have been added since release 57.0, the sequence data of 174 existing entries has been updated and the annotations of 27819 entries have been revised... more
+
+UniProtKB/TrEMBL Release 40.1 of 14-Apr-2009 contains 7527796 sequence entries comprising 2456091386 amino acids. 38583 sequences have been added since release 40, the sequence data of 41 existing entries has been updated and the annotations of 1125219 entries have been revised... more</description>
+      <pubDate>Tue, 14 Apr 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_476</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 98</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_475</link>
+      <description>IntAct contains 189,489 binary interactions from 3,893  manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-04-03</description>
+      <pubDate>Tue, 07 Apr 2009 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_475</guid>
+    </item>
+	<item>
+      <title>RESID Release 57.00</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_474</link>
+      <description>Release 57.00 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF. See the release notes for more information on the this release of the RESID Database.</description>
+      <pubDate>Tue, 31 Mar 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_474</guid>
+    </item>
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_473</link>
+      <description>The latest release of IPI is now available...</description>
+      <pubDate>Thu, 26 Mar 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_473</guid>
+    </item>
+	<item>
+      <title>UniProt Knowledgebase release 15.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_472</link>
+      <description>UniProt Knowledgebase release 15.0 includes Swiss-Prot release 57.0 and TrEMBL release 40.0... more
+
+    * UniProtKB/Swiss-Prot Release 57.0 of 24-Mar-09 contains 428'650 sequence entries, comprising 154'416'236 amino acids abstracted from 177'584 references. 36'053 sequences have been added since release 56.0, the sequence data of 2'010 existing entries have been manually updated and the annotations of 368'500 entries have been revised... more
+    * UniProtKB/TrEMBL Release 40.0 of 24-Mar-2009 contains 7'753'442 sequence entries, comprising 2'459'135'421 amino acids. 1'700'878 sequences have been added since release 39.0, the sequence data of 24'829 existing entries has been updated and the annotations of 4'218'268 entries have been revised. This represents an increase of 31%... more
+</description>
+      <pubDate>Tue, 24 Mar 2009 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_472</guid>
+    </item>
+
+	
+	
+	<item>
+      <title>IntEnz Release 48</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_471</link>
+      <description>IntEnz release 48 is already available. Two new entries and two changes in the classification have been included in this release. UniProt 14.9 has been used for cross-references.</description>
+      <pubDate>Fri, 13 Mar 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_471</guid>
+    </item>
+	
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_470</link>
+      <description>The new release of GOA contains UniProt GO v70.0, GOA Human v72.0, GOA Mouse v58.0, GOA Rat v58.0, GOA Arabidopsis v45.0, GOA Zebrafish v45.0, GOA Chicken v42.0, GOA Cow v35.0, GOA PDB v61.0 and GOA Proteome Sets 47.0... more</description>
+      <pubDate>Tue, 10 Mar 2009 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_470</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 97</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_469</link>
+      <description>IntAct contains 189,082 binary interactions from 3,865 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-03-06</description>
+      <pubDate>Tue, 10 Mar 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_469</guid>
+    </item>
+	
+	
+	<item>
+      <title>A census of human transcription factors reveals their secrets</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_468</link>
+      <description>By incorporating publicly available genomic data sets and analysing over 1,000 transcription factors, Juanma Vaquerizas, a researcher in the Luscombe group at EMBL-EBI and his colleagues have provided new understanding of how transcription factors in humans might operate. The study is published online in advance of publication in Nature Reviews Genetics.</description>
+      <pubDate>Tue, 10 Mar 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_468</guid>
+    </item>
+	
+	
+	<item>
+      <title>EMBL release 99</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_467</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 99 on 26-FEB-2009. The release contains 158,001,051 sequence entries comprising 270,341,262,540 nucleotides ...more</description>
+      <pubDate>Tue, 03 Mar 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_467</guid>
+    </item>
+	
+	
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_466</link>
+      <description>The latest release of IPI is now available...</description>
+      <pubDate>Tue, 03 Mar 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_466</guid>
+    </item>
+	
+	<item>
+      <title>UniProt v14.9 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_465</link>
+      <description>UniProt Release 14.9 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.9 and UniProtKB/TrEMBL Protein Database Release 39.9... more</description>
+      <pubDate>Tue, 03 Mar 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_465</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB/Swiss-Prot v56.8 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_464</link>
+      <description>Release 56.9 of UniProtKB/Swiss-Prot contains 412525 entries... more</description>
+      <pubDate>Tue, 03 Mar 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_464</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB/TrEMBL v39.9 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_463</link>
+      <description>Release 39.9 of UniProtKB/TrEMBL contains 7341751  sequence entries, this represents an increase of 26%... more</description>
+      <pubDate>Tue, 03 Mar 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_463</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 96</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_462</link>
+      <description>IntAct contains 188,838 binary interactions from 3,838 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-02-20.</description>
+      <pubDate>Tue, 24 Feb 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_462</guid>
+    </item>
+
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_461</link>
+      <description>The new release of GOA contains UniProt GO v69.0, GOA Human v71.0, GOA Mouse v57.0, GOA Rat v57.0, GOA Arabidopsis v44.0, GOA Zebrafish v44.0, GOA Chicken v41.0, GOA Cow v34.0, GOA PDB v60.0 and GOA Proteome Sets 46.0... more</description>
+      <pubDate>Tue, 24 Feb 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_461</guid>
+    </item>
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_460</link>
+      <description>The latest release of IPI is now available...</description>
+      <pubDate>Fri, 13 Feb 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_460</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 95</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_459</link>
+      <description>IntAct contains 188,292 binary interactions from 3,812 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-02-06.</description>
+      <pubDate>Wed, 11 Feb 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_459</guid>
+    </item>
+	
+	<item>
+      <title>UniProt v14.8 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_458</link>
+      <description>UniProt Release 14.8 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.8 and UniProtKB/TrEMBL Protein Database Release 39.8... more</description>
+      <pubDate>Tue, 10 Feb 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_458</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB/Swiss-Prot v56.8 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_457</link>
+      <description>Release 56.8 of UniProtKB/Swiss-Prot contains 410518  entries... more</description>
+      <pubDate>Tue, 10 Feb 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_457</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB/TrEMBL v39.8 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_456</link>
+      <description>Release 39.8 of UniProtKB/TrEMBL contains 7157600  sequence entries, this represents an increase of 22%... more</description>
+      <pubDate>Tue, 10 Feb 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_456</guid>
+    </item>
+	
+	<item>
+      <title>RESID Release  56.01</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_455</link>
+      <description>Release  56.01 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF. See the release notes for more information on the this release of the RESID Database. </description>
+      <pubDate>Mon, 02 Feb 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_455</guid>
+    </item>
+	
+	<item>
+      <title>InterPro release 19.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_454</link>
+      <description>
+We are pleased to announce the release of InterPro 19.0, it contains 17412 entries covering 76.2% of UniProtKB with new methods from Pfam, PANTHER, Gene3D and SUPEFAMILY. 
+UniParc (uniparc_match.tar.gz) and UniMES (unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site.
+For full details of the release please see the Release Notes.</description>
+      <pubDate>Thu, 29 Jan 2009 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_454</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 94</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_453</link>
+      <description>IntAct contains 187,839 binary interactions from 3,791 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-01-23.</description>
+      <pubDate>Thu, 29 Jan 2009 13:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_453</guid>
+    </item>
+	
+	
+	<item>
+      <title>IntEnz release 47</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_452</link>
+      <description>IntEnz release 47 (http://www.ebi.ac.uk/intenz) is already available.
+
+* XML files updated to make better use of the xchars package, for easier
+  querying and formatting using XSLT.
+* A batch of approved entries and a batch of proposals have been included in
+  this release.
+* UniProt 14.7 has been used for cross-references.
+ ...more	</description>
+      <pubDate>Wed, 28 Jan 2009 22:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_452</guid>
+    </item>
+	
+	<item>
+      <title>EMBL release 98</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_451</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 98 on 12-JAN-2009. The release contains 155,114,144 sequence entries comprising 265,307,725,081 nucleotides ...more	</description>
+      <pubDate>Mon, 26 Jan 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_451</guid>
+    </item>
+	
+	<item>
+      <title>Re-write the textbooks: transcription is bidirectional</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_450</link>
+      <description>A genome wide study of transcription in yeast has 
+redefined the concept of promoters. Researchers in the groups of Lars 
+Steinmetz at EMBL in Heidelberg, Germany, and Wolfgang Huber at EMBL-EBI 
+in Hinxton, UK, have unravelled how yeast generates its transcripts and 
+have come a step closer to understanding their function. The study is 
+published online in the current issue of Nature... more</description>
+      <pubDate>Mon, 26 Jan 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_450</guid>
+    </item>
+	
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_449</link>
+      <description>The new release of GOA contains UniProt GO v68.0, GOA Human v70.0, GOA Mouse v56.0, GOA Rat v56.0, GOA Arabidopsis v43.0, GOA Zebrafish v43.0, GOA Chicken v40.0, GOA Cow v33.0, GOA PDB v59.0 and GOA Proteome Sets 45.0... more</description>
+      <pubDate>Thu, 22 Jan 2009 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_449</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 93</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_448</link>
+      <description>IntAct contains 187,118 binary interactions from 3,758 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-01-16.</description>
+      <pubDate>Wed, 21 Jan 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_448</guid>
+    </item>
+	
+	<item>
+      <title>UniProt v14.7 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_447</link>
+      <description>UniProt Release 14.7 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.7 and UniProtKB/TrEMBL Protein Database Release 39.7... more</description>
+      <pubDate>Tue, 20 Jan 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_447</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB/Swiss-Prot v56.7 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_446</link>
+      <description>Release 56.7 of UniProtKB/Swiss-Prot contains 408099 entries... more</description>
+      <pubDate>Tue, 20 Jan 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_446</guid>
+    </item>
+	
+	<item>
+      <title>UniProtKB/TrEMBL v39.7 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_445</link>
+      <description>Release 39.7 of UniProtKB/TrEMBL contains 7001017 sequence entries, this represents an increase of 18%... more</description>
+      <pubDate>Tue, 20 Jan 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_445</guid>
+    </item>
+	
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_444</link>
+      <description>The latest release of IPI is now available...</description>
+      <pubDate>Tue, 20 Jan 2009 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_444</guid>
+    </item>
+	
+	<item>
+      <title>IntAct Release 92</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_443</link>
+      <description>IntAct contains 186,848 binary interactions from 3,749 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2009-01-09.</description>
+      <pubDate>Tue, 13 Jan 2009 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_443</guid>
+    </item>
+
+	<item>
+      <title>RESID Release 56.00</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_442</link>
+      <description>Release 56.00 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF. See the release notes for more information on the this release of the RESID Database.</description>
+      <pubDate>Wed, 07 Jan 2009 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_442</guid>
+    </item>
+
+
+	<item>
+      <title>IntAct Release 91</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_441</link>
+      <description>IntAct contains 185,969 binary interactions from 3,709 manually curated publications. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/intact/2008-12-12.</description>
+      <pubDate>Thu, 18 Dec 2008 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_441</guid>
+    </item>
+
+
+
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_440</link>
+      <description>The latest release of IPI is now available...</description>
+      <pubDate>Thu, 18 Dec 2008 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_440</guid>
+    </item>
+
+
+	<item>
+      <title>ChEBI Release 52</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_439</link>
+      <description>Release 52 contains 16,618 annotated entities. See our entity of the month, Epicocconone. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/.</description>
+      <pubDate>Wed, 17 Dec 2008 18:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_439</guid>
+    </item>
+
+
+	<item>
+      <title>UniProt v14.6 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_438</link>
+      <description>UniProt Release 14.6 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.6 and UniProtKB/TrEMBL Protein Database Release 39.6... more</description>
+      <pubDate>Tue, 16 Dec 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_438</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v56.6 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_437</link>
+      <description>Release 56.6 of UniProtKB/Swiss-Prot contains 405506 entries... more</description>
+      <pubDate>Tue, 16 Dec 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_437</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v39.6 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_436</link>
+      <description>Release 39.6 of UniProtKB/TrEMBL contains 6964485 sequence entries, this represents an increase of 18%... more</description>
+      <pubDate>Tue, 16 Dec 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_436</guid>
+    </item>
+
+
+
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_435</link>
+      <description>The new release of GOA contains UniProt GO v67.0, GOA Human v69.0, GOA Mouse v55.0, GOA Rat v55.0, GOA Arabidopsis v42.0, GOA Zebrafish v42.0, GOA Chicken v39.0, GOA Cow v32.0, GOA PDB v58.0 and GOA Proteome Sets 44.0... more </description>
+      <pubDate>Mon, 15 Dec 2008 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_435</guid>
+    </item>
+
+
+	<item>
+      <title>IntEnz release 46</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_434</link>
+      <description>IntEnz release 46 is already available. UniProt 14.5 has been used for cross-references.</description>
+      <pubDate>Thu, 11 Dec 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_434</guid>
+    </item>
+
+
+	<item>
+      <title>EMBL release 97</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_433</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 97 on 28-NOV-2008. The release contains 150,911,591 sequence entries comprising 259,647,155,718 nucleotides ...more</description>
+      <pubDate>Tue, 09 Dec 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_433</guid>
+    </item>
+	
+	<item>
+      <title>RESID Release 55.02</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_432</link>
+      <description>Release 55.02 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF. See the release notes for more information on the this release of the RESID Database.</description>
+      <pubDate>Mon, 08 Dec 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_432</guid>
+    </item>
+
+	<item>
+      <title>ChEBI Release 51</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_431</link>
+      <description>Release 51 now includes the "has part" relationship in the ChEBI ontology. ChEBI contains 16,462 entities. See our entity of the month, Irgarol 1051 http://www.ebi.ac.uk/chebi/init.do#Entity. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/.</description>
+      <pubDate>Wed, 26 Nov 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_431</guid>
+    </item>
+
+	<item>
+      <title>UniProt v14.5 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_430</link>
+      <description>UniProt Release 14.5 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.5 and UniProtKB/TrEMBL Protein Database Release 39.5... more</description>
+      <pubDate>Wed, 26 Nov 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_430</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v56.5 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_429</link>
+      <description>Release 56.5 of UniProtKB/Swiss-Prot contains 402482 entries... more</description>
+      <pubDate>Wed, 26 Nov 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_429</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v39.5 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_428</link>
+      <description>Release 39.5 of UniProtKB/TrEMBL contains 5395414  sequence entries, this represents an increase of 23%... more</description>
+      <pubDate>Wed, 26 Nov 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_428</guid>
+    </item>
+
+
+
+
+
+
+
+
+
+	<item>
+      <title>Ensembl Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_427</link>
+      <description>The Ensembl team are very happy to announce release 51. See our website for details.</description>
+      <pubDate>Thu, 20 Nov 2008 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_427</guid>
+    </item>
+
+
+	<item>
+      <title>IntEnz release 45</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_426</link>
+      <description>IntEnz release 45 is already available. UniProt 14.4 has been used for cross-references ... more</description>
+      <pubDate>Thu, 06 Nov 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_426</guid>
+    </item>
+
+
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_425</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Thu, 06 Nov 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_425</guid>
+    </item>
+
+
+	<item>
+      <title>UniProt v14.4 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_424</link>
+      <description>UniProt Release 14.4 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.4 and UniProtKB/TrEMBL Protein Database Release 39.4... more</description>
+      <pubDate>Tue, 04 Nov 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_424</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v56.4 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_423</link>
+      <description>Release 56.4 of UniProtKB/Swiss-Prot contains 400771 entries... more</description>
+      <pubDate>Tue, 04 Nov 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_423</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v39.4 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_422</link>
+      <description>Release 39.4 of UniProtKB/TrEMBL contains 6697103  sequence entries, this represents an increase of 12%... more</description>
+      <pubDate>Tue, 04 Nov 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_422</guid>
+    </item>
+
+	<item>
+      <title>How bacteria survive environmental change</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_421</link>
+      <description>In an article published in Genome Research, scientists from the 
+EMBL-European Bioinformatics Institute have uncovered how metabolic 
+protein production is regulated in the model bacterium E.coli, and how 
+similar proteins have evolved in other bacteria. The ability to modify 
+the metabolic system is important for bacteria to be able to respond to 
+changes in nutrient availability... more
+</description>
+      <pubDate>Mon, 03 Nov 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_421</guid>
+    </item>
+
+	<item>
+      <title>ChEBI Release 50</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_420</link>
+      <description>ChEBI Release 50 has been released with a new ontology changes including the 'has role' relationship and a new upper level term 'role'. A new source has WHO MedNet has been added for INN name terminology. ChEBI contains 16,173 entities and the next ChEBI release is expected on the 26th Nov 2008. A new relationship 'has part' will be introduced in the next release. For more information on ontology changes, please read http://chebi.wiki.sourceforge.net/Remediation+initial+phase.
+See our entity of the month, PP121 http://www.ebi.ac.uk/chebi/init.do#Entity All data are also available on the public FTP site:ftp://ftp.ebi.ac.uk/pub/databases/chebi/
+</description>
+      <pubDate>Thu, 30 Oct 2008 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_420</guid>
+    </item>
+
+	<item>
+      <title>RESID Database of Protein Modifications version 55.01 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_419</link>
+      <description>Release 55.01 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ... more</description>
+      <pubDate>Fri, 24 Oct 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_419</guid>
+    </item>
+
+    <item>
+      <title>Feature Table Definitions updated</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_418</link>
+      <description>The INSDC Feature Table Definition document has been updated, 
+incorporating a number of improvements. Feature key and qualifier 
+definitions can be browsed at 
+http://www.ebi.ac.uk/embl/WebFeat/ and the full document is 
+available at 
+http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</description>
+      <pubDate>Fri, 17 Oct 2008 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_418</guid>
+    </item>
+
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_417</link>
+      <description>The new release of GOA contains UniProt GO v66.0, GOA Human v68.0, GOA Mouse v54.0, GOA Rat v54.0, GOA Arabidopsis v41.0, GOA Zebrafish v41.0, GOA Chicken v38.0, GOA Cow v31.0, GOA PDB v57.0 and GOA Proteome Sets 43.0... more</description>
+      <pubDate>Fri, 17 Oct 2008 13:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_417</guid>
+    </item>
+
+	<item>
+      <title>UniProt v14.3 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_416</link>
+      <description>UniProt Release 14.3 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.3 and UniProtKB/TrEMBL Protein Database Release 39.3... more</description>
+      <pubDate>Tue, 14 Oct 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_416</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v56.3 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_415</link>
+      <description>Release 56.3 of UniProtKB/Swiss-Prot contains 399749 entries... more</description>
+      <pubDate>Tue, 14 Oct 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_415</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v39.3 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_414</link>
+      <description>Release 39.3 of UniProtKB/TrEMBL contains 6627982  sequence entries, this represents an increase of 11%... more</description>
+      <pubDate>Tue, 14 Oct 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_414</guid>
+    </item> 
+
+	<item>
+      <title>RESID Database of Protein Modifications version 55.00 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_413</link>
+      <description>Release 55.00 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ... more</description>
+      <pubDate>Wed, 01 Oct 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_413</guid>
+    </item>
+
+	<item>
+      <title>IntEnz release 44</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_412</link>
+      <description>IntEnz release 44 is already available, with a total of 4855 EC numbers. UniProt 14.1 has been used for cross-references.Next release (45) is flexibly scheduled for Oct 30th... more</description>
+      <pubDate>Fri, 26 Sep 2008 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_412</guid>
+    </item>
+
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_411</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Fri, 26 Sep 2008 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_411</guid>
+    </item>
+
+	<item>
+      <title>UniProt v14.2 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_410</link>
+      <description>UniProt Release 14.2 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.2 and UniProtKB/TrEMBL Protein Database Release 39.1... more</description>
+      <pubDate>Tue, 23 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_410</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v56.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_409</link>
+      <description>Release 56.2 of UniProtKB/Swiss-Prot contains 398181 entries... more</description>
+      <pubDate>Tue, 23 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_409</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v39.2 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_408</link>
+      <description>Release 39.2 of UniProtKB/TrEMBL contains 6534543 sequence entries, this represents an increase of 9%... more</description>
+      <pubDate>Tue, 23 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_408</guid>
+    </item> 
+
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_407</link>
+      <description>The new release of GOA contains UniProt GO v65.0, GOA Human v67.0, GOA Mouse v53.0, GOA Rat v53.0, GOA Arabidopsis v40.0, GOA Zebrafish v40.0, GOA Chicken v37.0, GOA Cow v30.0, GOA PDB v56.0 and GOA Proteome Sets 42.0... more</description>
+      <pubDate>Thu, 18 Sep 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_407</guid>
+    </item>
+
+	<item>
+      <title>E-learning pilot project open for beta testing</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_406</link>
+      <description>Sign up and win an iPod Touch!... more</description>
+      <pubDate>Wed, 17 Sep 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_406</guid>
+    </item>
+
+	<item>
+      <title>UK PubMed Central to become the essential gateway for the UK's biomedical and health science researchers</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_405</link>
+      <description>Life sciences website UK PubMed Central is entering a phase of development to provide free global access to findings of UK life sciences. The British Library, the University of Manchester and the EMBL-EBI will be involved in adding new features to aid the UK's biomedical and health science researchers ...more</description>
+      <pubDate>Tue, 16 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_405</guid>
+    </item>
+
+
+	<item>
+      <title>EMBL release 96</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_404</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 96 on 28-AUG-2008. The release contains 137,951,674 sequence entries comprising 235,135,312,382 nucleotides ...more</description>
+      <pubDate>Mon, 08 Sep 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_404</guid>
+    </item>
+
+
+
+	<item>
+      <title>ChEBI Release 48</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_403</link>
+      <description>Announcing ChEBI Release 48 with 15,548 annotated entities in its database. The next ChEBI Release is scheduled for 24 Sep 2008. See our entity of the month,  Putrebactin  http://www.ebi.ac.uk/chebi/init.do#Entity All data are also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/</description>
+      <pubDate>Wed, 03 Sep 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_403</guid>
+    </item>
+	    
+	<item>
+      <title>UniProt v14.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_402</link>
+      <description>UniProt Release 14.1 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.1 and UniProtKB/TrEMBL Protein Database Release 39.1... more</description>
+      <pubDate>Tue, 02 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_402</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v56.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_401</link>
+      <description>Release 56.1 of UniProtKB/Swiss-Prot contains 397539 entries... more</description>
+      <pubDate>Tue, 02 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_401</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v39.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_400</link>
+      <description>Release 39.1 of UniProtKB/TrEMBL contains 6212793  sequence entries, this represents an increase of 3%... more</description>
+      <pubDate>Tue, 02 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_400</guid>
+    </item> 
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_399</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Tue, 02 Sep 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_399</guid>
+    </item>
+	
+	
+	<item>
+      <title>InterPro release 18.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_398</link>
+      <description>InterPro release 18.0 is out. This release includes: New methods from PROSITE, GENE3D and SUPERFAMILY. PROSITE pattern matches are now evaluated to either TRUE (T) or UNKOWN (?) using miniprofiles or associated existing PROSITE profiles. Please see User Manual for details. Match_complete.xml (UniProtKB) now contains all UniProtKB proteins including those not matching an InterPro signature. For full details of the release please see the Release Notes.</description>
+      <pubDate>Mon, 01 Sep 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_398</guid>
+    </item>
+	
+	
+	<item>
+      <title>RESID Database of Protein Modifications version 54.02 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_397</link>
+      <description>Release 54.02 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ... more</description>
+      <pubDate>Fri, 29 Aug 2008 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_397</guid>
+    </item>
+	
+	<item>
+      <title>First version of SBGN language released today</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_396</link>
+      <description>We are pleased to announce the specification of Process Diagrams of the Systems Biology Graphical Notation (SBGN). The goal of SBGN is to standardise the graphical representation of essential biochemical and cellular processes. Standardising graphical notations for describing biological interactions is an important step towards the efficient communication of biological knowledge between different communities. More information on SBGN and SBGN Process Diagram Level 1 can be found here</description>
+      <pubDate>Sat, 23 Aug 2008 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_396</guid>
+    </item>
+	
+	<item>
+      <title>IntEnz release 43</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_395</link>
+      <description>IntEnz release 43 is already available. UniProt 14.0 has been used for cross-references. 13 proposed changes in the enzyme classification have been approved in this last release ... more</description>
+      <pubDate>Wed, 20 Aug 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_395</guid>
+    </item>
+	
+	<item>
+      <title>RESID Database of Protein Modifications version 54.01 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_394</link>
+      <description>Release 54.01 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ... more</description>
+      <pubDate>Tue, 12 Aug 2008 10:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_394</guid>
+    </item>
+	
+	
+	
+	<item>
+      <title>A one-stop shop for minimal information standards</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_393</link>
+      <description>More than 20 standardisation groups, led by scientists at the EMBL-EBI and the Centre for Ecology and Hydrology (CEH), have combined forces to form the "Minimum Information about a Biomedical or Biological Investigation" (MIBBI) initiative. Their aim is to harmonise standards for high-throughput biology, and their methodology is published today in Nature Biotechnology... more | paper</description>
+      <pubDate>Thu, 07 Aug 2008 19:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_393</guid>
+    </item>
+	
+	<item>
+      <title>Calcium control of molecular learning</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_392</link>
+      <description>Our capacity to learn and remember is controlled by the fine tuning of intracellular calcium signalling in our brains. In an article published 
+in the journal PNAS, scientists at the EBI describe how calmodulin, a 
+small protein enriched in our neurons, measures calcium concentration 
+and regulates synaptic behaviour through the activation of proteins 
+CaMKII and calcineurin... more</description>
+      <pubDate>Fri, 01 Aug 2008 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_392</guid>
+    </item>
+	
+	<item>
+      <title>E-learning pilot project open for beta testing</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_391</link>
+      <description>The EBI training team open beta testing of the new E-learning pilot project... more</description>
+      <pubDate>Thu, 31 Jul 2008 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_391</guid>
+    </item>
+	
+	<item>
+      <title>ChEBI Release 47</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_390</link>
+      <description>Announcing ChEBI Release 47 with 15,367 annotated entities in its database. The next ChEBI Release is scheduled for 3 Sep 2008. See our entity of the month, 3,3'-diindolylmethane http://www.ebi.ac.uk/chebi/init.do#Entity All data are also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/</description>
+      <pubDate>Wed, 30 Jul 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_390</guid>
+    </item> 
+	
+	<item>
+      <title>Ensembl Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_389</link>
+      <description>The Ensembl team are very happy to announce release 50. See our website for details of the data updates and changes. We are also working on a new website design which will be ready for testing in Aug. If you would like to be involved in testing this new site please send your e-mail address to survey@ebi.ac.uk.</description>
+      <pubDate>Mon, 28 Jul 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_389</guid>
+    </item> 
+	
+	<item>
+      <title>Open access to large-scale drug discovery data</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_388</link>
+      <description>The Wellcome Trust has awarded 4.7 million GBP (5.8 million Euros) to  EMBL's European Bioinformatics Institute (EMBL-EBI) to support the  transfer of a large collection of information on the properties and  activities of drugs and a large set of drug-like small molecules from  publicly listed company Galapagos NV to the public domain... more</description>
+      <pubDate>Wed, 23 Jul 2008 07:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_388</guid>
+    </item> 
+	
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_387</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Tue, 22 Jul 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_387</guid>
+    </item>
+
+	<item>
+      <title>UniProt v14.0 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_386</link>
+      <description>UniProt Release 14.0 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 56.0 and UniProtKB/TrEMBL Protein Database Release 39.0... more</description>
+      <pubDate>Tue, 22 Jul 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_386</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v56.0 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_385</link>
+      <description>Release 56.0 of UniProtKB/Swiss-Prot contains 392667 entries... more</description>
+      <pubDate>Tue, 22 Jul 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_385</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v39.0 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_384</link>
+      <description>Release 39.0 of UniProtKB/TrEMBL contains 6070084  sequence entries, this represents an increase of 15%... more</description>
+      <pubDate>Tue, 22 Jul 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_384</guid>
+    </item> 
+	
+    <item>
+      <title>European Genotype Archive launched for personal genome information</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_383</link>
+      <description>Launch of secure archive of genetic data at European Bioinformatics Institute...more</description>
+      <pubDate>Mon, 14 Jul 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_383</guid>
+    </item>
+	
+	
+    <item>
+      <title>EBI becomes new host of Europe's raw sequence information</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_382</link>
+      <description>European Bioinformatics Institute receives boost to secure archives of sequencing data...more</description>
+      <pubDate>Mon, 14 Jul 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_382</guid>
+    </item>
+	
+	
+	
+    <item>
+      <title>Zooming in on genetic shuffling </title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_381</link>
+      <description>Scientists at EMBL in Heidelberg and the EBI in Hinxton, Cambridge, have generated the most precise map of genetic recombination ever. Genetic recombination leads to offspring with a new genetic make-up and influences the course of evolution. The study, published in the current issue of Nature, has implications for the tracking of disease genes and their inheritance...more</description>
+      <pubDate>Wed, 09 Jul 2008 18:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_381</guid>
+    </item>
+	
+	
+    <item>
+      <title>IntEnz release 42</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_380</link>
+      <description>IntEnz release 42 is already available. UniProt 13.6 has been used for cross-references... more</description>
+      <pubDate>Tue, 08 Jul 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_380</guid>
+    </item>
+	
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_379</link>
+      <description>The new release of GOA contains UniProt GO v64.0, GOA Human v66.0, GOA Mouse v52.0, GOA Rat v52.0, GOA Arabidopsis v39.0, GOA Zebrafish v39.0, GOA Chicken v36.0, GOA Cow v29.0, GOA PDB v55.0 and GOA Proteome Sets 41.0... more</description>
+      <pubDate>Thu, 03 Jul 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_379</guid>
+    </item>
+	
+    <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_378</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Wed, 02 Jul 2008 11:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_378</guid>
+    </item>
+	
+    <item>
+      <title>RESID Database of Protein Modifications version 54 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_377</link>
+      <description>Release 54 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ... more</description>
+      <pubDate>Wed, 02 Jul 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_377</guid>
+    </item>
+
+    <item>
+      <title>UniProt v13.6 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_376</link>
+      <description>UniProt Release 13.6 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 55.6 and UniProtKB/TrEMBL Protein Database Release 38.6... more</description>
+      <pubDate>Tue, 01 Jul 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_376</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v55.6 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_375</link>
+      <description>Release 55.6 of UniProtKB/Swiss-Prot contains 390696 entries... more</description>
+      <pubDate>Tue, 01 Jul 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_375</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v38.6 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_374</link>
+      <description>Release 38.6 of UniProtKB/TrEMBL contains 3667875 sequence entries, this represents an increase of 14%... more</description>
+      <pubDate>Tue, 01 Jul 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_374</guid>
+    </item>
+
+
+    <item>
+      <title>ChEBI Release 46</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_373</link>
+      <description>ChEBI Release 46 has 15,192 annotated entities in its database. The next ChEBI Release is scheduled for 30 Jul 2008... more </description>
+      <pubDate>Wed, 25 Jun 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_373</guid>
+    </item>
+
+    <item>
+      <title>Scientists fix bugs in our understanding of evolution</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_372</link>
+      <description>A new computational tool developed by EBI researchers allows the most  accurate insights into evolution ever... more</description>
+      <pubDate>Thu, 19 Jun 2008 19:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_372</guid>
+    </item>
+
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_371</link>
+      <description>The new release of GOA contains UniProt GO v63.0, GOA Human v65.0, GOA Mouse v51.0, GOA Rat v51.0, GOA Arabidopsis v38.0, GOA Zebrafish v38.0, GOA Chicken v35.0, GOA Cow v28.0, GOA PDB v54.0 and GOA Proteome Sets 40.0... more</description>
+      <pubDate>Wed, 18 Jun 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_371</guid>
+    </item>
+
+    <item>
+      <title>UniProt v13.5 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_370</link>
+      <description>UniProt Release 13.5 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 55.5 and UniProtKB/TrEMBL Protein Database Release 38.5... more</description>
+      <pubDate>Tue, 10 Jun 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_370</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v55.5 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_369</link>
+      <description>Release 55.5 of UniProtKB/Swiss-Prot contains 389046 entries... more</description>
+      <pubDate>Tue, 10 Jun 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_369</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v38.5 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_368</link>
+      <description>Release 38.5 of UniProtKB/TrEMBL contains 4672908 sequence entries, this represents an increase of 23%... more</description>
+      <pubDate>Tue, 10 Jun 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_368</guid>
+    </item>
+
+
+    <item>
+      <title>New release of International Protein Index (IPI) database </title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_367</link>
+      <description>The latest release of IPI is now available... more</description>
+      <pubDate>Tue, 10 Jun 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_367</guid>
+    </item>
+
+
+    <item>
+      <title>EMBL release 95</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_366</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 95 on 29-MAY-2008. The release contains 131,771,254 sequence entries comprising 224,351,474,408 nucleotides ...more</description>
+      <pubDate>Mon, 09 Jun 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_366</guid>
+    </item>
+
+
+    <item>
+      <title>IntEnz release 41</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_365</link>
+      <description>IntEnz release 41 (http://www.ebi.ac.uk/intenz) is already available. UniProt 13.4 has been used for cross-references.</description>
+      <pubDate>Fri, 06 Jun 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_365</guid>
+    </item>
+
+
+    <item>
+      <title>X chromosome exposed</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_364</link>
+      <description>Researchers from the European Molecular Biology Laboratory (EMBL) in Heidelberg, Germany, and the EMBL-European Bioinformatics Institute (EMBL-EBI) in Hinxton, UK, have revealed new insights into how sex chromosomes are regulated. An enzyme that binds differently to male and female sex chromosomes helps males to produce the same amount of proteins as females ... more</description>
+      <pubDate>Fri, 30 May 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_364</guid>
+    </item>
+	
+    <item>
+      <title>ChEBI Release 45: a milestone of 15000 entities</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_363</link>
+      <description>ChEBI Release 45 has reached the milestone of 15000 entities. ChEBI now has 15,061 annotated entities in its database. A new feature is the release of the ChEBI tutorials which provide extensive information on ChEBI... more </description>
+      <pubDate>Wed, 28 May 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_363</guid>
+    </item>
+
+
+    <item>
+      <title>Securing the future of Europe's biological data resources</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_362</link>
+      <description>In a contract signed today, the European Commission has awarded 4.5 million Euro's to the pan-European ELIXIR consortium, coordinated by the EMBL-EBI. The ELIXIR project aims to decide upon the best way to unite Europe's biological data resources into a sustainable, integrative bioinformatics network for the life sciences... more</description>
+      <pubDate>Wed, 28 May 2008 09:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_362</guid>
+    </item>
+
+
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_361</link>
+      <description>The new release of GOA contains UniProt GO v62.0, GOA Human v64.0, GOA Mouse v50.0, GOA Rat v50.0, GOA Arabidopsis v37.0, GOA Zebrafish v37.0, GOA Chicken v34.0, GOA Cow v27.0, GOA PDB v53.0 and GOA Proteome Sets 39.0... more</description>
+      <pubDate>Tue, 27 May 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_361</guid>
+    </item>
+
+
+	
+    <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_359</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Tue, 20 May 2008 16:10:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_359</guid>
+    </item>
+
+    <item>
+      <title>UniProt v13.4 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_358</link>
+      <description>UniProt Release 13.3 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 55.4 and UniProtKB/TrEMBL Protein Database Release 38.4... more</description>
+      <pubDate>Tue, 20 May 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_358</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v55.4 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_357</link>
+      <description>Release 55.3 of UniProtKB/Swiss-Prot contains 385721 sequence entries... more</description>
+      <pubDate>Tue, 20 May 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_357</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v38.3 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_356</link>
+      <description>Release 38.3 of UniProtKB/TrEMBL contains 1876321299 sequence entries, this represents an increase of 10%... more</description>
+      <pubDate>Tue, 20 May 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_356</guid>
+    </item>
+
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_355</link>
+      <description>The new release of GOA contains UniProt GO v61.0, GOA Human v63.0, GOA Mouse v49.0, GOA Rat v49.0, GOA Arabidopsis v36.0, GOA Zebrafish v36.0, GOA Chicken v33.0, GOA Cow v26.0, GOA PDB v52.0 and GOA Proteome Sets 38.0... more</description>
+      <pubDate>Wed, 07 May 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_355</guid>
+    </item>
+
+	<item>
+      <title>IntEnz release 40</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_354</link>
+      <description>IntEnz release 40 (http://www.ebi.ac.uk/intenz) is already available. UniProt 13.2 has been used for cross-references.</description>
+      <pubDate>Fri, 02 May 2008 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_354</guid>
+    </item>
+
+    <item>
+      <title>Sanger Institute and European Bioinformatics Institute top list of most influential UK research</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_353</link>
+      <description>The Wellcome Trust Sanger Institute and the EMBL-European Bioinformatics Institute have been rated as the top two most influential research institutions in the UK, according to results published this week. In addition, nine of the top 25 most influential UK researchers work at the Wellcome Trust Genome Campus near Cambridge, home to the two powerhouse institutes...more</description>
+      <pubDate>Thu, 01 May 2008 14:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_353</guid>
+    </item>
+
+    <item>
+      <title>ChEBI Release 44</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_352</link>
+      <description>Announcing ChEBI Release 43 with 14,757 annotated entities. A new feature is the incorporation of synonyms from the NC-IUPHAR Receptor Nomenclature and Drug Classification database. See our entity of the month, 2-deoxy-2-((18)F)fluoro-alpha-D-glucose All data is also available on the public FTP site.</description>
+      <pubDate>Wed, 30 Apr 2008 15:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_352</guid>
+    </item>
+
+    <item>
+      <title>UniProt v13.3 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_351</link>
+      <description>UniProt Release 13.3 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 55.3 and UniProtKB/TrEMBL Protein Database Release 38.3... more</description>
+      <pubDate>Tue, 29 Apr 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_351</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v55.3 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_350</link>
+      <description>Release 55.3 of UniProtKB/Swiss-Prot contains 366226  sequence entries... more</description>
+      <pubDate>Tue, 29 Apr 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_350</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v38.3 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_349</link>
+      <description>Release 38.3 of UniProtKB/TrEMBL contains 5708298  sequence entries, this represents an increase of 7%... more</description>
+      <pubDate>Tue, 29 Apr 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_349</guid>
+    </item>
+	
+	
+	<item>
+      <title>Strength of European rat genetics research highlighted in special focus issue of Nature Genetics</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_348</link>
+      <description>Researchers from EMBL-EBI are among those who co-author seven articles in Nature Genetics as part of the EU funded project &quot;European Rat Tools for Functional Genomics (EURATools)&quot;. The articles demonstrate the remarkable advances made in rat genetics since the sequencing of the rat genome four years ago... more</description>
+      <pubDate>Tue, 29 Apr 2008 14:30:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_348</guid>
+    </item>
+
+
+    <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_347</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Wed, 09 Apr 2008 12:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_347</guid>
+    </item>
+	
+    <item>
+      <title>UniProt v13.2 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_346</link>
+      <description>UniProt Release 13.2 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 55.2 and UniProtKB/TrEMBL Protein Database Release 38.2... more</description>
+      <pubDate>Tue, 08 Apr 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_346</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v55.2 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_345</link>
+      <description>Release 55.2 of UniProtKB/Swiss-Prot contains 362782 sequence entries... more</description>
+      <pubDate>Tue, 08 Apr 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_345</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v38.2 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_344</link>
+      <description>Release 38.2 of UniProtKB/TrEMBL contains 5577054  sequence entries, this represents an increase of 4%... more</description>
+      <pubDate>Tue, 08 Apr 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_344</guid>
+    </item>
+	
+
+    <item>
+      <title>An unexpected way to cause leukaemia</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_343</link>
+      <description>Researchers from the European Molecular Biology Laboratory in Italy, the EMBL-European Bioinformatics Institute, UK, and the Universities of Harvard, USA, and Lund, Sweden, have used genetic engineering to introduce a mutation found in human leukaemia patients into mice. In the current issue of Cancer Cell they report that the mutation causes leukaemia by triggering innate genetic programmes that allow white blood cells to proliferate uncontrollably... more</description>
+      <pubDate>Tue, 08 Apr 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_343</guid>
+    </item>
+	
+	<item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_342</link>
+      <description>The new release of GOA contains UniProt GO v60.0, GOA Human v62.0, GOA Mouse v48.0, GOA Rat v48.0, GOA Arabidopsis v35.0, GOA Zebrafish v35.0, GOA Chicken v32.0, GOA Cow v25.0, GOA PDB v51.0 and GOA Proteome Sets 37.0... more</description>
+      <pubDate>Wed, 02 Apr 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_342</guid>
+    </item>
+	
+	
+	<item>
+      <title>IntEnz Release 39</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_341</link>
+      <description>IntEnz release 39 (http://www.ebi.ac.uk/intenz) is already available. Read about Carbonate dehydratase in our enzyme spotlight. UniProt 13.1 has been used for cross-references... more</description>
+      <pubDate>Mon, 31 Mar 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_341</guid>
+    </item>
+
+
+	<item>
+      <title>RESID Database of Protein Modifications version 53 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_340</link>
+      <description>Release 53 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ... more</description>
+      <pubDate>Mon, 31 Mar 2008 16:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_340</guid>
+    </item>
+
+	<item>
+      <title>ChEBI Release 43</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_339</link>
+      <description>Announcing ChEBI Release 43 with 14,400 annotated entities. The next ChEBI Release is scheduled for 30 Apr 2008. See our entity of the month, (2-trans,6-trans)-farnesol http://www.ebi.ac.uk/chebi/init.do#Entity. All data is also available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/ ...more</description>
+      <pubDate>Wed, 26 Mar 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_339</guid>
+    </item>
+
+
+	<item>
+      <title>International partnership to produce "gold standard" gene copy
+reference of the human genome</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_338</link>
+      <description>A collaboration between The Centre for Applied Genomics at The Hospital
+for Sick Children and the European Molecular Biology Laboratory's
+European
+Bioinformatics Institute (EMBL-EBI) will collect, organize and curate
+genome-wide information, enhancing the translation of genetic
+information into new diagnostic, prognostic and therapeutic tools for
+the improved health of children... more</description>
+      <pubDate>Thu, 20 Mar 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_338</guid>
+    </item>
+
+
+	<item>
+      <title>InterPro release 17.0</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_337</link>
+      <description>InterPro release 17.0 is out. This release includes new methods from TIGRFAMs, GENE3D and SUPERFAMILY. New to this release is the introduction of Genome Properties, supplied from TIGRFAMs. For full details of the release please see the Release Notes.</description>
+      <pubDate>Thu, 20 Mar 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_337</guid>
+    </item>
+
+
+
+	<item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_336</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Tue, 18 Mar 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_336</guid>
+    </item>
+
+    <item>
+      <title>Ensembl release v49</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_335</link>
+      <description>We are pleased to announce the new release of Ensembl... more</description>
+      <pubDate>Tue, 18 Mar 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_335</guid>
+    </item>
+
+    <item>
+      <title>UniProt v13.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_334</link>
+      <description>UniProt Release 13.1 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 55.1 and UniProtKB/TrEMBL Protein Database Release 38.1... more</description>
+      <pubDate>Tue, 18 Mar 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_334</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v55.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_333</link>
+      <description>Release 55.1 of UniProtKB/Swiss-Prot contains 359942 sequence entries... more</description>
+      <pubDate>Tue, 18 Mar 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_333</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v38.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_332</link>
+      <description>Release 38.1 of UniProtKB/TrEMBL contains 5443281  sequence entries, this represents an increase of 1%... more</description>
+      <pubDate>Tue, 18 Mar 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_332</guid>
+    </item>
+
+	
+    <item>
+      <title>EMBL release 94</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_331</link>
+      <description>The EMBL Nucleotide Sequence Database was frozen to make Release 94 on 27-FEB-2008. The release contains 114,475,051 sequence entries comprising 215,540,553,360 nucleotides</description>
+      <pubDate>Mon, 17 Mar 2008 13:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_331</guid>
+    </item>	
+
+
+    <item>
+      <title> RESID Database of Protein Modifications version 52 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_330</link>
+      <description>Release 52 of the RESID Database of Protein Modifications is available by ftp at the EBI or at the NCIFCRF ... more</description>
+      <pubDate>Wed, 12 Mar 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_330</guid>
+    </item>
+
+
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_329</link>
+      <description>The new release of GOA contains UniProt GO v59.0, GOA Human v61.0, GOA Mouse v47.0, GOA Rat v47.0, GOA Arabidopsis v34.0, GOA Zebrafish v34.0, GOA Chicken v31.0, GOA Cow v24.0, GOA PDB v50.0 and GOA Proteome Sets 36.0... more</description>
+      <pubDate>Wed, 12 Mar 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_329</guid>
+    </item>
+	
+    <item>
+      <title>ChEBI Release 42</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_328</link>
+      <description>Announcing ChEBI Release 42 with 14,174 annotated entities. Synonyms may now
+be found in Spanish in addition to the French, German and Latin languages
+added in the previous release. The next ChEBI Release is scheduled for 26th
+Mar 2008.See our entity of the month, Pseudocoenzyme B12: http://www.ebi.ac.uk/chebi/init.do#Entity 
+All data is available on the public FTP site: ftp://ftp.ebi.ac.uk/pub/databases/chebi/</description>
+      <pubDate>Thu, 28 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_328</guid>
+    </item>	
+
+    <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_327</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Wed, 27 Feb 2008 15:15:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_327</guid>
+    </item>
+	
+    <item>
+      <title>UniProt v13.0 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_326</link>
+      <description>UniProt Release 13.0 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 55.0 and UniProtKB/TrEMBL Protein Database Release 38.0... more</description>
+      <pubDate>Tue, 26 Feb 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_326</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v55.0 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_325</link>
+      <description>Release 55.0 of UniProtKB/Swiss-Prot contains 349480 sequence entries... more</description>
+      <pubDate>Tue, 26 Feb 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_325</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v38.0 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_324</link>
+      <description>Release 38.0 of UniProtKB/TrEMBL contains 5395414 sequence entries, this represents an increase of 23%... more</description>
+      <pubDate>Tue, 26 Feb 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_324</guid>
+    </item>
+
+
+
+    <item>
+      <title>IntEnz release 38</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_323</link>
+      <description>IntEnz release 38 is already available. UniProt 12.8 has been used for cross-references. * New in this release: every cofactor is linked to ChEBI.* Learn about blue enzymes in our enzyme spotlight... more</description>
+      <pubDate>Wed, 20 Feb 2008 17:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_323</guid>
+    </item>
+
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_322</link>
+      <description>The new release of GOA contains UniProt GO v58.0, GOA Human v60.0, GOA Mouse v46.0, GOA Rat v46.0, GOA Arabidopsis v33.0, GOA Zebrafish v33.0, GOA Chicken v30.0, GOA Cow v23.0, GOA PDB v49.0 and GOA Proteome Sets 35.0... more</description>
+      <pubDate>Mon, 18 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_322</guid>
+    </item>
+
+    <item>
+      <title>ASTD v1.1 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_321</link>
+      <description>ASTD Release 1.1 contains improved TSS predictions covering 80% of human genes and 68% of mouse genes and in silico expression analysis. For full details of the release please see the Release Notes</description>
+      <pubDate>Fri, 15 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_321</guid>
+    </item>
+	
+    <item>
+      <title>New release of International Protein Index (IPI) database</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_320</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Thu, 07 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_320</guid>
+    </item>
+
+    <item>
+      <title>UniProt v12.8 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_319</link>
+      <description>UniProt Release 12.8 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 54.8 and UniProtKB/TrEMBL Protein Database Release 37.8...  more</description>
+      <pubDate>Tue, 05 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_319</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v54.8 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_318</link>
+      <description>Release 54.8 of UniProtKB/Swiss-Prot contains 349480 sequence entries...  more</description>
+      <pubDate>Tue, 05 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_318</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v37.8 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_317</link>
+      <description>Release 37.8 of UniProtKB/TrEMBL contains 5329119 sequence entries, this represents an increase of 21%... more</description>
+      <pubDate>Tue, 05 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_317</guid>
+    </item>
+
+
+
+
+
+
+
+
+	<item>
+      <title>InterPro release 16.2</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_316</link>
+      <description>InterPro release 16.2 is out, it contains 16175 entries covering
+76.2% of UniProtKB with new methods from PIRSF, Gene3D and SUPERFAMILY.
+A new Type, Conserved Site, has been created for PROSITE patterns that
+do not represent PTMs, Active Sites or Binding Sites.  UniProtKB
+(match_complete.xml), UniParc (uniparc_match.tar.gz) and UniMES
+(unimes_match.tar.gz) matches to InterPro methods have been updated and are available from the ftp site. 
+ For full details of the release please see the Release 
+Notes. </description>
+      <pubDate>Mon, 04 Feb 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_316</guid>
+    </item>
+	
+    <item>
+      <title>ChEBI Release 41</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_315</link>
+      <description>Announcing ChEBI Release 41 with 13,959 annotated entities. In addition all data is available on the public FTP site... more</description>
+      <pubDate>Wed, 23 Jan 2008 13:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_315</guid>
+    </item>
+	
+	
+    <item>
+      <title>International consortium announces the 1000 Genomes Project</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_314</link>
+      <description>Hinxton, 22 Jan 2008  The EBI is part of an international research consortium that today announced the 1000 Genomes Project, an ambitious effort to sequence the genomes of at least 1000 people to create the most detailed and medically useful catalogue to date of human genetic variation... more</description>
+      <pubDate>Tue, 22 Jan 2008 13:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_314</guid>
+    </item>
+	
+    <item>
+      <title>GOA Released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_313</link>
+      <description>The new release of GOA contains UniProt GO v57.0, GOA Human v59.0, GOA Mouse v45.0, GOA Rat v45.0, GOA Arabidopsis v32.0, GOA Zebrafish v32.0, GOA Chicken v29.0, GOA Cow v22.0, GOA PDB v48.0 and GOA Proteome Sets 34.0... more</description>
+      <pubDate>Mon, 21 Jan 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_313</guid>
+    </item>
+
+    <item>
+      <title>New release of International Protein Index (IPI) database </title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_312</link>
+      <description>The latest release of IPI is now available ... more</description>
+      <pubDate>Wed, 16 Jan 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_312</guid>
+    </item>
+	
+	
+    <item>
+      <title>UniProt v12.7 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_311</link>
+      <description>UniProt Release 12.7 consists of UniProtKB/Swiss-Prot Protein Knowledgebase Release 54.7 and UniProtKB/TrEMBL Protein Database Release 37.7...  more</description>
+      <pubDate>Tue, 15 Jan 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_311</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/Swiss-Prot v54.7 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_310</link>
+      <description>Release 54.7 of UniProtKB/Swiss-Prot contains 333445  sequence entries...  more</description>
+      <pubDate>Tue, 15 Jan 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_310</guid>
+    </item>
+
+    <item>
+      <title>UniProtKB/TrEMBL v37.7 released</title>
+      <link>http://www.ebi.ac.uk/Information/News/news.html#a_309</link>
+      <description>Release 37.7 of UniProtKB/TrEMBL contains 5139891  sequence entries, this represents an increase of 16%... more</description>
+      <pubDate>Tue, 15 Jan 2008 00:00:00 GMT</pubDate>
+      <guid>http://www.ebi.ac.uk/Information/News/news.html#a_309</guid>
+    </item>
+
+
+<atom:link href="http://www.ebi.ac.uk/Information/News/rss/ebinews.xml" rel="self" type="application/rss+xml" /> 
+  </channel>
+</rss>
+

@@ -1,0 +1,4 @@
+(SendSMS.xml , SendSMS.xml = 1.0 | 1.0 )	(SendSMS.xml , ValidateEmail.xml = 0.07847223 | 0.07322985 )	(SendSMS.xml , fax.xml = 0.1763904 | 0.1685607 )	(SendSMS.xml , sendsmsworld.xml = 0.7533108 | 0.6376858 )	
+(ValidateEmail.xml , SendSMS.xml = 0.0 | 0.0 )	(ValidateEmail.xml , ValidateEmail.xml = 1.0 | 1.0 )	(ValidateEmail.xml , fax.xml = 0.118062235 | 0.13959002 )	(ValidateEmail.xml , sendsmsworld.xml = 0.14424911 | 0.09737411 )	
+(fax.xml , SendSMS.xml = 0.0 | 0.0 )	(fax.xml , ValidateEmail.xml = 0.0 | 0.0 )	(fax.xml , fax.xml = 1.0 | 1.0 )	(fax.xml , sendsmsworld.xml = 0.17910533 | 0.20730709 )	
+(sendsmsworld.xml , SendSMS.xml = 0.0 | 0.0 )	(sendsmsworld.xml , ValidateEmail.xml = 0.0 | 0.0 )	(sendsmsworld.xml , fax.xml = 0.0 | 0.0 )	(sendsmsworld.xml , sendsmsworld.xml = 0.0 | 0.0 )	

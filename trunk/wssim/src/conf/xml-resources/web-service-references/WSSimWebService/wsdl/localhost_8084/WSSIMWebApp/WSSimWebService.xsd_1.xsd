@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://webservice.bis.edu/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.bis.edu/">
+
+<xs:element name="GetOperationPairInfo" type="tns:GetOperationPairInfo" />
+
+<xs:element name="GetOperationPairInfoResponse" type="tns:GetOperationPairInfoResponse" />
+
+<xs:element name="getServiceSimilarity" type="tns:getServiceSimilarity" />
+
+<xs:element name="getServiceSimilarityResponse" type="tns:getServiceSimilarityResponse" />
+
+<xs:element name="getSubstitutableOperations" type="tns:getSubstitutableOperations" />
+
+<xs:element name="getSubstitutableOperationsResponse" type="tns:getSubstitutableOperationsResponse" />
+
+<xs:complexType name="GetOperationPairInfo">
+<xs:sequence>
+<xs:element name="firstServiceURI" type="xs:string" minOccurs="0" />
+<xs:element name="firstOperationName" type="xs:string" minOccurs="0" />
+<xs:element name="secondServiceURI" type="xs:string" minOccurs="0" />
+<xs:element name="secondOperationName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="GetOperationPairInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:operationPairSimilarity" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="operationPairSimilarity">
+<xs:sequence>
+<xs:element name="Operation_1" type="xs:string" minOccurs="0" />
+<xs:element name="Operation_2" type="xs:string" minOccurs="0" />
+<xs:element name="similarity" type="xs:float" />
+<xs:element name="areSubstitutable" type="xs:boolean" />
+<xs:element name="areComposabe" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServiceSimilarity">
+<xs:sequence>
+<xs:element name="firstServiceURI" type="xs:string" minOccurs="0" />
+<xs:element name="secondServiceURI" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServiceSimilarityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubstitutableOperations">
+<xs:sequence>
+<xs:element name="firstServiceURI" type="xs:string" minOccurs="0" />
+<xs:element name="secondServiceURI" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubstitutableOperationsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

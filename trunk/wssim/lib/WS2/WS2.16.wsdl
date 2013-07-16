@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions targetNamespace="urn:tcl:mywebservice" xmlns:tns="urn:tcl:mywebservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:whttp="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  <xsd:schema targetNamespace="urn:tcl:mywebservice" elementFormDefault="qualified">
+   <xsd:complexType name="testitRequest">
+    <xsd:sequence>
+     <xsd:element name="a" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="b" maxOccurs="1" type="xsd:string" minOccurs="0"/>
+     <xsd:element name="c" maxOccurs="1" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="testitResponse">
+    <xsd:sequence>
+     <xsd:element name="A" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="B" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="C" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:simpleType name="symbol">
+    <xsd:restriction base="xsd:string">
+     <xsd:enumeration value="MSFT"/>
+     <xsd:enumeration value="WMT"/>
+     <xsd:enumeration value="XOM"/>
+     <xsd:enumeration value="GM"/>
+     <xsd:enumeration value="F"/>
+     <xsd:enumeration value="GE"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="EchoSymbolRequest">
+    <xsd:sequence>
+     <xsd:element name="Symbol" maxOccurs="1" type="tns:symbol" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EchoSymbolResponse">
+    <xsd:sequence>
+     <xsd:element name="Symbol" maxOccurs="1" type="tns:symbol" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:simpleType name="code">
+    <xsd:restriction base="xsd:integer">
+     <xsd:pattern value="[0-9]{4}"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="EchoCodeRequest">
+    <xsd:sequence>
+     <xsd:element name="Code" maxOccurs="1" type="tns:code" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EchoCodeResponse">
+    <xsd:sequence>
+     <xsd:element name="Code" maxOccurs="1" type="tns:code" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EchoRequest">
+    <xsd:sequence>
+     <xsd:element name="Input" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EchoResponse">
+    <xsd:sequence>
+     <xsd:element name="Output" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="AddNumbersRequest">
+    <xsd:sequence>
+     <xsd:element name="FirstNum" maxOccurs="1" type="xsd:integer" minOccurs="0"/>
+     <xsd:element name="SecondNum" maxOccurs="1" type="xsd:integer" minOccurs="0"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="AddNumbersResponse">
+    <xsd:sequence>
+     <xsd:element name="Sum" maxOccurs="1" type="xsd:integer" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="MultiplyNumbersRequest">
+    <xsd:sequence>
+     <xsd:element name="FirstDecimal" maxOccurs="1" type="xsd:decimal" minOccurs="0"/>
+     <xsd:element name="SecondDecimal" maxOccurs="1" type="xsd:decimal" minOccurs="0"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="MultiplyNumbersResponse">
+    <xsd:sequence>
+     <xsd:element name="Product" maxOccurs="1" type="xsd:decimal" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="helloRequest">
+    <xsd:sequence>
+     <xsd:element name="who" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="helloResponse">
+    <xsd:sequence>
+     <xsd:element name="Yeah" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="helloWorldRequest">
+    <xsd:sequence/>
+   </xsd:complexType>
+   <xsd:complexType name="helloWorldResponse">
+    <xsd:sequence>
+     <xsd:element name="Say" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:simpleType name="Byte">
+    <xsd:restriction base="xsd:integer">
+     <xsd:minInclusive value="-127"/>
+     <xsd:maxInclusive value="127"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TestDecimal">
+    <xsd:restriction base="xsd:decimal">
+     <xsd:minExclusive value="-321.01"/>
+     <xsd:maxInclusive value="456.78"/>
+     <xsd:totalDigits value="5"/>
+     <xsd:fractionDigits value="2"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TestDecimal2">
+    <xsd:restriction base="xsd:integer">
+     <xsd:pattern value="[0-9]{1,4}"/>
+     <xsd:minInclusive value="4"/>
+     <xsd:maxInclusive value="9765"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TestDecimal3">
+    <xsd:restriction base="xsd:decimal">
+     <xsd:totalDigits value="4"/>
+     <xsd:fractionDigits value="0"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TestDecimal4">
+    <xsd:restriction base="tns:TestDecimal">
+     <xsd:totalDigits value="4"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="TestInteger">
+    <xsd:restriction base="xsd:integer">
+     <xsd:fractionDigits value="0"/>
+     <xsd:totalDigits value="7"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="TestDecimalValueResponse">
+    <xsd:sequence>
+     <xsd:element name="StringToTest" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="IsTestDecimal" maxOccurs="1" type="xsd:boolean" minOccurs="1"/>
+     <xsd:element name="CanonicalValue" maxOccurs="1" type="tns:TestDecimal" minOccurs="0"/>
+     <xsd:element name="ErrorString" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EchoByteRequest">
+    <xsd:sequence>
+     <xsd:element name="ByteAsIntegerIn" maxOccurs="1" type="tns:Byte" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EchoByteResponse">
+    <xsd:sequence>
+     <xsd:element name="ByteAsIntegerOut" maxOccurs="1" type="tns:Byte" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="TestDecimalValueRequest">
+    <xsd:sequence>
+     <xsd:element name="StringToTest" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:simpleType name="myString">
+    <xsd:restriction base="xsd:string">
+     <xsd:length value="10"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="myString2">
+    <xsd:restriction base="xsd:string">
+     <xsd:minLength value="4"/>
+     <xsd:maxLength value="25"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="myString3">
+    <xsd:restriction base="xsd:string">
+     <xsd:pattern value="\A[0-7]+\Z"/>
+     <xsd:maxLength value="8"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="testStringRequest">
+    <xsd:sequence>
+     <xsd:element name="MyString" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="MyOtherString" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="MyThirdString" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="testStringResponse">
+    <xsd:sequence>
+     <xsd:element name="MyString" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="ErrorForMyString" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="MyString2" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="ErrorForMyString2" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="MyString3" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+     <xsd:element name="ErrorForMyString3" maxOccurs="1" type="xsd:string" minOccurs="1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="testitRequest" type="tns:testitRequest"/>
+   <xsd:element name="testitResponse" type="tns:testitResponse"/>
+   <xsd:element name="EchoSymbolRequest" type="tns:EchoSymbolRequest"/>
+   <xsd:element name="EchoSymbolResponse" type="tns:EchoSymbolResponse"/>
+   <xsd:element name="EchoCodeRequest" type="tns:EchoCodeRequest"/>
+   <xsd:element name="EchoCodeResponse" type="tns:EchoCodeResponse"/>
+   <xsd:element name="EchoRequest" type="tns:EchoRequest"/>
+   <xsd:element name="EchoResponse" type="tns:EchoResponse"/>
+   <xsd:element name="AddNumbersRequest" type="tns:AddNumbersRequest"/>
+   <xsd:element name="AddNumbersResponse" type="tns:AddNumbersResponse"/>
+   <xsd:element name="MultiplyNumbersRequest" type="tns:MultiplyNumbersRequest"/>
+   <xsd:element name="MultiplyNumbersResponse" type="tns:MultiplyNumbersResponse"/>
+   <xsd:element name="helloRequest" type="tns:helloRequest"/>
+   <xsd:element name="helloResponse" type="tns:helloResponse"/>
+   <xsd:element name="helloWorldRequest" type="tns:helloWorldRequest"/>
+   <xsd:element name="helloWorldResponse" type="tns:helloWorldResponse"/>
+   <xsd:element name="EchoByteRequest" type="tns:EchoByteRequest"/>
+   <xsd:element name="EchoByteResponse" type="tns:EchoByteResponse"/>
+   <xsd:element name="TestDecimalValueRequest" type="tns:TestDecimalValueRequest"/>
+   <xsd:element name="TestDecimalValueResponse" type="tns:TestDecimalValueResponse"/>
+   <xsd:element name="testStringRequest" type="tns:testStringRequest"/>
+   <xsd:element name="testStringResponse" type="tns:testStringResponse"/>
+  </xsd:schema>
+ </wsdl:types>
+ <wsdl:message name="testitRequestMsg">
+  <wsdl:part name="parameters" element="tns:testitRequest"/>
+ </wsdl:message>
+ <wsdl:message name="testitResponseMsg">
+  <wsdl:part name="parameters" element="tns:testitResponse"/>
+ </wsdl:message>
+ <wsdl:message name="EchoSymbolRequestMsg">
+  <wsdl:part name="parameters" element="tns:EchoSymbolRequest"/>
+ </wsdl:message>
+ <wsdl:message name="EchoSymbolResponseMsg">
+  <wsdl:part name="parameters" element="tns:EchoSymbolResponse"/>
+ </wsdl:message>
+ <wsdl:message name="EchoCodeRequestMsg">
+  <wsdl:part name="parameters" element="tns:EchoCodeRequest"/>
+ </wsdl:message>
+ <wsdl:message name="EchoCodeResponseMsg">
+  <wsdl:part name="parameters" element="tns:EchoCodeResponse"/>
+ </wsdl:message>
+ <wsdl:message name="EchoRequestMsg">
+  <wsdl:part name="parameters" element="tns:EchoRequest"/>
+ </wsdl:message>
+ <wsdl:message name="EchoResponseMsg">
+  <wsdl:part name="parameters" element="tns:EchoResponse"/>
+ </wsdl:message>
+ <wsdl:message name="AddNumbersRequestMsg">
+  <wsdl:part name="parameters" element="tns:AddNumbersRequest"/>
+ </wsdl:message>
+ <wsdl:message name="AddNumbersResponseMsg">
+  <wsdl:part name="parameters" element="tns:AddNumbersResponse"/>
+ </wsdl:message>
+ <wsdl:message name="MultiplyNumbersRequestMsg">
+  <wsdl:part name="parameters" element="tns:MultiplyNumbersRequest"/>
+ </wsdl:message>
+ <wsdl:message name="MultiplyNumbersResponseMsg">
+  <wsdl:part name="parameters" element="tns:MultiplyNumbersResponse"/>
+ </wsdl:message>
+ <wsdl:message name="helloRequestMsg">
+  <wsdl:part name="parameters" element="tns:helloRequest"/>
+ </wsdl:message>
+ <wsdl:message name="helloResponseMsg">
+  <wsdl:part name="parameters" element="tns:helloResponse"/>
+ </wsdl:message>
+ <wsdl:message name="helloWorldRequestMsg">
+  <wsdl:part name="parameters" element="tns:helloWorldRequest"/>
+ </wsdl:message>
+ <wsdl:message name="helloWorldResponseMsg">
+  <wsdl:part name="parameters" element="tns:helloWorldResponse"/>
+ </wsdl:message>
+ <wsdl:message name="EchoByteRequestMsg">
+  <wsdl:part name="parameters" element="tns:EchoByteRequest"/>
+ </wsdl:message>
+ <wsdl:message name="EchoByteResponseMsg">
+  <wsdl:part name="parameters" element="tns:EchoByteResponse"/>
+ </wsdl:message>
+ <wsdl:message name="TestDecimalValueRequestMsg">
+  <wsdl:part name="parameters" element="tns:TestDecimalValueRequest"/>
+ </wsdl:message>
+ <wsdl:message name="TestDecimalValueResponseMsg">
+  <wsdl:part name="parameters" element="tns:TestDecimalValueResponse"/>
+ </wsdl:message>
+ <wsdl:message name="testStringRequestMsg">
+  <wsdl:part name="parameters" element="tns:testStringRequest"/>
+ </wsdl:message>
+ <wsdl:message name="testStringResponseMsg">
+  <wsdl:part name="parameters" element="tns:testStringResponse"/>
+ </wsdl:message>
+ <wsdl:portType name="mywebservicePortType">
+  <wsdl:operation name="testitOperation">
+   <wsdl:input message="tns:testitRequestMsg"/>
+   <wsdl:output message="tns:testitResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="EchoSymbolOperation">
+   <wsdl:input message="tns:EchoSymbolRequestMsg"/>
+   <wsdl:output message="tns:EchoSymbolResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="EchoCodeOperation">
+   <wsdl:input message="tns:EchoCodeRequestMsg"/>
+   <wsdl:output message="tns:EchoCodeResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="EchoOperation">
+   <wsdl:input message="tns:EchoRequestMsg"/>
+   <wsdl:output message="tns:EchoResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="AddNumbersOperation">
+   <wsdl:input message="tns:AddNumbersRequestMsg"/>
+   <wsdl:output message="tns:AddNumbersResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="MultiplyNumbersOperation">
+   <wsdl:input message="tns:MultiplyNumbersRequestMsg"/>
+   <wsdl:output message="tns:MultiplyNumbersResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="helloOperation">
+   <wsdl:input message="tns:helloRequestMsg"/>
+   <wsdl:output message="tns:helloResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="helloWorldOperation">
+   <wsdl:input message="tns:helloWorldRequestMsg"/>
+   <wsdl:output message="tns:helloWorldResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="EchoByteOperation">
+   <wsdl:input message="tns:EchoByteRequestMsg"/>
+   <wsdl:output message="tns:EchoByteResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="TestDecimalValueOperation">
+   <wsdl:input message="tns:TestDecimalValueRequestMsg"/>
+   <wsdl:output message="tns:TestDecimalValueResponseMsg"/>
+  </wsdl:operation>
+  <wsdl:operation name="testStringOperation">
+   <wsdl:input message="tns:testStringRequestMsg"/>
+   <wsdl:output message="tns:testStringResponseMsg"/>
+  </wsdl:operation>
+ </wsdl:portType>
+ <wsdl:binding name="mywebserviceSoapBind" type="tns:mywebservicePortType">
+  <wsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <wsdl:operation name="testitOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/testitOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="EchoSymbolOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/EchoSymbolOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="EchoCodeOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/EchoCodeOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="EchoOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/EchoOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="AddNumbersOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/AddNumbersOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="MultiplyNumbersOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/MultiplyNumbersOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="helloOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/helloOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="helloWorldOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/helloWorldOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="EchoByteOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/EchoByteOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="TestDecimalValueOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/TestDecimalValueOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+  <wsdl:operation name="testStringOperation">
+   <wsoap:operation style="document" soapAction="http://junom.com/mywebservice/testStringOperation"/>
+   <wsdl:input>
+    <wsoap:body use="literal"/>
+   </wsdl:input>
+   <wsdl:output>
+    <wsoap:body use="literal"/>
+   </wsdl:output>
+  </wsdl:operation>
+ </wsdl:binding>
+ <wsdl:service name="mywebserviceService">
+  <wsdl:port name="mywebservicePort" binding="tns:mywebserviceSoapBind">
+   <wsoap:address location="http://junom.com/ws/mywebservice/"/>
+  </wsdl:port>
+ </wsdl:service>
+</wsdl:definitions>

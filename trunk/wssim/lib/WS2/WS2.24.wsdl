@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="char" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Preprocess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="0" maxOccurs="1" name="preproc" type="tns:PreprocessParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Spectrum">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SpectrumBase" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectrumBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DataModel" type="tns:TextParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="tns:TextParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="Length" type="tns:IntParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeSI" type="tns:TextParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpectralSI" type="tns:TextParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="FluxSI" type="tns:TextParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="CoordSys" type="tns:CoordSys" />
+          <s:element minOccurs="0" maxOccurs="1" name="Curation" type="tns:Curation" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataId" type="tns:DataId" />
+          <s:element minOccurs="0" maxOccurs="1" name="Derived" type="tns:Derived" />
+          <s:element minOccurs="0" maxOccurs="1" name="Target" type="tns:Target" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:Data" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomParams" type="tns:ArrayOfParamBase" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModelParameters" type="tns:ModelParameters" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spectral_Value" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spectral_Accuracy_StatError" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spectral_Accuracy_StatErrLow" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spectral_Accuracy_StatErrHigh" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spectral_Accuracy_BinSize" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spectral_Accuracy_BinLow" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Spectral_Accuracy_BinHigh" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Flux_Value" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Flux_Accuracy_StatError" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Flux_Accuracy_StatErrLow" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Flux_Accuracy_StatErrHigh" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Flux_Accuracy_Quality" type="tns:ArrayOfLong" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackgroundModel_Value" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackgroundModel_Accuracy_StatError" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackgroundModel_Accuracy_StatErrLow" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackgroundModel_Accuracy_StatErrHigh" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackgroundModel_Accuracy_Quality" type="tns:ArrayOfLong" />
+          <s:element minOccurs="0" maxOccurs="1" name="Time_Value" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Time_Accuracy_StatError" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Time_Accuracy_BinSize" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Time_Accuracy_BinLow" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Time_Accuracy_BinHigh" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Age_Value" type="tns:ArrayOfDouble" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sfr_Value" type="tns:ArrayOfDouble" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TextParam">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ParamBase">
+            <s:attribute name="value" type="s:string" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ParamBase">
+        <s:attribute name="ucd" type="s:string" />
+        <s:attribute name="unit" type="s:string" />
+        <s:attribute name="key" type="s:string" />
+      </s:complexType>
+      <s:complexType name="DoubleArrayParam">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ParamBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:ArrayOfDouble" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfDouble">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="double" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PositionParam">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ParamBase">
+            <s:attribute name="value" type="s:string" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeParam">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ParamBase">
+            <s:attribute name="value" type="s:dateTime" use="required" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoubleParam">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ParamBase">
+            <s:attribute name="value" type="s:double" use="required" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="IntParam">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ParamBase">
+            <s:attribute name="value" type="s:long" use="required" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CoordSys">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ID" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SpaceFrame" type="tns:SpaceFrame" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeFrame" type="tns:TimeFrame" />
+              <s:element minOccurs="0" maxOccurs="1" name="SpectralFrame" type="tns:SpectralFrame" />
+              <s:element minOccurs="0" maxOccurs="1" name="RedshiftFrame" type="tns:RedshiftFrame" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Group" />
+      <s:complexType name="DoubleInterval">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Min" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Max" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ModelParameters">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AgeAxis" type="tns:AgeAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="SfrAxis" type="tns:SfrAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="StellarMetAxis" type="tns:StellarMetAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="GasMetAxis" type="tns:GasMetAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="Z_met" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="T_eff" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Log_g" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tau_V0" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Mu" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="T_form" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Gamma" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="N_bursts" type="tns:IntParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Age_lastBurst" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AgeAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Axis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="GasMetAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StellarMetAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SfrAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BackgroundModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Accuracy" type="tns:BackgroundModelAccuracy" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BackgroundModelAccuracy">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="StatError" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SysError" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrLow" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrHigh" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quality" type="tns:IntParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Calibration" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Accuracy" type="tns:SpatialAccuracy" />
+              <s:element minOccurs="0" maxOccurs="1" name="Coverage" type="tns:SpatialCoverage" />
+              <s:element minOccurs="0" maxOccurs="1" name="SamplingPrecision" type="tns:SpatialSamplingPrecision" />
+              <s:element minOccurs="0" maxOccurs="1" name="Resolution" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialAccuracy">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="StatError" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SysError" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialCoverage">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Location" type="tns:SpatialCoverageLocation" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bounds" type="tns:SpatialCoverageBounds" />
+              <s:element minOccurs="0" maxOccurs="1" name="Support" type="tns:SpatialCoverageSupport" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialCoverageLocation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:PositionParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialCoverageBounds">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Extent" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialCoverageSupport">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Area" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Extent" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialSamplingPrecision">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SampleExtent" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SamplingPrecisionRefVal" type="tns:SpatialSamplingPrecisionRefVal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpatialSamplingPrecisionRefVal">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FillFactor" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Resolution" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Calibration" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Accuracy" type="tns:TimeAccuracy" />
+              <s:element minOccurs="0" maxOccurs="1" name="Coverage" type="tns:TimeCoverage" />
+              <s:element minOccurs="0" maxOccurs="1" name="SamplingPrecision" type="tns:TimeSamplingPrecision" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeAccuracy">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="BinLow" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="BinHigh" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatError" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrLow" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrHigh" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SysError" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeCoverage">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Location" type="tns:TimeCoverageLocation" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bounds" type="tns:TimeCoverageBounds" />
+              <s:element minOccurs="0" maxOccurs="1" name="Support" type="tns:TimeCoverageSupport" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeCoverageLocation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeCoverageBounds">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Extent" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Start" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Stop" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeCoverageSupport">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Extent" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeSamplingPrecision">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SampleExtent" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SamplingPrecisionRefVal" type="tns:TimeSamplingPrecisionRefVal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeSamplingPrecisionRefVal">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FillFactor" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FluxAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Calibration" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Accuracy" type="tns:FluxAccuracy" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FluxAccuracy">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="StatError" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SysError" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrLow" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrHigh" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quality" type="tns:IntParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Data">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" ref="s1:SpectralAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="FluxAxis" type="tns:FluxAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="TimeAxis" type="tns:TimeAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="SpatialAxis" type="tns:SpatialAxis" />
+              <s:element minOccurs="0" maxOccurs="1" name="BackgroundModel" type="tns:BackgroundModel" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Target">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Class" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SpectralClass" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Redshift" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Pos" type="tns:PositionParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="VarAmpl" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="GalacticExtinction" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Redshift">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatError" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Confidence" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Derived">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SNR" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Redshift" type="tns:Redshift" />
+              <s:element minOccurs="0" maxOccurs="1" name="VarAmpl" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DataId">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Creator" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Collection" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="DatasetId" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorDID" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Date" type="tns:TimeParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Version" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Instrument" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bandpass" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreationType" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Logo" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Contributor" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="DataSource" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="MatchDID" type="tns:TextParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Contact">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContactEmail" type="tns:TextParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Curation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Publisher" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="PublisherID" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Date" type="tns:TimeParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Version" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Rights" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Reference" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Contact" type="tns:Contact" />
+              <s:element minOccurs="0" maxOccurs="1" name="PublisherDID" type="tns:TextParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RedshiftFrame">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="DopplerDefinition" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="RefPos" type="tns:TextParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectralFrame">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="UCD" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="RefPos" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Redshift" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TimeFrame">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="UCD" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Zero" type="tns:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="RefPos" type="tns:TextParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpaceFrame">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="UCD" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="RefPos" type="tns:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Equinox" type="tns:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfParamBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParamBase" nillable="true" type="tns:ParamBase" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PreprocessParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Deredden" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Restframe" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="WavelengthConversion" type="tns:WavelengthConversion" />
+          <s:element minOccurs="1" maxOccurs="1" name="NormalizeMethod" type="tns:NormalizeMethods" />
+          <s:element minOccurs="0" maxOccurs="1" name="NormalizeWavelength" type="tns:DoubleParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="NormalizeFlux" type="tns:DoubleParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="NormalizeLimitsStart" type="tns:DoubleArrayParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="NormalizeLimitsEnd" type="tns:DoubleArrayParam" />
+          <s:element minOccurs="1" maxOccurs="1" name="NormalizeFactor" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NormalizePower" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rebin" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="RebinLimits" type="tns:DoubleInterval" />
+          <s:element minOccurs="0" maxOccurs="1" name="RebinBinSize" type="tns:DoubleParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="RebinValue" type="tns:DoubleArrayParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="RebinBinLow" type="tns:DoubleArrayParam" />
+          <s:element minOccurs="0" maxOccurs="1" name="RebinBinHigh" type="tns:DoubleArrayParam" />
+          <s:element minOccurs="1" maxOccurs="1" name="Convolve" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConvolveVelocityDispersion" type="tns:DoubleParam" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="WavelengthConversion">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Vac2Air" />
+          <s:enumeration value="Air2Vac" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="NormalizeMethods">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="FluxAtWavelength" />
+          <s:enumeration value="FluxMedianInRanges" />
+          <s:enumeration value="FluxIntegralInRanges" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="PreprocessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PreprocessResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec1" type="tns:Spectrum" />
+            <s:element minOccurs="0" maxOccurs="1" name="spec2" type="tns:Spectrum" />
+            <s:element minOccurs="1" maxOccurs="1" name="multiplier" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Multiply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="1" maxOccurs="1" name="multiplier" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MultiplyResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Redshift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="1" maxOccurs="1" name="z" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RedshiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RedshiftResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Resframe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResframeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResframeResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Air2Vac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Air2VacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Air2VacResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vac2Air">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Vac2AirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Vac2AirResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Deredden">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="1" maxOccurs="1" name="ext" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DereddenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DereddenResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Deredden_Auto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Deredden_AutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Deredden_AutoResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindBins">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindBinsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindBinsResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Normalize">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="1" maxOccurs="1" name="wavelength" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="flux" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NormalizeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NormalizeResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Normalize_Median">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="0" maxOccurs="1" name="limitsStart" type="tns:ArrayOfDouble" />
+            <s:element minOccurs="0" maxOccurs="1" name="limitsEnd" type="tns:ArrayOfDouble" />
+            <s:element minOccurs="1" maxOccurs="1" name="flux" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="power" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="factor" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Normalize_MedianResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Normalize_MedianResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Normalize_Integral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="0" maxOccurs="1" name="limitsStart" type="tns:ArrayOfDouble" />
+            <s:element minOccurs="0" maxOccurs="1" name="limitsEnd" type="tns:ArrayOfDouble" />
+            <s:element minOccurs="1" maxOccurs="1" name="flux" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Normalize_IntegralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Normalize_IntegralResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Rebin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="0" maxOccurs="1" name="coord" type="tns:ArrayOfDouble" />
+            <s:element minOccurs="0" maxOccurs="1" name="binlow" type="tns:ArrayOfDouble" />
+            <s:element minOccurs="0" maxOccurs="1" name="binhigh" type="tns:ArrayOfDouble" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RebinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RebinResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Weight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spec" type="tns:Spectrum" />
+            <s:element minOccurs="1" maxOccurs="1" name="power" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="factor" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WeightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WeightResult" type="tns:Spectrum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Revisions">
+        <s:complexType />
+      </s:element>
+      <s:element name="RevisionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RevisionsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="char">
+      <s:element name="SpectralAxis" type="s1:SpectralAxis" />
+      <s:complexType name="SpectralAxis">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Axis">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Calibration" type="s1:TextParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Resolution" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResPower" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Accuracy" type="s1:SpectralAccuracy" />
+              <s:element minOccurs="0" maxOccurs="1" name="Coverage" type="s1:SpectralCoverage" />
+              <s:element minOccurs="0" maxOccurs="1" name="SamplingPrecision" type="s1:SpectralSamplingPrecision" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Axis">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Group" />
+      <s:complexType name="SpectralSamplingPrecisionRefVal">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FillFactor" type="s1:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DoubleParam">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ParamBase">
+            <s:attribute name="value" type="s:double" use="required" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ParamBase">
+        <s:attribute name="ucd" type="s:string" />
+        <s:attribute name="unit" type="s:string" />
+        <s:attribute name="key" type="s:string" />
+      </s:complexType>
+      <s:complexType name="IntParam">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ParamBase">
+            <s:attribute name="value" type="s:long" use="required" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TextParam">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:ParamBase">
+            <s:attribute name="value" type="s:string" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectralSamplingPrecision">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SampleExtent" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SamplingPrecisionRefVal" type="s1:SpectralSamplingPrecisionRefVal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectralCoverageSupport">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Extent" type="s1:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectralCoverageBounds">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Extent" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Start" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Stop" type="s1:DoubleParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectralCoverageLocation">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Value" type="s1:TextParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectralCoverage">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Location" type="s1:SpectralCoverageLocation" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bounds" type="s1:SpectralCoverageBounds" />
+              <s:element minOccurs="0" maxOccurs="1" name="Support" type="s1:SpectralCoverageSupport" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SpectralAccuracy">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Group">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="BinSize" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="BinLow" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="BinHigh" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatError" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrLow" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="StatErrHigh" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="SysError" type="s1:DoubleParam" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quality" type="s1:IntParam" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PreprocessSoapIn">
+    <wsdl:part name="parameters" element="tns:Preprocess" />
+  </wsdl:message>
+  <wsdl:message name="PreprocessSoapOut">
+    <wsdl:part name="parameters" element="tns:PreprocessResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiplySoapIn">
+    <wsdl:part name="parameters" element="tns:Multiply" />
+  </wsdl:message>
+  <wsdl:message name="MultiplySoapOut">
+    <wsdl:part name="parameters" element="tns:MultiplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="RedshiftSoapIn">
+    <wsdl:part name="parameters" element="tns:Redshift" />
+  </wsdl:message>
+  <wsdl:message name="RedshiftSoapOut">
+    <wsdl:part name="parameters" element="tns:RedshiftResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResframeSoapIn">
+    <wsdl:part name="parameters" element="tns:Resframe" />
+  </wsdl:message>
+  <wsdl:message name="ResframeSoapOut">
+    <wsdl:part name="parameters" element="tns:ResframeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Air2VacSoapIn">
+    <wsdl:part name="parameters" element="tns:Air2Vac" />
+  </wsdl:message>
+  <wsdl:message name="Air2VacSoapOut">
+    <wsdl:part name="parameters" element="tns:Air2VacResponse" />
+  </wsdl:message>
+  <wsdl:message name="Vac2AirSoapIn">
+    <wsdl:part name="parameters" element="tns:Vac2Air" />
+  </wsdl:message>
+  <wsdl:message name="Vac2AirSoapOut">
+    <wsdl:part name="parameters" element="tns:Vac2AirResponse" />
+  </wsdl:message>
+  <wsdl:message name="DereddenSoapIn">
+    <wsdl:part name="parameters" element="tns:Deredden" />
+  </wsdl:message>
+  <wsdl:message name="DereddenSoapOut">
+    <wsdl:part name="parameters" element="tns:DereddenResponse" />
+  </wsdl:message>
+  <wsdl:message name="Deredden_AutoSoapIn">
+    <wsdl:part name="parameters" element="tns:Deredden_Auto" />
+  </wsdl:message>
+  <wsdl:message name="Deredden_AutoSoapOut">
+    <wsdl:part name="parameters" element="tns:Deredden_AutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindBinsSoapIn">
+    <wsdl:part name="parameters" element="tns:FindBins" />
+  </wsdl:message>
+  <wsdl:message name="FindBinsSoapOut">
+    <wsdl:part name="parameters" element="tns:FindBinsResponse" />
+  </wsdl:message>
+  <wsdl:message name="NormalizeSoapIn">
+    <wsdl:part name="parameters" element="tns:Normalize" />
+  </wsdl:message>
+  <wsdl:message name="NormalizeSoapOut">
+    <wsdl:part name="parameters" element="tns:NormalizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Normalize_MedianSoapIn">
+    <wsdl:part name="parameters" element="tns:Normalize_Median" />
+  </wsdl:message>
+  <wsdl:message name="Normalize_MedianSoapOut">
+    <wsdl:part name="parameters" element="tns:Normalize_MedianResponse" />
+  </wsdl:message>
+  <wsdl:message name="Normalize_IntegralSoapIn">
+    <wsdl:part name="parameters" element="tns:Normalize_Integral" />
+  </wsdl:message>
+  <wsdl:message name="Normalize_IntegralSoapOut">
+    <wsdl:part name="parameters" element="tns:Normalize_IntegralResponse" />
+  </wsdl:message>
+  <wsdl:message name="RebinSoapIn">
+    <wsdl:part name="parameters" element="tns:Rebin" />
+  </wsdl:message>
+  <wsdl:message name="RebinSoapOut">
+    <wsdl:part name="parameters" element="tns:RebinResponse" />
+  </wsdl:message>
+  <wsdl:message name="WeightSoapIn">
+    <wsdl:part name="parameters" element="tns:Weight" />
+  </wsdl:message>
+  <wsdl:message name="WeightSoapOut">
+    <wsdl:part name="parameters" element="tns:WeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="RevisionsSoapIn">
+    <wsdl:part name="parameters" element="tns:Revisions" />
+  </wsdl:message>
+  <wsdl:message name="RevisionsSoapOut">
+    <wsdl:part name="parameters" element="tns:RevisionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RevisionsHttpGetIn" />
+  <wsdl:message name="RevisionsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="RevisionsHttpPostIn" />
+  <wsdl:message name="RevisionsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:portType name="utilSoap">
+    <wsdl:operation name="Preprocess">
+      <wsdl:input message="tns:PreprocessSoapIn" />
+      <wsdl:output message="tns:PreprocessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <wsdl:input message="tns:MultiplySoapIn" />
+      <wsdl:output message="tns:MultiplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Redshift">
+      <wsdl:input message="tns:RedshiftSoapIn" />
+      <wsdl:output message="tns:RedshiftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Resframe">
+      <wsdl:input message="tns:ResframeSoapIn" />
+      <wsdl:output message="tns:ResframeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Air2Vac">
+      <wsdl:input message="tns:Air2VacSoapIn" />
+      <wsdl:output message="tns:Air2VacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Vac2Air">
+      <wsdl:input message="tns:Vac2AirSoapIn" />
+      <wsdl:output message="tns:Vac2AirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Deredden">
+      <wsdl:input message="tns:DereddenSoapIn" />
+      <wsdl:output message="tns:DereddenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Deredden_Auto">
+      <wsdl:input message="tns:Deredden_AutoSoapIn" />
+      <wsdl:output message="tns:Deredden_AutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBins">
+      <wsdl:input message="tns:FindBinsSoapIn" />
+      <wsdl:output message="tns:FindBinsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Normalize">
+      <wsdl:input message="tns:NormalizeSoapIn" />
+      <wsdl:output message="tns:NormalizeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Normalize_Median">
+      <wsdl:input message="tns:Normalize_MedianSoapIn" />
+      <wsdl:output message="tns:Normalize_MedianSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Normalize_Integral">
+      <wsdl:input message="tns:Normalize_IntegralSoapIn" />
+      <wsdl:output message="tns:Normalize_IntegralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rebin">
+      <wsdl:input message="tns:RebinSoapIn" />
+      <wsdl:output message="tns:RebinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Weight">
+      <wsdl:input message="tns:WeightSoapIn" />
+      <wsdl:output message="tns:WeightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Revisions">
+      <wsdl:input message="tns:RevisionsSoapIn" />
+      <wsdl:output message="tns:RevisionsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="utilHttpGet">
+    <wsdl:operation name="Revisions">
+      <wsdl:input message="tns:RevisionsHttpGetIn" />
+      <wsdl:output message="tns:RevisionsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="utilHttpPost">
+    <wsdl:operation name="Revisions">
+      <wsdl:input message="tns:RevisionsHttpPostIn" />
+      <wsdl:output message="tns:RevisionsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="utilSoap" type="tns:utilSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Preprocess">
+      <soap:operation soapAction="http://tempuri.org/Preprocess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <soap:operation soapAction="http://tempuri.org/Multiply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Redshift">
+      <soap:operation soapAction="http://tempuri.org/Redshift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resframe">
+      <soap:operation soapAction="http://tempuri.org/Resframe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Air2Vac">
+      <soap:operation soapAction="http://tempuri.org/Air2Vac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vac2Air">
+      <soap:operation soapAction="http://tempuri.org/Vac2Air" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deredden">
+      <soap:operation soapAction="http://tempuri.org/Deredden" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deredden_Auto">
+      <soap:operation soapAction="http://tempuri.org/Deredden_Auto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBins">
+      <soap:operation soapAction="http://tempuri.org/FindBins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Normalize">
+      <soap:operation soapAction="http://tempuri.org/Normalize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Normalize_Median">
+      <soap:operation soapAction="http://tempuri.org/Normalize_Median" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Normalize_Integral">
+      <soap:operation soapAction="http://tempuri.org/Normalize_Integral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rebin">
+      <soap:operation soapAction="http://tempuri.org/Rebin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Weight">
+      <soap:operation soapAction="http://tempuri.org/Weight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Revisions">
+      <soap:operation soapAction="http://tempuri.org/Revisions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="utilSoap12" type="tns:utilSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Preprocess">
+      <soap12:operation soapAction="http://tempuri.org/Preprocess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://tempuri.org/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <soap12:operation soapAction="http://tempuri.org/Multiply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Redshift">
+      <soap12:operation soapAction="http://tempuri.org/Redshift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resframe">
+      <soap12:operation soapAction="http://tempuri.org/Resframe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Air2Vac">
+      <soap12:operation soapAction="http://tempuri.org/Air2Vac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Vac2Air">
+      <soap12:operation soapAction="http://tempuri.org/Vac2Air" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deredden">
+      <soap12:operation soapAction="http://tempuri.org/Deredden" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deredden_Auto">
+      <soap12:operation soapAction="http://tempuri.org/Deredden_Auto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindBins">
+      <soap12:operation soapAction="http://tempuri.org/FindBins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Normalize">
+      <soap12:operation soapAction="http://tempuri.org/Normalize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Normalize_Median">
+      <soap12:operation soapAction="http://tempuri.org/Normalize_Median" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Normalize_Integral">
+      <soap12:operation soapAction="http://tempuri.org/Normalize_Integral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rebin">
+      <soap12:operation soapAction="http://tempuri.org/Rebin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Weight">
+      <soap12:operation soapAction="http://tempuri.org/Weight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Revisions">
+      <soap12:operation soapAction="http://tempuri.org/Revisions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="utilHttpGet" type="tns:utilHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Revisions">
+      <http:operation location="/Revisions" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="utilHttpPost" type="tns:utilHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Revisions">
+      <http:operation location="/Revisions" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="util">
+    <wsdl:port name="utilSoap" binding="tns:utilSoap">
+      <soap:address location="http://www.voservices.net/spectrum/spectrumws_v3.1.0/util.asmx" />
+    </wsdl:port>
+    <wsdl:port name="utilSoap12" binding="tns:utilSoap12">
+      <soap12:address location="http://www.voservices.net/spectrum/spectrumws_v3.1.0/util.asmx" />
+    </wsdl:port>
+    <wsdl:port name="utilHttpGet" binding="tns:utilHttpGet">
+      <http:address location="http://www.voservices.net/spectrum/spectrumws_v3.1.0/util.asmx" />
+    </wsdl:port>
+    <wsdl:port name="utilHttpPost" binding="tns:utilHttpPost">
+      <http:address location="http://www.voservices.net/spectrum/spectrumws_v3.1.0/util.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
